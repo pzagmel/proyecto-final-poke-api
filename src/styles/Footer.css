@@ -1,0 +1,47 @@
+body {
+    background: #103873;
+}
+img[src="{CirculoFooter3}"]  {
+    box-sizing: border-box;
+
+position: absolute;
+width: 183px;
+height: 132.07px;
+
+background: rgba(194, 207, 255, 0.4);
+mix-blend-mode: multiply;
+}
+.BoxFooter1{
+    position: absolute;
+width: 1440px;
+height: 600px;
+left: -1px;
+top: 4719px;
+
+background: #181E55;
+}
+p.Copyright{
+    position: absolute;
+width: 474px;
+height: 24px;
+left: 490px;
+top: 5379px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+}
+.RRSS{
+    position: absolute;
+width: 84px;
+height: 85px;
+}
+.IG{
+    left: 49px;
+top: 5146px;
+}
