@@ -36,12 +36,8 @@ export const Card = ({img, description, img2}) => {
 /* componente card para los 3 profesionales solo destructuring de imagen */
 export const Procard = ({img}) => {
   return (
-      <div className="card - bg-primary" style={{"width": "18rem"}}>
-      <img src={img} className="card-img-top mx-1" />
-      <div className="card-body">
-        <p className="card-text text-center">{description}</p>
-        <img src={img2} className="card-img-bot" style={{"width": "14rem"}}/>
-      </div>
+      <div className="card" style={{"width": "18rem"}}>
+      <img src={img} className="img-fluid"></img>
     </div>
   );
 };
