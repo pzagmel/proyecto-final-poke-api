@@ -4,6 +4,8 @@ import tituloinfo from "../../img/TITULOINFO.png";
 import profesTitulo from "../../img/PROFESTITULO.png";
 import unete from "../../img/UNETETITULO.png";
 import pokebola from "../../img/pngegg 1.png";
+import personaltrainer from "../../img/personaltrainer.png";
+import fisio from "../../img/fisio.png";
 import "../../styles/home.css";
 import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";
@@ -35,8 +37,9 @@ export const Home = () => {
               img={
                 "https://lmimirror3pvr.azureedge.net/static/media/18461/22b355e1-db06-4491-b67c-f00048f78b99/training-load-960x540.jpg"
               }
-              description=
-              {"-100 Burpies y 100 sentadillas"}
+              description= {"-100 Burpies"}  
+              description2={"-50 Sentadillas Bulgaras"}
+              description3={"-Plancha de 1 minuto"}          
             />
           </div>
         </div>
@@ -45,16 +48,16 @@ export const Home = () => {
         <div className="row">
           <div className="col" />
           <Card
-            img={tituloinfo}
-            description={"Profesor 1"}
+            img={personaltrainer}
+            description={"Profesional 1"}
           />
           <div className="col" />
           <Card
-            img={profesTitulo}
-            description={"Profesor 2"}
+            img={fisio}
+            description={"Profesional 2"}
           />
           <div className="col" />
-          <Card img={unete} description={"Profesor 3"} />
+          <Card img={unete} description={"Profesional 3"} />
         </div>
       </div>
     </>

@@ -1,0 +1,10 @@
+/* diseño longcard reto  */
+
+p#reto.card-text.-lg{
+    font-weight: 500;
+    font-size: 1.8em;
+    font-family: 'Pokemon Solid', sans-serif;
+}
+h5#titlereto.card-title.text-center{
+    font-size:2em;
+}
