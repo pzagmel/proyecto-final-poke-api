@@ -1,0 +1,29 @@
+.iconos{
+    justify-content: space-between;
+    width: 20%;
+    margin: 2%;
+    background-color: #1f69d8;
+    border-radius: 8px;
+}
+
+.logo-gym{
+    max-width: 55%;
+}
+
+.nav-style{
+    background-color: #103873;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 576px) {
+  .img-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) {
+    .iconos span {
+      display: none;
+    }
+  }
