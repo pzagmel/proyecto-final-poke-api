@@ -11,8 +11,8 @@ import TW from "../../img/TW.png"
 import IG from "../../img/IG.png"
 
 export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
-		<div className="BoxFooter1">
+	<footer>
+		<div id="footer-container">
 			<div>
 				<img src={CirculoFooter1}/>
 				<img src={CirculoFooter2}/>
@@ -20,27 +20,42 @@ export const Footer = () => (
 				<img src={CirculoFooter4}/>
 
 			</div>
-			<div>
-			<img src={logoprincipal}/>
+
+			<div id="footer-content-container" className="col-12">
+				<div>
+			<img src={logoprincipal} className="website-logo"/>
 			</div>
-			<div className="RRSS">
+			
+			<div className="footer-menus">
+			<div className="footer-content-container">
+				<div className="menu-item-footer">
+					<p>Av. Tanto Tanto,
+					Comuna Tanto, 
+					Region (?)
+					Chile?
+					</p>
+				</div>
+				<div className="menu-item-footer">
+				<p>+569 xxxx xxxx
+				pokegym@pokegym.cl
+				</p>
+				</div>
+			</div>
+			</div>
+			<div className="social-container">
+				<span className="menu-title"> Siguenos </span>
+				<div className="social-link">
 				<img className="IG" src={IG} style={{left: 49}}/>
 				<img className="FB"src={FB} style={{left: 171}}/>
 				<img className="TW"src={TW} style={{left: 290}}/>
 				<img className="MAIL" src={MAIL} style={{left: 435}}/>
+					</div>	
 			</div>
-			<div>
-				<div>Av. Tanto Tanto,
-					Comuna Tanto, 
-					Region (?)
-					Chile?
-				</div>
-				<div>
-				+569 xxxx xxxx
-				pokegym@pokegym.cl
-				</div>
-			</div>
+			
 		</div>
-		<p className="Copyright"> Copyright @2023. Todos los derechos reservados </p>
+		</div>
+		<div className="copyright-container">
+		<p className="copyright"> Copyright @2023. Todos los derechos reservados </p>
+		</div>
 	</footer>
 );
