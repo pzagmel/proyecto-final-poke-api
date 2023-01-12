@@ -10,11 +10,11 @@ import pokebola from "../../img/POKEBOLA.png"
 
 export const InfoGym = () => (
     <div>
-                <img src={CirculoFooter1}/>
+               {/*  <img src={CirculoFooter1}/>
 				<img src={CirculoFooter2}/>
 				<img src={CirculoFooter3}/>
 				<img src={CirculoFooter4}/>
-    
+     */}
     <div className="container" style={{display: "flex", flexWrap: "nowrap", alignItems: "center", justifyContent: "space-between", width: "100%"}}>
         
         <div>

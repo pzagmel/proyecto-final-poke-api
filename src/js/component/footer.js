@@ -13,15 +13,15 @@ import IG from "../../img/IG.png"
 export const Footer = () => (
 	<footer>
 		<div id="footer-container">
-			<div>
-				<img src={CirculoFooter1}/>
-				<img src={CirculoFooter2}/>
-				<img src={CirculoFooter3}/>
-				<img src={CirculoFooter4}/>
+			{/* <div>
+				<img className="Circulo1" src={CirculoFooter1}/>
+				<img className="Circulo2" src={CirculoFooter2}/>
+				<img className="Circulo3" src={CirculoFooter3}/>
+				<img className="Circulo4" src={CirculoFooter4}/>
 
-			</div>
+			</div> */}
 
-			<div id="footer-content-container" className="col-12">
+			<div id="footer-content-container">
 				<div>
 			<img src={logoprincipal} className="website-logo"/>
 			</div>
