@@ -30,7 +30,6 @@ export const Longcard = ({
     <p id="reto" className="card-text">{description3} </p>
   </div>
 </div>
-
   );
 };
 
