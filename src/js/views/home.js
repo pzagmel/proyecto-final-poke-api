@@ -52,6 +52,7 @@ export const Home = () => {
             />
           </div>
         </div>
+        
         <div className="row">
           <div className="col-sm-4">
             <Procard img={personaltrainer1} />

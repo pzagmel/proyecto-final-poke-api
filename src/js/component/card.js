@@ -12,7 +12,7 @@ export const Card = ({ title, description, img2 }) => {
     </div>
   );
 };
-
+/* componente del reto de la semana en home */
 export const Longcard = ({
   img,
   title,
