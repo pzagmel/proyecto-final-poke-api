@@ -54,8 +54,6 @@ export const Footer = () => (
 			
 		</div>
 		</div>
-		<div className="copyright-container">
-		<p className="copyright"> Copyright @2023. Todos los derechos reservados </p>
-		</div>
+		 
 	</footer>
 );
