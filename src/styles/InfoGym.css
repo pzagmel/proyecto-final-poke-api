@@ -1,0 +1,20 @@
+.container{
+
+    display: flex;
+    flex-wrap: nowrap; 
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%
+}
+
+@media screen and (min-width:600px){
+    .PrimeraRow{
+        flex:1 0px;
+    }
+    .SegundaRow{
+        flex: 1 0px;
+    }
+    .TerceraRow{
+        flex:1 0px;
+    }
+    }

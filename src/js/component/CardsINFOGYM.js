@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../../styles/InfoGym.css";
 import M1 from "../../img/Machop.png"
 import M2 from "../../img/Machoke.png"
 import M3 from "../../img/Machamp.png"
@@ -15,20 +16,20 @@ export const InfoGym = () => (
 				<img src={CirculoFooter3}/>
 				<img src={CirculoFooter4}/>
      */}
-    <div className="container" style={{display: "flex", flexWrap: "nowrap", alignItems: "center", justifyContent: "space-between", width: "100%"}}>
+    <div className="container row-4">
         
-        <div>
-            <img src={M1} style={{width: "30%", height: "auto"}}/>
+        <div className="PrimerRow">
+            <img className="Pk1" src={M1} style={{width: 100, height: "auto"}}/>
             <h1>Evoluciona</h1>
             <p> En este gimnasio podrás hacer ejercicio y ver tu evolución igual a tu pokemon favorito </p>
         </div>
-        <div>
-            <img src={M2} style={{width: "30%", height: "auto"}}/>
+        <div className="SegundaRow">
+            <img className="Pk2" src={M2} style={{width: 100, height: "auto"}}/>
             <h1>Ejercita</h1>
             <p> Dependiendo del peso que vayas aumentando y tu constancia</p>
         </div>
-        <div>
-            <img src={M3} style={{width: "30%", height: "auto"}}/>
+        <div className="TerceraRow">
+            <img className="Pk3" src={M3} style={{width: 100, height: "auto"}}/>
             <h1>Se tu mejor versión</h1>
             <p> Podrás convertirte en tu pokemon favorito, siendo fuerte y teniendo un estado física ideal</p>
         </div>

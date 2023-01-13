@@ -13,12 +13,15 @@
     display: -ms-flex;
     display: -o-flex;
     display:flex;
+    position: absolute;
     flex-flow: row wrap;
     padding: 50px;
     color: rgb(202, 239, 253);
+    z-index:0;
 }
 .footer > *{
     flex: 1 100%;
+    
 }
 .footer-left{
     margin-right: 1.25em;
@@ -74,16 +77,16 @@ img.MAIL{
 li.info{
     font-family: 'Pokemon Solid', sans-serif;
     font-weight: 700; 
-    font-size: 30px;
+    font-size: 15px;
 }
 h1.titulo{
     font-family: 'Pokemon Solid', sans-serif;
     font-weight: 700; 
-font-size: 50px;}
+font-size: 30px;}
 
 
 footer.footer{
-    background-color: rgba(49, 119, 224, 0.729);
+    background-color: #181E55;
 }
 
 @media screen and (min-width:600px){
