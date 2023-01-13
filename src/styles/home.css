@@ -1,10 +1,33 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
 /* diseño longcard reto  */
 
-p#reto.card-text.-lg{
+
+p#reto.card-text{
     font-weight: 500;
-    font-size: 1.8em;
+    font-size: 2em;
+    font-family: 'Pokemon Solid', sans-serif;
+    color:yellow;
+}
+h5#titlereto.card-title{
+    color: yellow;
+    font-size:4em;
     font-family: 'Pokemon Solid', sans-serif;
 }
-h5#titlereto.card-title.text-center{
-    font-size:2em;
+img.card-img{
+    height:430px;
+}
+h5.card-title.text-center{
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size:4em;
+    color: yellow;
+}
+p.card-text.text-center{
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size:1em;
+    color: white;
+}
+img#pokebola text-center{
+    width: 10px;
+    height: 10px;
+    justify-content: center;
 }

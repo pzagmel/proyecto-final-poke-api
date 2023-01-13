@@ -7,6 +7,7 @@ import pokebola from "../../img/pngegg 1.png";
 import personaltrainer1 from "../../img/personaltrainer1.gif";
 import kine from "../../img/kine.gif";
 import personaltrainer2 from "../../img/personaltrainer2.gif";
+import reto from "../../img/Tu Desafio.png";
 
 import "../../styles/home.css";
 import { Card } from "../component/card.js";
@@ -20,18 +21,22 @@ export const Home = () => {
         <div className="row g-3 mb-2">
           <div className="col-sm-4 ">
             <Card
-              img={tituloinfo}
+              title={"Info!"}
               description={"Informacion de qué trata la app"}
+              img2={pokebola}
             />
           </div>
           <div className="col-sm-4 ">
             <Card
-              img={profesTitulo}
+              title={"Profes"}
               description={"Conoce a nuestros profesionales"}
+              img2={pokebola}
             />
           </div>
           <div className="col-sm-4 ">
-            <Card img={unete} img2={pokebola} />
+            <Card 
+            title={"Únete"}
+            img2={pokebola} />
           </div>
         </div>
         <div className="row">
@@ -39,7 +44,7 @@ export const Home = () => {
             <Longcard
               title={"Reto de la Semana"}
               img={
-                "https://lmimirror3pvr.azureedge.net/static/media/18461/22b355e1-db06-4491-b67c-f00048f78b99/training-load-960x540.jpg"
+                reto
               }
               description={"-100 Burpies"}
               description2={"-50 Sentadillas Bulgaras"}
