@@ -1,0 +1,41 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+/* diseño longcard reto  */
+
+p#reto.card-text{
+    font-weight: 500;
+    font-size: 2em;
+    font-family: 'Pokemon Solid', sans-serif;
+    color:yellow;
+}
+h5#titlereto.card-title{
+    color: yellow;
+    font-size:4em;
+    font-family: 'Pokemon Solid', sans-serif;
+}
+img.card-img{
+    height:430px;
+}
+
+/* diseño cards iniciales info, profes y únete  */
+h5.card-title.text-center{
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size:4em;
+    color: yellow;
+}
+p.card-text.text-center{
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size:1em;
+    color: white;
+}
+img#pokebola text-center{
+    width: 10px;
+    height: 10px;
+    justify-content: center;
+}
+
+
+/* cart principal home */
+div.carousel.slide{
+    margin-bottom: 10px;
+}
+/* se da margen al final para separar cart de info profes y unete */
