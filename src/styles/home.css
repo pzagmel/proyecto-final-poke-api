@@ -32,3 +32,10 @@ img#pokebola text-center{
     height: 10px;
     justify-content: center;
 }
+
+
+/* cart principal home */
+div.carousel.slide{
+    margin-bottom: 10px;
+}
+/* se da margen al final para separar cart de info profes y unete */
