@@ -17,7 +17,7 @@ export const Home = () => {
   return (
     <>
     <CartHome/>
-      <div className="container justify-content-center">
+      <div className="justify-content-center">
         <div className="row g-3 mb-2">
           <div className="col-sm-4 ">
             <Card
@@ -65,8 +65,8 @@ export const Home = () => {
           </div>
         </div>
     </div>
-    <InfoGym/>
-    <Calendario/>
+    <div className="row"><InfoGym/></div>
+
   
 </>
   );

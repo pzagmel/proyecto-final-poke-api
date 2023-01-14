@@ -1,12 +1,8 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/register.css";
 import registro from "../../img/registro.png";
 import LOGOPOKEGYM from "../../img/LOGOPOKEGYM.png";
 
-import { InfoGym } from "../component/CardsINFOGYM";
-import { Footer } from "../component/footer";
-import { Footergp } from "../component/footer2";
 
 
 
