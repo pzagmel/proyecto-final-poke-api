@@ -17,8 +17,9 @@ import { Calendario } from "../component/calendario";
 
 export const Home = () => {
   return (
-  <>
-    <CartHome/>
+    <>
+    <CartHome/> 
+    <span>hola</span>
       <div className="container justify-content-center">
         <div className="row g-3 mb-2">
           <div className="col-sm-4 ">
