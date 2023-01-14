@@ -16,25 +16,26 @@ export const InfoGym = () => (
 				<img src={CirculoFooter3}/>
 				<img src={CirculoFooter4}/>
      */}
-    <div className="container row-4">
-        
-        <div className="PrimerRow">
-            <img className="Pk1" src={M1} style={{width: 100, height: "auto"}}/>
+    <div className="" id="Padre">
+        <div className="col">
+        <div id="PrimeraRow" className="row-4">
+            <img id="Pk1" src={M1} style={{width: 100, height: "auto"}}/>
             <h1>Evoluciona</h1>
             <p> En este gimnasio podrás hacer ejercicio y ver tu evolución igual a tu pokemon favorito </p>
         </div>
         <div className="SegundaRow">
-            <img className="Pk2" src={M2} style={{width: 100, height: "auto"}}/>
+            <img id="Pk2" src={M2} style={{width: 100, height: "auto"}}/>
             <h1>Ejercita</h1>
             <p> Dependiendo del peso que vayas aumentando y tu constancia</p>
         </div>
         <div className="TerceraRow">
-            <img className="Pk3" src={M3} style={{width: 100, height: "auto"}}/>
+            <img id="Pk3" src={M3} style={{width: 100, height: "auto"}}/>
             <h1>Se tu mejor versión</h1>
             <p> Podrás convertirte en tu pokemon favorito, siendo fuerte y teniendo un estado física ideal</p>
         </div>
+        </div>
     </div>
-    <img src={pokebola}/>
+    <img id="img" src={pokebola}/>
     </div>
 
 );
