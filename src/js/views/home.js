@@ -69,8 +69,9 @@ export const Home = () => {
             <Procard img={personaltrainer2} />
           </div>
         </div>
+    <div className="row">
+      <InfoGym/></div>  
     </div>
-    <div className="row"><InfoGym/></div>  
 </>
   );
 };

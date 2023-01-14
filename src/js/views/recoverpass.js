@@ -1,17 +1,16 @@
 import React from "react";
 import "../../styles/recuperar.css";
+import LOGOPOKEGYM from "../../img/LOGOPOKEGYM.png";
+
 
 export const RecoverPass = () => (
   <div className="container">
-    <div className="row">
-      <div className="col-1">
+    <div className="row justify-content-center">
+      
         <div>
-          <img src={LOGOPOKEGYM} style={{ width: 250 }} />
+          <img src={LOGOPOKEGYM}  />
         </div>
         <div className="recover-card">
-          <h2>
-            <img src={registro} style={{ width: 300 }} />
-          </h2>
           <h3>Introduce Información</h3>
           <form className="recover-form">
             <input type="mail" placeholder="Correo" />
@@ -19,7 +18,7 @@ export const RecoverPass = () => (
             <button>OK</button>
           </form>
         </div>
-      </div>
+      
     </div>
   </div>
 );
