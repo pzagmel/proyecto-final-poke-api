@@ -1,4 +1,6 @@
 import React from "react";
+
+import "../../styles/home.css";
 import tituloinfo from "../../img/TITULOINFO.png";
 import profesTitulo from "../../img/PROFESTITULO.png";
 import unete from "../../img/UNETETITULO.png";

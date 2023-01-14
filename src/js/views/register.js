@@ -1,8 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/claudia
 import "../../styles/register.css";
 import registro from "../../img/registro.png";
 import LOGOPOKEGYM from "../../img/LOGOPOKEGYM.png";
