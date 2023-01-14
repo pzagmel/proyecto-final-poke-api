@@ -11,12 +11,12 @@ import { Longcard } from "../component/card.js";
 import { Procard } from "../component/card.js";
 import { CartHome } from "../component/cardhome";
 import { InfoGym } from "../component/CardsINFOGYM";
+import { Calendario } from "../component/calendario";
 
 export const Home = () => {
   return (
     <>
     <CartHome/>
-    <span>hola</span>
       <div className="container justify-content-center">
         <div className="row g-3 mb-2">
           <div className="col-sm-4 ">
@@ -66,6 +66,7 @@ export const Home = () => {
         </div>
     </div>
     <InfoGym/>
+    <Calendario/>
   
 </>
   );
