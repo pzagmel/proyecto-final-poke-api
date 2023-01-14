@@ -9,6 +9,8 @@ import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";
 import { Procard } from "../component/card.js";
 import { CartHome } from "../component/cardhome";
+import { InfoGym } from "../component/CardsINFOGYM"
+import { Link } from "react-router-dom"; 
 
 export const Home = () => {
   return (
@@ -32,9 +34,10 @@ export const Home = () => {
             />
           </div>
           <div className="col-sm-4 ">
-            <Card 
+          <Link to="/register"><Card 
             title={"Únete"}
-            img2={pokebola} />
+             > img2={pokebola}</Card></Link>
+            
           </div>
         </div>
         <div className="row">
@@ -63,7 +66,7 @@ export const Home = () => {
           </div>
         </div>
     </div>
-  
+  <InfoGym/>
 </>
   );
 };
