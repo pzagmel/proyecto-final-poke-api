@@ -3,13 +3,19 @@ import pokebola from "../../img/POKEBOLA.png"
 import "../../styles/Fichapersonal.css";
 
 export const FichaPersonal = () => (
+    const profesionales = [
+        { nombre: 'ASH', apellido: 'KEPSHUP', info: 'ENTRENADOR POKEMON' },
+        
+    function App() {
+        return (
     <div>
         <div >
             <div className="Ficha">
             <h1>Información del Profesional</h1>
             <ul className="ListaCompleta">
-                <li> Nombre </li>
-                <li> Apellido </li>
+            {profesionales.map(profesional => (
+                <li> {profesional.Nombre} </li>
+                <li> {profesional.apellido} </li>))}
                 <li> Información Profesional </li>
                 <li> Información Profesional </li>
                 <li> Información Profesional </li>
@@ -19,6 +25,7 @@ export const FichaPersonal = () => (
         </div>
         <img src={pokebola}/>
     </div>
-        
+);
+    }
 
 )

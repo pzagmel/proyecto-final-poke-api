@@ -10,6 +10,7 @@ import CirculoFooter4 from "../../img/CirculoFooter 4.png"
 import pokebola from "../../img/POKEBOLA.png"
 
 export const InfoGym = () => (
+    
     <div>
                {/*  <img src={CirculoFooter1}/>
 				<img src={CirculoFooter2}/>
@@ -17,7 +18,7 @@ export const InfoGym = () => (
 				<img src={CirculoFooter4}/>
      */}
     <div className="" id="Padre">
-        <div className="col">
+        <div>
         <div id="PrimeraRow" className="row-4">
             <img id="Pk1" src={M1} style={{width: 100, height: "auto"}}/>
             <h1>Evoluciona</h1>
@@ -33,9 +34,10 @@ export const InfoGym = () => (
             <h1>Se tu mejor versión</h1>
             <p> Podrás convertirte en tu pokemon favorito, siendo fuerte y teniendo un estado física ideal</p>
         </div>
-        </div>
+        
     </div>
     <img id="img" src={pokebola}/>
     </div>
-
+    </div>
+    
 );

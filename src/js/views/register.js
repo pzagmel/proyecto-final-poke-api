@@ -1,5 +1,4 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/register.css";
 import registro from "../../img/registro.png";
 import LOGOPOKEGYM from "../../img/LOGOPOKEGYM.png";
@@ -13,7 +12,7 @@ import { Formik, Form, Field } from 'formik';
 
 
 export const Register = () => (
-	<>
+	 <>
 	<div className="container">
 		<div className="row">
 			<div className="col-1">
@@ -35,35 +34,54 @@ export const Register = () => (
 		</div>
 	</div>
 	</div>
-	
-	<Formik
-  initialValues={{ email: '', password: '', confirmPassword: '' }}
-  onSubmit={values => {
-    console.log(values);
-  }}
->
-  {({ handleSubmit }) => (
-    <form onSubmit={handleSubmit}>
-      <div class="tu-diseño">
-          <label>
-            Email:
-            <Field type="email" name="email" required />
-          </label>
-          <br />
-          <label>
-            Password:
-            <Field type="password" name="password" required />
-          </label>
-          <br />
-          <label>
-            Confirm Password:
-            <Field type="password" name="confirmPassword" required />
-          </label>
-          <br />
-      </div>
-      <button type="submit">Sign Up</button>
-    </form>
-  )}
-</Formik>
-	</>
+	 
+	{/* import React from 'react';
+import { Formik, Form, Field } from 'formik';
+
+function validateEmail(value) {
+  let error;
+  if (!value) {
+    error = 'Required';
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+    error = 'Invalid email address';
+  }
+  return error;
+}
+
+function validateUsername(value) {
+  let error;
+  if (value === 'admin') {
+    error = 'Nice try!';
+  }
+  return error;
+}
+
+export const FieldLevelValidationExample = () => (
+  <div>
+    <h1>Signup</h1>
+    <Formik
+      initialValues={{
+        username: '',
+        email: '',
+      }}
+      onSubmit={values => {
+        // same shape as initial values
+        console.log(values);
+      }}
+    >
+      {({ errors, touched, isValidating }) => (
+        <Form>
+          <Field name="email" validate={validateEmail} />
+          {errors.email && touched.email && <div>{errors.email}</div>}
+
+          <Field name="username" validate={validateUsername} />
+          {errors.username && touched.username && <div>{errors.username}</div>}
+
+          <button type="submit">Submit</button>
+        </Form>
+      )}
+    </Formik>
+  </div>
+); */}
+</>
 );
