@@ -1,7 +1,4 @@
 import React from "react";
-import tituloinfo from "../../img/TITULOINFO.png";
-import profesTitulo from "../../img/PROFESTITULO.png";
-import unete from "../../img/UNETETITULO.png";
 import pokebola from "../../img/pngegg 1.png";
 import personaltrainer1 from "../../img/personaltrainer1.gif";
 import kine from "../../img/kine.gif";
@@ -13,12 +10,11 @@ import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";
 import { Procard } from "../component/card.js";
 import { CartHome } from "../component/cardhome";
-import { Calendario } from "../component/calendario";
 
 export const Home = () => {
   return (
     <>
-    <CartHome/> 
+    <CartHome/>
     <span>hola</span>
       <div className="container justify-content-center">
         <div className="row g-3 mb-2">
@@ -68,7 +64,7 @@ export const Home = () => {
           </div>
         </div>
     </div>
-    <Calendario/>
+  
 </>
   );
 };
