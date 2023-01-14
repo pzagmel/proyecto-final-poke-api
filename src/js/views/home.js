@@ -4,26 +4,17 @@ import personaltrainer1 from "../../img/personaltrainer1.gif";
 import kine from "../../img/kine.gif";
 import personaltrainer2 from "../../img/personaltrainer2.gif";
 import reto from "../../img/Tu Desafio.png";
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/desarrollo
 import "../../styles/home.css";
 import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";
 import { Procard } from "../component/card.js";
 import { CartHome } from "../component/cardhome";
-<<<<<<< HEAD
-import { InfoGym } from "../component/CardsINFOGYM"
-import { Link } from "react-router-dom"; 
-=======
 import { Calendario } from "../component/calendario";
 import { Comments }  from "../component/carousel";
 import { InfoGym } from "../component/CardsINFOGYM";
+import { Link } from "react-router-dom";
 
 
-
->>>>>>> origin/desarrollo
 
 export const Home = () => {
   return (
@@ -80,12 +71,6 @@ export const Home = () => {
           </div>
         </div>
     </div>
-<<<<<<< HEAD
-  <InfoGym/>
-</>
-  );
-};
-=======
     <div className="container"><InfoGym/></div>
     <div> <Calendario/> </div>
 	<div> <Comments/>   </div> 		  
@@ -94,4 +79,3 @@ export const Home = () => {
   );
 };
 
->>>>>>> origin/desarrollo
