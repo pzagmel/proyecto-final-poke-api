@@ -6,7 +6,7 @@ import LOGOPOKEGYM from "../../img/LOGOPOKEGYM.png";
 import { InfoGym } from "../component/CardsINFOGYM";
 import { Footer } from "../component/footer";
 import { Footergp } from "../component/footer2";
-//import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field } from 'formik';
 
 
 
