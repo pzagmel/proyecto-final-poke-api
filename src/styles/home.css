@@ -32,6 +32,35 @@ img#pokebola text-center{
     height: 10px;
     justify-content: center;
 }
-div.col{
-margin-bottom: 10px;
+
+
+/* cart principal home */
+div.carousel.slide{
+    margin-bottom: 10px;
 }
+/* se da margen al final para separar cart de info profes y unete */
+
+/* diseño de calendario */
+caption {
+    padding: 20px;
+    font-size: 28px;
+    color: #5524c8e3;
+    font-family: 'Pokemon Solid', sans-serif;
+  }
+  
+  th {
+    background-color: #ffca3ac1;
+    color: #5524c8e3;
+    font-family: 'Pokemon Solid', sans-serif;
+    text-align: center;
+  }
+  
+  td {
+    background-color: #5524c8e3;
+    color: #ffca3a;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Pokemon Solid', sans-serif;
+  }
+/* finalde calendario
+ */  
