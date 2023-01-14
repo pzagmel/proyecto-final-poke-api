@@ -11,7 +11,10 @@ import { Longcard } from "../component/card.js";
 import { Procard } from "../component/card.js";
 import { CartHome } from "../component/cardhome";
 import { Calendario } from "../component/calendario";
+import { Comments }  from "../component/carousel";
 import { InfoGym } from "../component/CardsINFOGYM";
+
+
 
 
 export const Home = () => {
@@ -70,6 +73,7 @@ export const Home = () => {
     </div>
     <div className="container"><InfoGym/></div>
     <div> <Calendario/> </div>
+	<div> <Comments/>   </div> 		  
 
 </>
   );

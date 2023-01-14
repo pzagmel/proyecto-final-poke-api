@@ -3,6 +3,11 @@ import "../../styles/register.css";
 import registro from "../../img/registro.png";
 import LOGOPOKEGYM from "../../img/LOGOPOKEGYM.png";
 
+import { InfoGym } from "../component/CardsINFOGYM";
+import { Footer } from "../component/footer";
+import { Footergp } from "../component/footer2";
+import { Formik, Form, Field } from 'formik';
+
 
 
 
