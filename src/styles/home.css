@@ -32,3 +32,6 @@ img#pokebola text-center{
     height: 10px;
     justify-content: center;
 }
+div.col{
+margin-bottom: 10px;
+}

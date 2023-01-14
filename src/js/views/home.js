@@ -1,5 +1,4 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import tituloinfo from "../../img/TITULOINFO.png";
 import profesTitulo from "../../img/PROFESTITULO.png";
 import unete from "../../img/UNETETITULO.png";
