@@ -4,20 +4,33 @@ import personaltrainer1 from "../../img/personaltrainer1.gif";
 import kine from "../../img/kine.gif";
 import personaltrainer2 from "../../img/personaltrainer2.gif";
 import reto from "../../img/Tu Desafio.png";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/desarrollo
 import "../../styles/home.css";
 import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";
 import { Procard } from "../component/card.js";
 import { CartHome } from "../component/cardhome";
+<<<<<<< HEAD
 import { InfoGym } from "../component/CardsINFOGYM"
 import { Link } from "react-router-dom"; 
+=======
+import { Calendario } from "../component/calendario";
+import { Comments }  from "../component/carousel";
+import { InfoGym } from "../component/CardsINFOGYM";
+
+
+
+>>>>>>> origin/desarrollo
 
 export const Home = () => {
   return (
     <>
     <CartHome/>
-    <span>hola</span>
-      <div className="container justify-content-center">
+     <div className="container">
+      <div className="justify-content-center">
         <div className="row g-3 mb-2">
           <div className="col-sm-4 ">
             <Card
@@ -64,9 +77,21 @@ export const Home = () => {
           <div className="col-sm-4">
             <Procard img={personaltrainer2} />
           </div>
+          </div>
         </div>
     </div>
+<<<<<<< HEAD
   <InfoGym/>
 </>
   );
 };
+=======
+    <div className="container"><InfoGym/></div>
+    <div> <Calendario/> </div>
+	<div> <Comments/>   </div> 		  
+
+</>
+  );
+};
+
+>>>>>>> origin/desarrollo
