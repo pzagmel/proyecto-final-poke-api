@@ -13,7 +13,7 @@ import { Formik, Form, Field } from 'formik';
 
 
 export const Register = () => (
-	
+	<>
 	<div className="container">
 		<div className="row">
 			<div className="col-1">
@@ -35,4 +35,35 @@ export const Register = () => (
 		</div>
 	</div>
 	</div>
+	
+	<Formik
+  initialValues={{ email: '', password: '', confirmPassword: '' }}
+  onSubmit={values => {
+    console.log(values);
+  }}
+>
+  {({ handleSubmit }) => (
+    <form onSubmit={handleSubmit}>
+      <div class="tu-diseño">
+          <label>
+            Email:
+            <Field type="email" name="email" required />
+          </label>
+          <br />
+          <label>
+            Password:
+            <Field type="password" name="password" required />
+          </label>
+          <br />
+          <label>
+            Confirm Password:
+            <Field type="password" name="confirmPassword" required />
+          </label>
+          <br />
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+  )}
+</Formik>
+	</>
 );
