@@ -10,6 +10,7 @@ import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";
 import { Procard } from "../component/card.js";
 import { CartHome } from "../component/cardhome";
+import { InfoGym } from "../component/CardsINFOGYM";
 
 export const Home = () => {
   return (
@@ -64,7 +65,9 @@ export const Home = () => {
           </div>
         </div>
     </div>
+    <InfoGym/>
   
 </>
   );
 };
+
