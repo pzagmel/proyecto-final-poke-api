@@ -12,6 +12,8 @@ import { Register } from "./views/register";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
+import { Navbar2 } from "./component/navbar";
+
 import { Footer } from "./component/footer";
 import { Footergp } from "./component/footer2";
 
@@ -27,6 +29,7 @@ const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
+					<Navbar2 />
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
