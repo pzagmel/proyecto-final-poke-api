@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/recuperar.css";
 
-export const Register = () => (
+export const RecuperarContraseña = () => (
 	
 	<div className="container">
 		<div className="row">
