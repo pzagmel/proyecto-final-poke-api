@@ -10,9 +10,11 @@ import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";
 import { Procard } from "../component/card.js";
 import { CartHome } from "../component/cardhome";
-import { InfoGym } from "../component/CardsINFOGYM";
 import { Calendario } from "../component/calendario";
 import { Comments }  from "../component/carousel";
+import { InfoGym } from "../component/CardsINFOGYM";
+
+
 
 
 export const Home = () => {
