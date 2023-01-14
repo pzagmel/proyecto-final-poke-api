@@ -1,5 +1,4 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import tituloinfo from "../../img/TITULOINFO.png";
 import profesTitulo from "../../img/PROFESTITULO.png";
 import unete from "../../img/UNETETITULO.png";
@@ -13,10 +12,13 @@ import "../../styles/home.css";
 import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";
 import { Procard } from "../component/card.js";
+import { CartHome } from "../component/cardhome";
+import { Calendario } from "../component/calendario";
 
 export const Home = () => {
   return (
-
+  <>
+    <CartHome/>
       <div className="container justify-content-center">
         <div className="row g-3 mb-2">
           <div className="col-sm-4 ">
@@ -64,7 +66,8 @@ export const Home = () => {
             <Procard img={personaltrainer2} />
           </div>
         </div>
-      </div>
-
+    </div>
+    <Calendario/>
+</>
   );
 };
