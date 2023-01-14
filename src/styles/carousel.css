@@ -1,0 +1,64 @@
+.img-style{
+    max-width: 150px;
+}
+
+.carousel-style{
+    background-color: #8fb0d5;
+    max-width: 90%;
+    border-radius: 83px;
+}
+
+.img-text{
+    display: flex;
+    background-color: #0b2b69;
+    max-width: 60%;
+    margin: 18px auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.img-div {
+    flex: 1;
+    justify-self: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-div {
+    flex: 1;
+    color: floralwhite;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+#carouselExampleControls {
+    margin: 0 auto;
+    max-width: 95%;
+  }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.img-div, .text-div {
+    padding: 5%;
+}
+
+
+@media (max-width: 576px) {
+   .img-div{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .text-div {
+    font-size: 12px;
+  }
+  }
