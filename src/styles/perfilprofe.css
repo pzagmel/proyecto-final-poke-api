@@ -1,0 +1,12 @@
+body{
+    background-color: #0A2A69;
+}
+#Padre {
+    position:relative;
+}
+#img{
+    position:absolute;
+    left:0;
+    bottom:5px;
+    
+}
