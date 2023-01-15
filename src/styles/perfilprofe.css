@@ -1,6 +1,8 @@
-body{
+/* body{
     background-color: #0A2A69;
-}
+} 
+ */
+/* intenten de no tocar el body afecta a los demas componentes */
 #Padre {
     position:relative;
 }

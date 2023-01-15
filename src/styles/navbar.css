@@ -1,13 +1,15 @@
+
+
 .iconos{
     justify-content: space-between;
     width: 20%;
-    margin: 2%;
+    margin: 5px;
     background-color: #1f69d8;
     border-radius: 8px;
 }
 
 .logo-gym{
-    max-width: 55%;
+    max-width: 30%;
 }
 
 .nav-style{
@@ -69,4 +71,17 @@ li > a:hover{
     .iconos {
       display: none;
     }
+  }
+
+  h1.titulonavbar{
+    color: #ffff00;
+    font-size: 50px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    
+  }
+
+  div.titupok{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
