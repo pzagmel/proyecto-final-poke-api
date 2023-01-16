@@ -7,9 +7,10 @@ body{
 #img{
     position:absolute;
     left:0;
-    bottom:5px;
-    
+    bottom:5px;   
 }
+
+/* css de fichas  */
 div.fichacard{
     background-color: #0dcaf0;
 }

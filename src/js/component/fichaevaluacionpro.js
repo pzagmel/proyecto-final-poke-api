@@ -1,5 +1,7 @@
 import React from "react";
 import Machop from "../../img/Machop.png";
+
+
 export const Fichaevaluacionpro = ()=> {
     return(
 <div className="fichacard rounded">
@@ -10,18 +12,18 @@ export const Fichaevaluacionpro = ()=> {
     <table className="table">
   <thead>
     <tr>
-      <th scope="col">Peso</th>
-      <th scope="col">Estatura</th>
+      <th scope="col">Peso (kg)</th>
+      <th scope="col">Estatura (cm)</th>
       <th scope="col">% de Grasa</th>
       <th scope="col">% de Músculo</th>
     </tr>
   </thead>
   <tbody className="table-group-divider">
     <tr>
-      <td scope="row">70kg</td>
-      <td>170cm</td>
-      <td>40%</td>
-      <td>25%</td>
+      <td scope="row">70</td>
+      <td>170</td>
+      <td>40</td>
+      <td>25</td>
     </tr>
     </tbody>
     </table>
@@ -34,6 +36,7 @@ export const Fichaevaluacionpro = ()=> {
 </div>      
     );
 };
+
 export const Fichaejercicios = ()=> {
     return(
 <div className="ejercicioscard mb-3 rounded" >
@@ -43,7 +46,7 @@ export const Fichaejercicios = ()=> {
     </div>
     <div className="col-md-8">
       <div className="card-body text-center">
-        <h5 className="card-title">TU PLAN DE EJERCICIOS</h5>
+        <h5 className="card-title">TU PLAN DE ENTRENAMIENTO</h5>
         <p className="card-text">Aqui van los ejercicios</p>
       </div>
     </div>
