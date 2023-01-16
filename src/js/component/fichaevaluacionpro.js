@@ -2,7 +2,7 @@ import React from "react";
 import Machop from "../../img/Machop.png";
 export const Fichaevaluacionpro = ()=> {
     return(
-<div className="card">
+<div className="fichacard rounded">
   <div className="card-body">
     <h5 className="card-titleficha text-center">Ficha de evaluacion profesional</h5>
     <h6 className="card-subtitle mb-2 text-muted">Informacion general</h6>
@@ -36,14 +36,14 @@ export const Fichaevaluacionpro = ()=> {
 };
 export const Fichaejercicios = ()=> {
     return(
-<div className="card mb-3" >
+<div className="ejercicioscard mb-3 rounded" >
   <div className="row g-0">
     <div className="col-md-4">
       <img src={Machop} className="img-fluid rounded-start" alt="..."/>
     </div>
     <div className="col-md-8">
-      <div className="card-body">
-        <h5 className="card-title">TUS EJERCICIOS</h5>
+      <div className="card-body text-center">
+        <h5 className="card-title">TU PLAN DE EJERCICIOS</h5>
         <p className="card-text">Aqui van los ejercicios</p>
       </div>
     </div>

@@ -10,3 +10,9 @@ body{
     bottom:5px;
     
 }
+div.fichacard{
+    background-color: #0dcaf0;
+}
+div.ejercicioscard.mb-3{
+    background-color: #0dcaf0;
+}
