@@ -35,8 +35,8 @@ export const Modal = () => {
       </div>
       <div className="iconos">
      <img src={BannerModal} alt=""/>
-     <Iconos/>
       </div>
+      <Iconos/>
       </div>
       
       </div>

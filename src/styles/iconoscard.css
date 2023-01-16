@@ -1,0 +1,22 @@
+/* css de iconos calendario para el modal */
+ 
+div.iconodeportivo{
+    background-color: blueviolet;
+}
+div.col-sm-6.col-md-9.superioricono{
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+ }
+ div.container.iconoimgsuperior{
+    display: inline; 
+ }
+ h1.titulodeiconosdeportivo{
+    display: inline;
+    margin-top: 100px;
+ }
+
+ div.col-6.col-md-3.icono{
+    margin-top:70px;
+ }
+ 
