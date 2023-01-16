@@ -76,6 +76,8 @@ div.carousel.slide{
 }
 /* se da margen al final para separar cart de info profes y unete */
 
+
+
 /* diseño de calendario */
 
 div.container.calen{
@@ -166,6 +168,88 @@ caption {
     }
   }
 /* finalde calendario*/  
+
+
+/* comienzo diseño de modal de calendario de ejercicio */
+div#exampleModal.modal.fade.show{
+    padding-right: 1000px;
+    display: block;
+}
+div.modal-content{
+    width: 1500px;
+    height: 1000px;
+}
+/* contener total del modal de ejercicio */
+
+div.tituloejercicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:50px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.infoejercicio{
+    margin-right: 80px;
+    margin-bottom: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    
+}
+div.infoejerciciolvl{
+    margin-left: 100px;
+    margin-bottom: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.infoejercicioFT{
+    margin-left: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.infoejercicio1{
+    margin-right: 60px;
+    margin-left: 30px;
+    margin-top: -10px;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.infoejercicio1m{
+    margin-left: -50px;
+    margin-right: 200px;
+    margin-top: -10px;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.infoejercicio1t{  
+    margin-right: 180px;
+    margin-top: -10px;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.infoejercicio1g{
+    margin-left: 150px;
+    margin-top: -10px;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.tipoejercicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+hr{
+    border: 5px solid #0000008c;
+    width: 100%;
+    margin-top: -20px;
+}
+
+div.banner{
+    width: 1455px;
+    height: 150px;
+    background-color: black;
+}
 
 /* diseño1 div del home */
 div.diseño1{
