@@ -1,0 +1,18 @@
+
+.ContainerDropdownClientes{
+    border: 0px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #1F69D8;
+    width: 30%;
+    height: 30%;
+    border-radius: 20px;
+}
+.dropdowndos{
+        width:20%;
+        height: 20%;
+        background-color: #6190D7;
+        border: 5px;
+        margin: 0px;
+        border-radius: 30px;
+}
