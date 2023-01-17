@@ -24,3 +24,34 @@
     width: 20%;
     height: 20%;
 }
+
+@media screen and (max-width: 600px) {
+    .conteiner {
+      flex-wrap: wrap;
+    }
+    .col {
+      width: auto;
+    }
+  }
+
+  #PrimeroPrimerin { /*SI BORRO ESTO SE TIRA < Y QUEDA AHI MEJOR QUE AHORA  */
+    position: absolute;
+    top: 35%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .PrincipalContainerDropdown{
+      border: 0px;
+      margin: 10px;
+      padding: 20px;
+      background-color: #1F69D8;
+      width: 12%;
+      height: 60%;
+      border-radius: 20px;
+  }
+
+  .aumentado {
+    width: 23%;
+    height: 250px;
+    }
