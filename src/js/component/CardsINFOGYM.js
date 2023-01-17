@@ -9,8 +9,12 @@ import CirculoFooter3 from "../../img/CirculoFooter 3.png"
 import CirculoFooter4 from "../../img/CirculoFooter 4.png"
 import pokebola from "../../img/POKEBOLA.png"
 
-export const InfoGym = () => (
-    
+export const InfoGym = ({
+    ImgPokemon,
+    TituloInfoGYM,
+    DescripcionInfoGYM,
+    }) => {
+    return (
     <div>
                {/*  <img src={CirculoFooter1}/>
 				<img src={CirculoFooter2}/>
@@ -20,24 +24,15 @@ export const InfoGym = () => (
     <div className="" id="Padre">
         <div>
         <div id="PrimeraRow" className="row-4">
-            <img id="Pk1" src={M1} style={{width: 100, height: "auto"}}/>
-            <h1>Evoluciona</h1>
-            <p> En este gimnasio podrás hacer ejercicio y ver tu evolución igual a tu pokemon favorito </p>
-        </div>
-        <div className="SegundaRow">
-            <img id="Pk2" src={M2} style={{width: 100, height: "auto"}}/>
-            <h1>Ejercita</h1>
-            <p> Dependiendo del peso que vayas aumentando y tu constancia</p>
-        </div>
-        <div className="TerceraRow">
-            <img id="Pk3" src={M3} style={{width: 100, height: "auto"}}/>
-            <h1>Se tu mejor versión</h1>
-            <p> Podrás convertirte en tu pokemon favorito, siendo fuerte y teniendo un estado física ideal</p>
-        </div>
-        
+            <img id="Pk1" src={ImgPokemon} style={{width: 100, height: "auto"}}/>
+            <h1>{TituloInfoGYM}</h1>
+            <p> {DescripcionInfoGYM}</p>
+        </div>   
     </div>
-    <img id="img" src={pokebola}/>
+
     </div>
     </div>
     
+    
 );
+};

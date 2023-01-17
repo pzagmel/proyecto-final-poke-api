@@ -4,6 +4,9 @@ import personaltrainer1 from "../../img/personaltrainer1.gif";
 import kine from "../../img/kine.gif";
 import personaltrainer2 from "../../img/personaltrainer2.gif";
 import reto from "../../img/Tu Desafio.png";
+import M1 from "../../img/Machop.png"
+import M2 from "../../img/Machoke.png"
+import M3 from "../../img/Machamp.png"
 import "../../styles/home.css";
 import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";
@@ -71,7 +74,24 @@ export const Home = () => {
           </div>
         </div>
     </div>
-    <div className="container"><InfoGym/></div>
+    <div className="container">
+      <div>
+      <InfoGym  ImgPokemon={M1} 
+                TituloInfoGYM={"Evoluciona"}
+                DescripcionInfoGYM={"En este gimnasio podrás hacer ejercicio y ver tu evolución igual a tu pokemon favorito"}
+      /> </div>
+      <div>
+      <InfoGym  ImgPokemon={M2} 
+                TituloInfoGYM={"Ejercita"} 
+                DescripcionInfoGYM={"Dependiendo del peso que vayas aumentando y tu constancia"}
+      /> </div>
+      <div>
+      <InfoGym  ImgPokemon={M3} 
+                TituloInfoGYM={"Se tu mejor versión"}
+                DescripcionInfoGYM={"Podrás convertirte en tu pokemon favorito, siendo fuerte y teniendo un estado física ideal"}
+      /> </div>
+      </div>
+
     <div> <Calendario/> </div>
 	<div> <Comments/>   </div> 		  
 
