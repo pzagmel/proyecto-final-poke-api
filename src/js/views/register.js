@@ -35,7 +35,7 @@ export const Register = () => (
 	</div>
 	</div>
 	
-	<Formik
+	{/* <Formik
   initialValues={{ email: '', password: '', confirmPassword: '' }}
   onSubmit={values => {
     console.log(values);
@@ -43,7 +43,7 @@ export const Register = () => (
 >
   {({ handleSubmit }) => (
     <form onSubmit={handleSubmit}>
-      <div class="tu-diseño">
+      <div className="tu-diseño">
           <label>
             Email:
             <Field type="email" name="email" required />
@@ -63,6 +63,6 @@ export const Register = () => (
       <button type="submit">Sign Up</button>
     </form>
   )}
-</Formik>
+</Formik> */}
 	</>
 );

@@ -6,8 +6,8 @@ import { Footer } from "../component/footer";
 import { Footergp } from "../component/footer2";
 import { FichaPersonal } from "../component/FijaPersonal";
 import { ListaClientes } from "../component/PerfilProfesionalListaClientes";
-import { Fichaevaluacionpro } from "../component/fichaevaluacionpro";
-import { Fichaejercicios } from "../component/fichaevaluacionpro";
+import { Fichaevaluacion } from "../component/fichaevaluacion";
+
 
 export const Perfilprofe = () => (
         <div>
@@ -15,13 +15,10 @@ export const Perfilprofe = () => (
 
         <FichaPersonal/>
         <ListaClientes/>
-        <div className="row">
-           <div className="col">
-             <Fichaejercicios/>
-            </div>
-            <div className="col">
-        <Fichaevaluacionpro/>
-            </div>
-        </div>        
+        
+        <div className="row rowfichaej">          
+        <Fichaevaluacion/>
+        </div>
+                
  </div>
 );

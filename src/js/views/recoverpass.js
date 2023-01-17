@@ -1,25 +1,32 @@
 import React from "react";
 import "../../styles/recuperar.css";
 import pokebola from "../../img/POKEBOLA.png";
+import loginImage from "../../img/login.png";
 
 
 
 export const RecoverPass = () => (
-  <div className="container recover justify-content-center">    
-        <div className="recover-card">
-          <h3 id="recuperartitulo">Recupera Tu Contraseña</h3>
-          <form className="recover-form">
-            <div className="row mail">
-            <input type="mail" placeholder="Correo" />
-            </div>
-            <div className="row rut">
-            <input type="Rut" placeholder="Rut" />
-            </div>
-            <div className="row ok">
-            <button>OK</button>
-            </div>
-          </form>
-          <div> <img id="recoverpoke" src={pokebola} /></div>
-        </div>  
-  </div>
+  <>
+    <div className="container login-page">
+      <div className="row">
+        <div className="col-1 login-style">
+          <div className="login-card">
+            <h2 id="titulorecover">
+              RECUPERA TU CONTRASEÑA
+            </h2>
+            <form className="login-form">
+              <input type="text" placeholder="Correo Electrónico" required />
+              <input type="password" placeholder="Rut" required />             
+              <button id="okrecover">OK</button>
+              <div className="links-div">               
+              </div>
+            </form>
+          </div>
+          <h5>
+            <img className="poke-img" src={pokebola} style={{ width: 75 }} />
+          </h5>
+        </div>
+      </div>
+    </div>
+  </>
 );

@@ -19,7 +19,7 @@ export const Login = () => (
             <form className="login-form">
               <input type="text" placeholder="Nombre de Usuario" required />
               <input type="password" placeholder="Contraseña" required />
-              <Link to="/reset-password" className="link link-style">
+              <Link to="/recover" className="link link-style">
                   ¿Olvidaste tu contraseña?
                 </Link>
               <button>Ingresar</button>
