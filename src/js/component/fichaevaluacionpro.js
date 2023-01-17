@@ -42,7 +42,7 @@ export const Fichaejercicios = ()=> {
 <div className="ejercicioscard mb-3 rounded" >
   <div className="row g-0">
     <div className="col-md-4">
-      <img src={Machop} className="img-fluid rounded-start" alt="..."/>
+      <img src={Machop} className="img-fluid rounded-start"/>
     </div>
     <div className="col-md-8">
       <div className="card-body text-center">
