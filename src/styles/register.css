@@ -82,7 +82,13 @@ a,button{
     color: #ffff;
     font-weight: 600;
 }
-
+/*
+#CONTAINERREGISTER{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
 
  
 

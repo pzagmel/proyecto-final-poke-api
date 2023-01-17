@@ -4,18 +4,20 @@ import "../../styles/Fichapersonal.css";
 
 export const FichaPersonal = () => {
     const profesionales = [
-           { nombre: 'ASH', apellido: 'KEPSHUP', info: 'ENTRENADOR POKEMON', horario:'DIURNO' }]
+           { nombre: 'ASH', apellido: 'KEPSHUP', info: 'ENTRENADOR POKEMON', horario:'DIURNO' }
+        /*    { nombre: 'Misty', apellido: 'Mistison', info: 'ENTRENADORA POKEMON', horario:'NOCTURNO' } */]
         
         return (
-    <div className="conteiner">
-        <div className="row-6">
+    <div className="conteiner" id="CajaPadre">
+         <h1>Información del Profesional</h1>
+        <div className="row-6" id="CajaHijoFicha">
             <div className="col">
                 <div className="CuadroFicha">
             <div className="Ficha">
-            <h1>Información del Profesional</h1>
+           
             <ul className="ListaCompleta">
             {profesionales.map(profesional => (
-                <li> 
+                <li id="ListaTOTAL"> 
                     {profesional.nombre} 
                     {profesional.apellido} 
                     {profesional.info} 
