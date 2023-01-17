@@ -15,6 +15,7 @@ import { Calendario } from "../component/calendario";
 import { Comments }  from "../component/carousel";
 /* import { InfoGym } from "../component/CardsINFOGYM"; */
 import Cardservice from "../component/cardinfogym";
+import { Link } from "react-router-dom";
 
 
 
@@ -43,9 +44,9 @@ export const Home = () => {
             />
           </div>
           <div className="col-sm-4 ">
-            <Card 
+           <Link to="/register"> <Card 
             title={"Únete"}
-            img2={pokebola} />
+            img2={pokebola} /></Link>
           </div>
         </div>
         <div className="row">

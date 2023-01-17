@@ -14,7 +14,6 @@ export const Calendario = () => {
           <caption>
             HORARIO
           </caption>
-          <th>HORA</th>
           <th>lUNES</th>
           <th>MARTES</th>
           <th>MIERCOLES</th>
@@ -29,7 +28,7 @@ export const Calendario = () => {
             <td>902</td>
             <td>901</td>
             <td>1101</td>
-            <td>1002</td>
+            
           </tr>
           <tr>
             <td className="hora">9:00</td>
@@ -38,7 +37,7 @@ export const Calendario = () => {
             <td>1102</td>
             <td>901</td>
             <td>1101</td>
-            <td>1002</td>
+            
           </tr>
           <tr>
             <td className="hora">10:00</td>
@@ -47,7 +46,7 @@ export const Calendario = () => {
             <td>1102</td>
             <td>801</td>
             <td>1002</td>
-            <td>1002</td>
+            
           </tr>
           <tr>
             <td className="hora">11:00</td>
@@ -56,7 +55,7 @@ export const Calendario = () => {
             <td>1002</td>
             <td>FREE</td>
             <td>1002</td>
-            <td>1002</td>
+            
           </tr>
           <tr>
             <td className="hora">12:00</td>
@@ -65,7 +64,7 @@ export const Calendario = () => {
             <td>moda</td>
             <td>moda</td>
             <td>moda</td>
-            <td>1002</td>
+            
           </tr>
           <tr>
             <td className="hora">13:00</td>
@@ -74,7 +73,7 @@ export const Calendario = () => {
             <td>descanso</td>
             <td>descanso</td>
             <td>descanso</td>
-            <td>1002</td>
+           
           </tr>
           <tr>
             <td className="hora">15:00</td>
@@ -83,7 +82,6 @@ export const Calendario = () => {
             <td>ATENCION</td>
             <td>1102</td>
             <td>1102</td>
-            <td>1002</td>
           </tr>
           <tr>
             <td className="hora">16:00</td>
@@ -91,7 +89,6 @@ export const Calendario = () => {
             <td>FREE</td>
             <td>FREE</td>
             <td>FREE</td>
-            <td>1002</td>
             <td>1002</td>
           </tr>
           
