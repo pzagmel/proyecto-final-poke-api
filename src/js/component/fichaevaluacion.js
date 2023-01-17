@@ -13,7 +13,7 @@ export const Fichaevaluacion = ()=> {
       
 <h5 className="card-titleficha text-center">Ficha de evaluacion profesional</h5>
     <h6 className="card-subtitle mb-2 text-center">Informacion general</h6>   
-    <table className="tableinfog">
+    <table className="table asd">
   <thead id="headtableinfo">
     <tr>
       <th id="thficha" scope="col">Peso (kg)</th>
@@ -32,7 +32,9 @@ export const Fichaevaluacion = ()=> {
     </tbody>
     </table> 
         <h5 className="card-titleretro text-center">Retroalomentacion del profesional</h5>  
-        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent tincidunt ipsum eget quam varius mattis.</p>    
+        <div id="cardtextretro">
+        
+        </div>
         <div className="cardejercicios text-center">
         <h5 className="card-titlejercicios">TU PLAN DE ENTRENAMIENTO</h5>
         <p className="card-textejercicios">Aqui van los ejercicios</p>

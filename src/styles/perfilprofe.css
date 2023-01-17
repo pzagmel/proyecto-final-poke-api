@@ -20,28 +20,40 @@ div.ejercicioscard.mb-3{
 div.col.colfichas{
     transform: none;
 }
-table.tableinfog{
+table.table.asd{
     width: 1000px;
-    border-radius:25px ;
+    border-collapse: inherit;
 }
 th#thficha{
     background-color: red;
 }
 td#tdficha{
     background-color: #0a58ca;
+    font-size: 45px;
 }
 h5.card-titleficha.text-center{
     margin-top: 10px;
     color:#0a58ca;
+    text-shadow: 5px 5px 10px white;
 }
 h6.card-subtitle.mb-2.text-center{
     color:#0a58ca;
+    text-shadow: 5px 5px 10px white;
 }
 
 h5.card-titleretro.text-center{
     margin-top: 10px;
     color:#0a58ca;
+    text-shadow: 5px 5px 10px white;
 }
 h5.card-titlejercicios{
     color:#0a58ca;
+    text-shadow: 5px 5px 10px white;
+}
+div#cardtextretro{
+    background-color: white;
+    border-radius: 5px;
+    border-block: 5px solid red;
+    height: 112px;
+    width: 1000px;
 }
