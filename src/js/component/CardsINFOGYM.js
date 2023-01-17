@@ -16,7 +16,7 @@ export const InfoGym = () => (
 				<img src={CirculoFooter3}/>
 				<img src={CirculoFooter4}/>
      */}
-    <div className="" id="Padre">
+    <div className="container" id="Padre">
         <div className="col">
         <div id="PrimeraRow" className="row-4">
             <img id="Pk1" src={M1} style={{width: 100, height: "auto"}}/>
@@ -36,6 +36,9 @@ export const InfoGym = () => (
         </div>
     </div>
     <img id="img" src={pokebola}/>
+
+
     </div>
+    
 
 );

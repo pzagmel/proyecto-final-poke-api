@@ -30,7 +30,17 @@ a,button{
         padding: 0;
     }
 } */
+.div-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+div-login-card{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
 
 .login-card{
     width: 100%;

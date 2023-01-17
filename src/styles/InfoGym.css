@@ -1,20 +1,66 @@
-.container{
 
+div.infogym.card{
+    background:#038dd766;
     display: flex;
-    flex-wrap: nowrap; 
+    justify-content: center;
     align-items: center;
-    justify-content: space-between; 
-    width: 100%
+    margin:20px;
+    transition: ease all .3s;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 0 20px 10px rgba(25, 25, 25, .1);
+    border-radius: 20px;
+    border: 5px solid #0b5ef88c;
+
+}
+div.infogym.card:hover{
+    transform: translate(-10px);
+    
 }
 
-@media screen and (min-width:600px){
-    .PrimeraRow{
-        flex:1 0px;
-    }
-    .SegundaRow{
-        flex: 1 0px;
-    }
-    .TerceraRow{
-        flex:1 0px;
-    }
-    }
+ 
+img.card-img-top{
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom:20px;
+    right: 50px;
+}
+img.card-img-top:hover{
+    transform: translate(-20px);
+    
+}
+img.card-img-medium{
+    width: 244px;
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+
+img.card-img-medium:hover{
+    transform: translate(-20px);
+    
+}
+img.card-img-bottom{
+    width: 215px;
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+img.card-img-bottom:hover{
+    transform: translate(-20px);
+    
+}
+div.card-body.info1{
+    background: #fff;
+}
+#CardGroup{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+}
+ 
+h1.tituloinfo{
+    color: #ffff00;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-shadow: black 0.1em 0.1em 0.2em
+}

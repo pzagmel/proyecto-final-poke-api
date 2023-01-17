@@ -10,6 +10,7 @@ import kine from "../../img/kine.gif";
 import personaltrainer2 from "../../img/personaltrainer2.gif";
 import reto from "../../img/Tu Desafio.png";
 
+
 import "../../styles/home.css";
 import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";
@@ -17,7 +18,9 @@ import { Procard } from "../component/card.js";
 import { CartHome } from "../component/cardhome";
 import { Calendario } from "../component/calendario";
 import { Comments }  from "../component/carousel";
-import { InfoGym } from "../component/CardsINFOGYM";
+/* import { InfoGym } from "../component/CardsINFOGYM"; */
+import Cardservice from "../component/cardinfogym";
+import { Link } from "react-router-dom";
 
 
 
@@ -26,6 +29,8 @@ export const Home = () => {
   return (
     <>
     <CartHome/>
+
+    <div className="diseño1"></div>
      <div className="container">
       <div className="justify-content-center">
         <div className="row g-3 mb-2">
@@ -44,9 +49,9 @@ export const Home = () => {
             />
           </div>
           <div className="col-sm-4 ">
-            <Card 
+           <Link to="/register"> <Card 
             title={"Únete"}
-            img2={pokebola} />
+            img2={pokebola} /></Link>
           </div>
         </div>
         <div className="row">
@@ -62,7 +67,8 @@ export const Home = () => {
             />
           </div>
         </div>
-        
+    
+        <div className="diseño2"> </div>
         <div className="row">
           <div className="col-sm-4">
             <Procard img={personaltrainer1} />
@@ -76,7 +82,11 @@ export const Home = () => {
           </div>
         </div>
     </div>
-    <div className="container"><InfoGym/></div>
+    <div className="container">
+     
+        <Cardservice/>
+      
+      </div>
     <div> <Calendario/> </div>
 	<div> <Comments/>   </div> 		  
 
