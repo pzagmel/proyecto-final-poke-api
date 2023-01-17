@@ -13,7 +13,9 @@ export const Fichaevaluacion = ()=> {
       
 <h5 className="card-titleficha text-center">Ficha de evaluacion profesional</h5>
     <h6 className="card-subtitle mb-2 text-center">Informacion general</h6>   
-    <table className="table asd">
+    <div class="table-responsive">
+    <table className="table align-middle">
+
   <thead id="headtableinfo">
     <tr>
       <th id="thficha" scope="col">Peso (kg)</th>
@@ -31,12 +33,16 @@ export const Fichaevaluacion = ()=> {
     </tr>
     </tbody>
     </table> 
-        <h5 className="card-titleretro text-center">Retroalomentacion del profesional</h5>  
-        <div id="cardtextretro">
-        
+    </div>
+        <h5 className="card-titleretro">Retroalomentacion del profesional</h5>  
+        <div className="row cardtextretro">
+          <div className="col-sm-12">
+         Pepito realiza correctamente sus ejercicios con Xkilogramos, de seguir asi
+         aumentaremos el peso y repeticiones.
+         </div>
         </div>
-        <div className="cardejercicios text-center">
-        <h5 className="card-titlejercicios">TU PLAN DE ENTRENAMIENTO</h5>
+        <div className="cardejercicios">
+        <h5 className="card-titlejercicios">Tu Plan De Entrenamiento</h5>
         <p className="card-textejercicios">Aqui van los ejercicios</p>
       </div>
     </div>

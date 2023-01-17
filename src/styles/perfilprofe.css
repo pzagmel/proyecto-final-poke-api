@@ -20,12 +20,12 @@ div.ejercicioscard.mb-3{
 div.col.colfichas{
     transform: none;
 }
-table.table.asd{
-    width: 1000px;
+table.table.align-middle{
     border-collapse: inherit;
 }
 th#thficha{
     background-color: red;
+    text-shadow: 5px 5px 10px white;
 }
 td#tdficha{
     background-color: #0a58ca;
@@ -41,14 +41,15 @@ h6.card-subtitle.mb-2.text-center{
     text-shadow: 5px 5px 10px white;
 }
 
-h5.card-titleretro.text-center{
-    margin-top: 10px;
+h5.card-titleretro{
     color:#0a58ca;
     text-shadow: 5px 5px 10px white;
 }
 h5.card-titlejercicios{
     color:#0a58ca;
     text-shadow: 5px 5px 10px white;
+    margin-top: 15px;
+    
 }
 div#cardtextretro{
     background-color: white;
