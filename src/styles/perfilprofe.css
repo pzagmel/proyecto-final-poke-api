@@ -58,3 +58,6 @@ div#cardtextretro{
     height: 112px;
     width: 1000px;
 }
+div.col-md-8{
+    margin-top:65px;
+}
