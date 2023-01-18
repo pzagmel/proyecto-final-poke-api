@@ -1,10 +1,10 @@
 import React from "react";
 import "../../styles/home.css";
 import Pokebola from "../../img/POKEBOLA.png"
-import { Modal } from "./modalcalendario";
-import { Hiit } from "./modalcalendario";
-import { ProCycling } from "./modalcalendario";
-import { Pilates } from "./modalcalendario";
+import { Pilates } from "./modalcalendario/Pilates";
+import { GymBall } from "./modalcalendario/gymball";
+
+
 export const Calendario = () => {
     return(
         <div className="container calen"> 
@@ -25,51 +25,51 @@ export const Calendario = () => {
   </thead>
   <tbody className="poketablaejercicio" >
     <tr className="filadehorariodeejercicio">
-      <th scope="row horariocalendario">8:00</th>
-      <td className="espaciodeejercicio"><Modal/></td>
+      <th scope="row horariocalendario" style={{fontSize:30}}>8:00</th>
       <td className="espaciodeejercicio"></td>
-      <td className="espaciodeejercicio"></td>
-      <td className="espaciodeejercicio"></td>
-      <td className="espaciodeejercicio"></td>
-    </tr>
-    <tr className="filadehorariodeejercicio">
-      <th scope="row  horariocalendario">10:00</th>
-      <td className="espaciodeejercicio"><Pilates/></td>
-      <td className="espaciodeejercicio"><Hiit/></td>
-      <td className="espaciodeejercicio"><Modal/></td>
-      <td className="espaciodeejercicio"></td>
-      <td className="espaciodeejercicio"><ProCycling/></td>
-    </tr>
-    <tr className="filadehorariodeejercicio">
-      <th scope="row  horariocalendario">12:00</th>
-      <td className="espaciodeejercicio"><Hiit/></td>
       <td className="espaciodeejercicio"><Pilates/></td>
       <td className="espaciodeejercicio"></td>
-      <td className="espaciodeejercicio"><ProCycling/></td>
-      <td className="espaciodeejercicio"><Modal/></td>
+      <td className="espaciodeejercicio"><GymBall/></td>
+      <td className="espaciodeejercicio"></td>
     </tr>
     <tr className="filadehorariodeejercicio">
-      <th scope="row  horariocalendario">14:00</th>
-      <td className="espaciodeejercicio"><ProCycling/></td>
+      <th scope="row  horariocalendario" style={{fontSize:30}}>10:00</th>
+      <td className="espaciodeejercicio"></td>
+      <td className="espaciodeejercicio"></td>
+      <td className="espaciodeejercicio"></td>
+      <td className="espaciodeejercicio"></td>
+      <td className="espaciodeejercicio"><Pilates/></td>
+    </tr>
+    <tr className="filadehorariodeejercicio">
+      <th scope="row  horariocalendario" style={{fontSize:30}}>12:00</th>
       <td className="espaciodeejercicio"><Pilates/></td>
       <td className="espaciodeejercicio"></td>
-      <td className="espaciodeejercicio"><Modal/></td>
-      <td className="espaciodeejercicio"><Hiit/></td>
-    </tr>
-    <tr className="filadehorariodeejercicio">
-      <th scope="row  horariocalendario">15:00</th>
       <td className="espaciodeejercicio"></td>
-      <td className="espaciodeejercicio"><Hiit/></td>
-      <td className="espaciodeejercicio"><ProCycling/></td>
       <td className="espaciodeejercicio"></td>
       <td className="espaciodeejercicio"></td>
     </tr>
     <tr className="filadehorariodeejercicio">
-      <th scope="row  horariocalendario">16:00 </th>
-      <td className="espaciodeejercicio"><Modal/></td>
-      <td className="espaciodeejercicio"><ProCycling/></td>
-      <td className="espaciodeejercicio"><Hiit/></td>
+      <th scope="row  horariocalendario" style={{fontSize:30}}>14:00</th>
+      <td className="espaciodeejercicio"></td>
       <td className="espaciodeejercicio"><Pilates/></td>
+      <td className="espaciodeejercicio"></td>
+      <td className="espaciodeejercicio"></td>
+      <td className="espaciodeejercicio"></td>
+    </tr>
+    <tr className="filadehorariodeejercicio">
+      <th scope="row  horariocalendario" style={{fontSize:30}}>15:00</th>
+      <td className="espaciodeejercicio"></td>
+      <td className="espaciodeejercicio"></td>
+      <td className="espaciodeejercicio"></td>
+      <td className="espaciodeejercicio"></td>
+      <td className="espaciodeejercicio"><Pilates/></td>
+    </tr>
+    <tr className="filadehorariodeejercicio">
+      <th scope="row  horariocalendario" style={{fontSize:30}}>16:00 </th>
+      <td className="espaciodeejercicio"><Pilates/></td>
+      <td className="espaciodeejercicio"></td>
+      <td className="espaciodeejercicio"></td>
+      <td className="espaciodeejercicio"></td>
       <td className="espaciodeejercicio"></td>
     </tr>
   </tbody>

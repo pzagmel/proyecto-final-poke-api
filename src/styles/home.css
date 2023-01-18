@@ -81,8 +81,9 @@ div.carousel.slide{
 /* diseño de calendario */
 
 p.diashoras{
-    margin: 40px;
+    margin: 10px;
     color: #fff;
+    font-size: 20px;
 }
 tbody.poketablaejercicio{
     background: #e9eff8a6;
@@ -99,8 +100,7 @@ td {
     padding: 20px;
     text-align: center;
     font-family: 'Pokemon Solid', sans-serif;
-    height: 100px;
-    width: 100px;
+
   }
 
 
@@ -142,8 +142,9 @@ caption {
     height: 100px;
     width: 100px;
   }
-  td.hora{
-    width: 1000px;
+  th.row.horariocalendario{
+    font-size: 20px;
+    
   }
 
   div.calendario{
@@ -289,7 +290,7 @@ div.diseño1{
 
 
 div.diseño2{
-    width: 2135px;
+    width: 1970px;
     height: 500px;
     background-color: rgba(0, 153, 255, 0.745);
     position: absolute;
@@ -310,7 +311,7 @@ div.diseño2{
     }
 
  div.diseño3{
-    width: 2135px;
+    width: 1970px;
     height: 205px;
     background-color: rgba(0, 153, 255, 0.745);
     margin-left: -500px;

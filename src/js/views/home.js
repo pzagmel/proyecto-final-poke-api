@@ -83,7 +83,7 @@ export const Home = () => {
       
       </div>
     <div> <Calendario/> </div>
-	<div> <Comments/>   </div> 		  
+	<div className="comentariocliente"> <Comments/>   </div> 		  
 
 </>
   );
