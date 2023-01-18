@@ -8,12 +8,20 @@ import { Footer } from "../component/footer";
 import { Footergp } from "../component/footer2";
 import { Formik, Form, Field } from 'formik';
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 
 
 
 export const Register = () => {
 	const [pass,setPass] = useState('');
 	const [email,setEmail] = useState('');
+	const [usuario,setUsuario] = useState('');
+	let navigate = useNavigate();
+
+	function validarTelefono(numtelefon) {
+		var nfono = /^\d{8}$/;
+		return nfono.test(numtelefono);
+	  }
 	
 	
 	return(	
@@ -22,17 +30,35 @@ export const Register = () => {
    <>
    
 	<div className="container">
-			<form onSubmit={(evento)=>{
-				evento.preventDefault();
-
-			}}/>
+			
 		<div className="row">
 			<div className="col-1">
 				
 	<div className="login-card" id="CONTAINERREGISTER">
 		<h2><img src={registro} style={{width:300}}/></h2>
 		<h3>Introduce Información</h3>
-		<form className="login-form">
+		<form className="login-form" onSubmit={(evento)=>{
+				evento.preventDefault();
+				let USER = (evento.target[0].value)
+				let MAIL = (evento.target[1].value)
+				let PASS = (evento.target[2].value)
+				let REPPASS = (evento.target[3].value)
+				let FONO = (evento.target[4].value)
+				let RUT = (evento.target[5].value)
+					if(PASS!=REPPASS){
+						alert("Contraseñas deben ser iguales")
+					}
+					if(USER=='' || MAIL=='' || PASS=='' || REPPASS==''){
+						alert("Debes completar los datos")
+					}else if(!validarTelefono(FONO)){
+						alert("Numero de telefono invalido")
+					}
+					else{
+						alert("Registrado")
+						navigate('/login')
+					}
+					
+			}}>
 			<input type="text" placeholder="Nombre de Usuario"/>
 			<input type="email" placeholder="Correo"/>
 			<input type="password" placeholder="Contraseña"/>
