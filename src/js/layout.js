@@ -8,7 +8,8 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Perfilprofe } from "./views/perfilprofe";
 import { Register } from "./views/register";
-
+import { Login } from "./views/login";
+import { RecoverPass } from "./views/recoverpass";
 
 import injectContext from "./store/appContext";
 
@@ -37,6 +38,8 @@ const Layout = () => {
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/perfilprofe" element={<Perfilprofe />} />
 						<Route path="/register" element={<Register />} />
+						<Route path="/login" element={<Login />} />
+						<Route path="/recover" element={<RecoverPass />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>

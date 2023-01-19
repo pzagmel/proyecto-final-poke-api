@@ -1,12 +1,22 @@
 import React from "react";
+
+import "../../styles/home.css";
+import tituloinfo from "../../img/TITULOINFO.png";
+import profesTitulo from "../../img/PROFESTITULO.png";
+import unete from "../../img/UNETETITULO.png";
 import pokebola from "../../img/pngegg 1.png";
 import personaltrainer1 from "../../img/personaltrainer1.gif";
 import kine from "../../img/kine.gif";
 import personaltrainer2 from "../../img/personaltrainer2.gif";
 import reto from "../../img/Tu Desafio.png";
+<<<<<<< HEAD
 import M1 from "../../img/Machop.png"
 import M2 from "../../img/Machoke.png"
 import M3 from "../../img/Machamp.png"
+=======
+
+
+>>>>>>> origin/perfilprofe
 import "../../styles/home.css";
 import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";
@@ -14,8 +24,15 @@ import { Procard } from "../component/card.js";
 import { CartHome } from "../component/cardhome";
 import { Calendario } from "../component/calendario";
 import { Comments }  from "../component/carousel";
+<<<<<<< HEAD
 import { InfoGym } from "../component/CardsINFOGYM";
 import { Link } from "react-router-dom";
+=======
+/* import { InfoGym } from "../component/CardsINFOGYM"; */
+import Cardservice from "../component/cardinfogym";
+import { Link } from "react-router-dom";
+
+>>>>>>> origin/perfilprofe
 
 
 
@@ -23,6 +40,8 @@ export const Home = () => {
   return (
     <>
     <CartHome/>
+
+    <div className="diseño1"></div>
      <div className="container">
       <div className="justify-content-center">
         <div className="row g-3 mb-2">
@@ -41,10 +60,16 @@ export const Home = () => {
             />
           </div>
           <div className="col-sm-4 ">
+<<<<<<< HEAD
           <Link to="/register"><Card 
             title={"Únete"}
              > img2={pokebola}</Card></Link>
             
+=======
+           <Link to="/register"> <Card 
+            title={"Únete"}
+            img2={pokebola} /></Link>
+>>>>>>> origin/perfilprofe
           </div>
         </div>
         <div className="row">
@@ -60,7 +85,8 @@ export const Home = () => {
             />
           </div>
         </div>
-        
+    
+        <div className="diseño2"> </div>
         <div className="row">
           <div className="col-sm-4">
             <Procard img={personaltrainer1} />
@@ -75,6 +101,7 @@ export const Home = () => {
         </div>
     </div>
     <div className="container">
+<<<<<<< HEAD
       <div>
       <InfoGym  ImgPokemon={M1} 
                 TituloInfoGYM={"Evoluciona"}
@@ -92,6 +119,12 @@ export const Home = () => {
       /> </div>
       </div>
 
+=======
+     
+        <Cardservice/>
+      
+      </div>
+>>>>>>> origin/perfilprofe
     <div> <Calendario/> </div>
 	<div> <Comments/>   </div> 		  
 
