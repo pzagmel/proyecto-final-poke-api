@@ -73,14 +73,17 @@ div.col-md-8{
 
 } */
 .aumentado1 {
-    width: 80%;
-    height: 250px;
+    width: 100%;
+    height: 100px;
 }
 .aumentado2 {
-    width: 23%;
-    height: 250px;
+    width: 80%;
+    height: 150px;
 }
 .aumentado3 {
-    width: 23%;
-    height: 250px;
+    width: 80%;
+    height: 150px;
+}
+button.btn.btn-primary.collapsed{
+    margin-top: 20px;
 }

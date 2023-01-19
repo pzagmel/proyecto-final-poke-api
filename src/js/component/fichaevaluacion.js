@@ -83,15 +83,18 @@ export const Fichaevaluacion = () => {
               <div className="PadreNivel1">
                 <div className="Nivel1">
                   <button
-                    className="btn btn-primary collapse-toggle"
+                    className="btn btn-primary"
                     type="button"
                     data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample1"
                     aria-expanded="false"
+                    aria-controls="collapseExample1"
+                    value="option1"
                   >
                     Nivel 1
                   </button>
-                  <div className="collapse" id="collapseExample">
-                    <div className="card card-bodyyy"></div>
+                  <div className="collapse" id="collapseExample1">
+                    <p>Levanta pesas entre los 5 y 10Kg / Ejercicio aeróbico de baja intensidad en bicicleta, trotadora o elíptica / Entrena 3 veces por semana</p>
                   </div>
                 </div>
               </div>
@@ -102,14 +105,16 @@ export const Fichaevaluacion = () => {
                       class="btn btn-primary"
                       type="button"
                       data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample1"
+                      data-bs-target="#collapseExample2"
                       aria-expanded="false"
-                      aria-controls="collapseExample1"
-                      value="option1"
+                      aria-controls="collapseExample2"
+                      value="option2"
                     >
                       Nivel 2
                     </button>
-                    <div className="collapse" id="collapseExample1"></div>
+                    <div className="collapse" id="collapseExample2">
+                      <p>Podrás levantar pesas entre los 10 y 20Kg / Ejercicio aeróbico de mediana intensidad / Entrena 4 veces por semana</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -120,14 +125,16 @@ export const Fichaevaluacion = () => {
                       class="btn btn-primary"
                       type="button"
                       data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample1"
+                      data-bs-target="#collapseExample3"
                       aria-expanded="false"
-                      aria-controls="collapseExample1"
-                      value="option1"
+                      aria-controls="collapseExample3"
+                      value="option3"
                     >
                       Nivel 3
                     </button>
-                    <div className="collapse" id="collapseExample1"></div>
+                    <div className="collapse" id="collapseExample3">
+                      <p>Podrás levantar pesas sobre los 20Kg / Ejercicio aeróbico de mediana/alta intensidad / Entrena 5 veces por semana</p>
+                    </div>
                   </div>
                 </div>
               </div>
