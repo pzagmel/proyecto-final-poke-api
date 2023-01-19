@@ -6,12 +6,8 @@ import LOGOPOKEGYM from "../../img/LOGOPOKEGYM.png";
 import { InfoGym } from "../component/CardsINFOGYM";
 import { Footer } from "../component/footer";
 import { Footergp } from "../component/footer2";
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-=======
-//import { Formik, Form, Field } from 'formik';
->>>>>>> origin/perfilprofe
 
 
 
@@ -70,40 +66,6 @@ export const Register = () => {
 	</div>
   
 	
-<<<<<<< HEAD
 </>
 )
 };
-=======
-	{/* <Formik
-  initialValues={{ email: '', password: '', confirmPassword: '' }}
-  onSubmit={values => {
-    console.log(values);
-  }}
->
-  {({ handleSubmit }) => (
-    <form onSubmit={handleSubmit}>
-      <div className="tu-diseño">
-          <label>
-            Email:
-            <Field type="email" name="email" required />
-          </label>
-          <br />
-          <label>
-            Password:
-            <Field type="password" name="password" required />
-          </label>
-          <br />
-          <label>
-            Confirm Password:
-            <Field type="password" name="confirmPassword" required />
-          </label>
-          <br />
-      </div>
-      <button type="submit">Sign Up</button>
-    </form>
-  )}
-</Formik> */}
-	</>
-);
->>>>>>> origin/perfilprofe

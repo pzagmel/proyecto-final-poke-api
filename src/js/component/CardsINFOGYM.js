@@ -16,12 +16,7 @@ export const InfoGym = ({
     }) => {
     return (
     <div>
-               {/*  <img src={CirculoFooter1}/>
-				<img src={CirculoFooter2}/>
-				<img src={CirculoFooter3}/>
-				<img src={CirculoFooter4}/>
-     */}
-<<<<<<< HEAD
+        
     <div className="" id="Padre">
         <div>
         <div id="PrimeraRow" className="row-4">
@@ -52,7 +47,7 @@ export const InfoGym = ({
     <img id="img" src={pokebola}/>
 
 
->>>>>>> origin/perfilprofe
+
     </div>
     
 
