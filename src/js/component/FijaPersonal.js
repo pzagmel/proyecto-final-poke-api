@@ -15,16 +15,16 @@ export const FichaPersonal = () => {
                 <div className="CuadroFicha">
             <div className="Ficha">
            
-            <ul className="ListaCompleta">
-            {profesionales.map(profesional => (
-                <li id="ListaTOTAL"> 
-                    {profesional.nombre} 
-                    {profesional.apellido} 
-                    {profesional.info} 
-                    {profesional.horario}
-                    </li>
-                ))} 
-                </ul>
+            {profesionales.map(profesional => {
+        return (
+            <ul id="ListaTOTAL">
+                <li>Nombre:  {profesional.nombre}   </li>
+                <li>Apellido:{profesional.apellido} </li>
+                <li>Cargo:   {profesional.info}     </li>
+                <li>Horario: {profesional.horario}  </li>
+            </ul>
+        )})} 
+                
                 </div>  
             </div>
             </div>
@@ -34,3 +34,5 @@ export const FichaPersonal = () => {
 );
     }
 
+
+    

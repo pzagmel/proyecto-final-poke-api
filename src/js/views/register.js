@@ -24,9 +24,9 @@ export const Register = () => {
   
    <>
    
-	<div className="container">
+	<div className="container" id="REGISTERHIJOMAYOR">
 			
-		<div className="row">
+		<div className="row" >
 			<div className="col-1">
 				
 	<div className="login-card" id="CONTAINERREGISTER">
