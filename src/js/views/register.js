@@ -6,7 +6,6 @@ import LOGOPOKEGYM from "../../img/LOGOPOKEGYM.png";
 import { InfoGym } from "../component/CardsINFOGYM";
 import { Footer } from "../component/footer";
 import { Footergp } from "../component/footer2";
-import { Formik, Form, Field } from 'formik';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
@@ -18,11 +17,7 @@ export const Register = () => {
 	const [usuario,setUsuario] = useState('');
 	let navigate = useNavigate();
 
-	function validarTelefono(numtelefon) {
-		var nfono = /^\d{8}$/;
-		return nfono.test(numtelefono);
-	  }
-	
+
 	
 	return(	
   
@@ -39,19 +34,17 @@ export const Register = () => {
 		<h3>Introduce Información</h3>
 		<form className="login-form" onSubmit={(evento)=>{
 				evento.preventDefault();
-				let USER = (evento.target[0].value)
-				let MAIL = (evento.target[1].value)
-				let PASS = (evento.target[2].value)
-				let REPPASS = (evento.target[3].value)
-				let FONO = (evento.target[4].value)
-				let RUT = (evento.target[5].value)
+				let USER = 		(evento.target[0].value)
+				let MAIL = 		(evento.target[1].value)
+				let PASS = 		(evento.target[2].value)
+				let REPPASS = 	(evento.target[3].value)
+				let FONO = 		(evento.target[4].value)
+				let RUT = 		(evento.target[5].value) /* AUN NO SE VERIFICA */
 					if(PASS!=REPPASS){
 						alert("Contraseñas deben ser iguales")
 					}
 					if(USER=='' || MAIL=='' || PASS=='' || REPPASS==''){
 						alert("Debes completar los datos")
-					}else if(!validarTelefono(FONO)){
-						alert("Numero de telefono invalido")
 					}
 					else{
 						alert("Registrado")
@@ -63,7 +56,7 @@ export const Register = () => {
 			<input type="email" placeholder="Correo"/>
 			<input type="password" placeholder="Contraseña"/>
 			<input type="password" placeholder="Repetir Contraseña"/>
-			<input type="telefono" placeholder="+569"/>
+			<input type="elefono" placeholder="+569 12345678" pattern="\x2b[0-9]+" required></input>
 			<input type="Rut" placeholder="Rut"/>
 			<button type="submit">CREAR</button>
 		</form>
