@@ -1,6 +1,29 @@
 import React from "react";
 import Machop from "../../img/Machop.png";
 
+window.onload = function () {
+  const botonNivel1 = document.querySelector(".Nivel1");
+  const contenedor = document.querySelector(".PadreNivel1");
+
+  const botonNivel2 = document.querySelector(".Nivel2");
+  const contenedor1 = document.querySelector(".PadreNivel2");
+
+  const botonNivel3 = document.querySelector(".Nivel3");
+  const contenedor2 = document.querySelector(".PadreNivel3");
+
+  botonNivel1.addEventListener("click", () => {
+    contenedor.classList.toggle("aumentado1");
+  });
+
+  botonNivel2.addEventListener("click", () => {
+    contenedor1.classList.toggle("aumentado2");
+  });
+
+  botonNivel3.addEventListener("click", () => {
+    contenedor2.classList.toggle("aumentado3");
+  });
+};
+
 export const Fichaevaluacion = () => {
   return (
     <div className="ejercicioscard mb-3 ">
@@ -56,101 +79,58 @@ export const Fichaevaluacion = () => {
         <div className="cardejercicios">
           <h5 className="card-titlejercicios">Tu Plan De Entrenamiento</h5>
           <div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios"
-                id="exampleRadios1"
-                value="option1"
-                checked
-              />
-              <label class="form-check-label" for="exampleRadios1">
-                Nivel 1
-              </label>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios"
-                id="exampleRadios2"
-                value="option2"
-                checked
-              />
-              <label class="form-check-label" for="exampleRadios2">
-                Nivel 2
-              </label>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios"
-                id="exampleRadios3"
-                value="option3"
-                cheked
-              />
-              <label class="form-check-label" for="exampleRadios3">
-                Nivel 3
-              </label>
-            </div>
-            <div>
-              <button
-                class="btn btn-primary"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseExample"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-              >
-                Nivel 1
-              </button>
-              <div className="collapse" id="collapseExample">
-                <div className="card card-bodyyy">
-                  Levantarás pesas de entre 5 y 10kg
+            <div className="row">
+              <div className="PadreNivel1">
+                <div className="Nivel1">
+                  <button
+                    className="btn btn-primary collapse-toggle"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    Nivel 1
+                  </button>
+                  <div className="collapse" id="collapseExample">
+                    <div className="card card-bodyyy"></div>
+                  </div>
                 </div>
               </div>
-              </div>
-              <div>
-              <button
-                class="btn btn-primary"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseExample1"
-                aria-expanded="false"
-                aria-controls="collapseExample1"
-                value="option1"
-                disabled
-              >
-                Nivel 2
-              </button>
-              <div className="collapse" id="collapseExample1">
-                <div className="card card-bodyyy">
-                  Levantarás pesas de entre 10 y 20kg
+              <div className="PadreNivel2">
+                <div className="Nivel2">
+                  <div>
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseExample1"
+                      aria-expanded="false"
+                      aria-controls="collapseExample1"
+                      value="option1"
+                    >
+                      Nivel 2
+                    </button>
+                    <div className="collapse" id="collapseExample1"></div>
+                  </div>
                 </div>
               </div>
-              
-            </div>
-            <div>
-              <button
-                class="btn btn-primary"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseExample2"
-                aria-expanded="false"
-                aria-controls="collapseExample2"
-                value="option2"
-                disabled
-              >
-                Nivel 3
-              </button>
-              <div className="collapse" id="collapseExample2">
-                <div className="card card-bodyyy">
-                  Levantarás pesas sobre los 20kg, estás mamadisimo!!
+              <div className="PadreNivel3">
+                <div className="Nivel3">
+                  <div>
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseExample1"
+                      aria-expanded="false"
+                      aria-controls="collapseExample1"
+                      value="option1"
+                    >
+                      Nivel 3
+                    </button>
+                    <div className="collapse" id="collapseExample1"></div>
+                  </div>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>

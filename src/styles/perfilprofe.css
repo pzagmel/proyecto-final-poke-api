@@ -61,3 +61,26 @@ div#cardtextretro{
 div.col-md-8{
     margin-top:65px;
 }
+
+/* .ContenedorNivel1{
+    border:0px;
+    margin:10px;
+    padding:20px;
+    background-color: #1F69D8;
+    width: 40%;
+    height: 40%;
+    border-radius: 20px;
+
+} */
+.aumentado1 {
+    width: 80%;
+    height: 250px;
+}
+.aumentado2 {
+    width: 23%;
+    height: 250px;
+}
+.aumentado3 {
+    width: 23%;
+    height: 250px;
+}
