@@ -23,7 +23,7 @@ export const Navbar = () => {
 					</Link>
 			  	</li>
 			  	<li className="nav-item d-none d-sm-block">
-					<Link className="nav-link" to="/">
+					<Link className="nav-link" to="/login">
 				 		 <img className="img-icon" src={iconLogin} alt="Icono usuario" />
 					</Link>
 			 	 </li>
