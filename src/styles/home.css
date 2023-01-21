@@ -81,26 +81,39 @@ div.carousel.slide{
 
 /* diseño de calendario */
 
-div.container.calen{
-    display: block;
-    align-items: center;
-    justify-content: center;
+p.diashoras{
+    margin: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+tbody.poketablaejercicio{
+    background: #e9eff8a6;
+}
+table.tablepoke{
+    display: block; 
+    text-shadow: black 0.1em 0.1em 0.2em;
+    border: 5px solid #04a7d08c;
 }
 
-table.tablacalen{
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-}
+td {
+    background-color: #c6daf8;
+    color: #ffff00;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Pokemon Solid', sans-serif;
+
+  }
+
 
 /* calendario en media disminuira su tamaña   cuando las pantallas sean mas pequeñas */
-/* @media screen and (max-width: 1300px) {
-    table.tablacalen{
-        
-    } */
-    
 @media screen and (max-width: 1000px) {
-    table.tablacalen{
+    div.calendario{
+        font-size: medium;
+    } 
+} 
+    
+@media screen and (max-width: 900px) {
+    table.tablepoke{
         display: none;
     }
     }
@@ -131,10 +144,13 @@ caption {
     width: 100px;
   }
 /* finalde calendario*/  
-  td.hora{
+  /* td.hora{
     width: 1000px;
+  th.row.horariocalendario{
+    font-size: 20px;
   }
-
+ ERROR MI MERGE*/
+ 
   div.calendario{
     display: flex;
     justify-content: center;
@@ -179,8 +195,18 @@ div#exampleModal.modal.fade.show{
 }
 div.modal-content{
     width: 1500px;
-    height: 1000px;
+    height: 900px;
 }
+h1.titulodemodalejercicio{
+    text-shadow: black 0.1em 0.1em 0.2em; 
+}
+
+button.btn.btn-primary.modaldeejercicio{
+    background-color: #ffff00;
+    text-shadow: black 0.1em 0.1em 0.2em; 
+   font-size: 30px;
+}
+
 /* contener total del modal de ejercicio */
 
 div.tituloejercicio{
@@ -253,6 +279,8 @@ div.banner{
     background-color: black;
 }
 
+
+
 /* diseño1 div del home */
 div.diseño1{
     width: 100%;
@@ -266,7 +294,7 @@ div.diseño1{
 
 
 div.diseño2{
-    width: 2200px;
+    width: 1970px;
     height: 500px;
     background-color: rgba(0, 153, 255, 0.745);
     position: absolute;
@@ -287,7 +315,7 @@ div.diseño2{
     }
 
  div.diseño3{
-    width: 2200px;
+    width: 1970px;
     height: 205px;
     background-color: rgba(0, 153, 255, 0.745);
     margin-left: -500px;

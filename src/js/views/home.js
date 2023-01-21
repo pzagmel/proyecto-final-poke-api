@@ -81,6 +81,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
+
       <div className="container">
         <div className="container">
           <div>
@@ -112,7 +113,7 @@ export const Home = () => {
           </div>
         </div>
         <Cardservice />
-      </div>
+      
       <div>
         {" "}
         <Calendario />{" "}
@@ -121,6 +122,10 @@ export const Home = () => {
         {" "}
         <Comments />{" "}
       </div>
-    </>
+    
+    <div> <Calendario/> </div>
+	<div className="comentariocliente"> <Comments/>   </div> 		  
+  </div>
+</> 
   );
 };
