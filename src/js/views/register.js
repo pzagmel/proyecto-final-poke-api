@@ -24,7 +24,7 @@ export const Register = () => {
 			<div className="col-1">
 				
 	<div className="login-card" id="CONTAINERREGISTER">
-		<h1 className="registro">Registro</h1>
+		<h1 className="registro">registro</h1>
 		<h3 className="introinfo">Introduce Información</h3>
 		<form className="login-form" onSubmit={(evento)=>{
 				evento.preventDefault();
