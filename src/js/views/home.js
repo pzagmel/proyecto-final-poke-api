@@ -22,7 +22,6 @@ import { Procard } from "../component/card.js";
 import { CartHome } from "../component/cardhome";
 import { Calendario } from "../component/calendario";
 import { Comments } from "../component/carousel";
-/* import { InfoGym } from "../component/CardsINFOGYM"; */
 import Cardservice from "../component/cardinfogym";
 import { Link } from "react-router-dom";
 import { InfoGym } from "../component/CardsINFOGYM";
@@ -32,7 +31,7 @@ import { InfoGym } from "../component/CardsINFOGYM";
 
 export const Home = () => {
 return(
-<div>
+<>
 <CartHome/>
 
 <div className="diseño1"></div>
@@ -88,30 +87,12 @@ description3={"-Plancha de 1 minuto"}
 </div>
 </div>
 <div className="container">
+<Cardservice/>
+ </div>
+ 
 
-
-<div className="container">
-      <div>
-      <InfoGym  ImgPokemon={M1} 
-                TituloInfoGYM={"Evoluciona"}
-                DescripcionInfoGYM={"En este gimnasio podrás hacer ejercicio y ver tu evolución igual a tu pokemon favorito"}
-      /> </div>
-      <div>
-      <InfoGym  ImgPokemon={M2} 
-                TituloInfoGYM={"Ejercita"} 
-                DescripcionInfoGYM={"Dependiendo del peso que vayas aumentando y tu constancia"}
-      /> </div>
-      <div>
-      <InfoGym  ImgPokemon={M3} 
-                TituloInfoGYM={"Se tu mejor versión"}
-                DescripcionInfoGYM={"Podrás convertirte en tu pokemon favorito, siendo fuerte y teniendo un estado física ideal"}
-      /> </div>
-      </div>
-   </div>   
-   <div><Cardservice/> </div>
     <div> <Calendario/> </div>
-	<div className="comentariocliente"> <Comments/>   </div> 		  
-
-</div>
+	<div className="comentariocliente"> <Comments/>   </div> 
+   </>		  
 )
 };

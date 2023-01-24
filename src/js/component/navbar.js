@@ -41,8 +41,10 @@ export const Navbar2 = () => {
       <button className="button-menu" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? "Cerrar Menu" : "Abrir Menu"}
       </button>
+	 
       {menuOpen && (
-		<div className="ul-li">
+		
+		<div className="ul-li menu">
         <ul>
           <li>
             <a href="#">Ir al Calendario</a>
