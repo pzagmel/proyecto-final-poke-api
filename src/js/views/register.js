@@ -16,16 +16,16 @@ export const Register = () => {
 	return(	
   
   
-   <>
+   <div>
    
-	<div className="container" id="REGISTERHIJOMAYOR">
+	<div className="container" id="REGISTERHIJOMAYOR" style={{ margin: 30, marginrigth:20 }}>
 			
 		<div className="row" >
 			<div className="col-1">
 				
 	<div className="login-card" id="CONTAINERREGISTER">
-		<h2><img src={registro} style={{width:300}}/></h2>
-		<h3>Introduce Información</h3>
+		<h1 className="registro">Registro</h1>
+		<h3 className="introinfo">Introduce Información</h3>
 		<form className="login-form" onSubmit={(evento)=>{
 				evento.preventDefault();
 				let USER = 		(evento.target[0].value)
@@ -60,6 +60,6 @@ export const Register = () => {
 	</div>
   
 	
-</>
+</div>
 )
 };
