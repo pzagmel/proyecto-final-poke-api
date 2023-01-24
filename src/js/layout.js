@@ -17,8 +17,6 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Navbar2 } from "./component/navbar";
-
-import { Footer } from "./component/footer";
 import { Footergp } from "./component/footer2";
 
 
