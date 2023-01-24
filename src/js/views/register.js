@@ -5,11 +5,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
 
-import { InfoGym } from "../component/CardsINFOGYM";
-import { Footer } from "../component/footer";
-import { Footergp } from "../component/footer2";
-import { Formik, Form, Field } from 'formik';
-
 export const Register = () => {
 	const [pass,setPass] = useState('');
 	const [email,setEmail] = useState('');
