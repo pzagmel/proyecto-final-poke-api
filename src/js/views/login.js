@@ -25,14 +25,14 @@ body: raw,
 redirect: 'follow'
 };
 
-fetch("https://3000-lukasoy-backendpokegym-h2fgbcggp3w.ws-us83.gitpod.io/profesor", requestOptions)
+fetch("https://3000-lukasoy-backendpokegym-h2fgbcggp3w.ws-us83.gitpod.io/login", requestOptions)
 .then(response => response.text())
 .then(result => console.log(result))
 .catch(error => console.log('error', error));
   }
 
    useEffect(() => {
-    fetch("https://3000-lukasoy-backendpokegym-h2fgbcggp3w.ws-us83.gitpod.io/profesor")
+    fetch("https://3000-lukasoy-backendpokegym-h2fgbcggp3w.ws-us83.gitpod.io/login")
       .then((data) => data.json())
       .then((response) => setLogin(response));
   }, []);
@@ -55,10 +55,11 @@ useEffect(()=>{
             {login.map((item) => (
               <React.Fragment key={item.email}>
                <input
-                  type="email"
+                  type="text"
                   placeholder={`email: ${item.email}`}
                   required
-                /> <input
+                />
+                <input
                 type="password"
                 placeholder={`Contraseña: ${item.password}`}
                 required

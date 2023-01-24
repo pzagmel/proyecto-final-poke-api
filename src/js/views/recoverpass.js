@@ -3,8 +3,6 @@ import "../../styles/recuperar.css";
 import pokebola from "../../img/POKEBOLA.png";
 import loginImage from "../../img/login.png";
 
-
-
 export const RecoverPass = () => (
   <>
     <div className="container login-page">
