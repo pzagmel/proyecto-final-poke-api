@@ -1,0 +1,60 @@
+/* css de iconos calendario para el modal */
+ 
+div.iconodeportivo{
+    
+    width: 3000px;
+    margin-top: 50px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.col-sm-6.col-md-9.superioricono{
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-left: 300px;
+      margin-top: -300px;
+      
+ }
+ div.container.iconoimgsuperior{
+    display: inline; 
+ }
+ h1.titulodeiconosdeportivo{
+    display: inline;
+    margin-top: 50px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-size: 70px;
+    font-weight: 800;
+
+ }
+
+ div.col-6.col-md-3.icono{
+    margin-top:50px;
+    margin-bottom: 50px;
+ }
+ 
+ p.informaciondelicono{
+   font-size: 50px;
+   font-weight: 500;
+   color:#333;
+   text-shadow: rgb(212, 216, 181) 0.1em 0.1em 0.2em;
+   margin-bottom: 30px;
+   margin-left: 20px;
+ }
+
+ div.imgicono{
+   background-color: rgba(0, 0, 255, 0.444);
+   border-radius: 100px;
+   width: 100px;
+   margin: 13px;
+ }
+
+ div#iconoimgsuperior.row{
+   width: 100px;
+   margin-right: 20px;
+   margin-top: -20px;
+ } 
+ div#iconoimginferior.row{
+   width: 100px;
+   margin-right: 20px;
+   margin-top: -20px;
+   margin-left: 30px;
+ } 

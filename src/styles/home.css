@@ -7,60 +7,317 @@ p#reto.card-text{
     font-size: 2em;
     font-family: 'Pokemon Solid', sans-serif;
     color:yellow;
+    text-shadow: black 0.1em 0.1em 0.2em
+    
 }
 h5#titlereto.card-title{
     color: yellow;
     font-size:4em;
     font-family: 'Pokemon Solid', sans-serif;
+    text-shadow: black 0.1em 0.1em 0.2em
 }
 img.card-img{
     height:430px;
 }
+
 
 /* diseño cards iniciales info, profes y únete  */
 h5.card-title.text-center{
     font-family: 'Pokemon Solid', sans-serif;
     font-size:4em;
     color: yellow;
+    text-shadow: black 0.1em 0.1em 0.2em
 }
 p.card-text.text-center{
     font-family: 'Pokemon Solid', sans-serif;
     font-size:1em;
     color: white;
+    text-shadow: black 0.1em 0.1em 0.2em
 }
 img#pokebola text-center{
     width: 10px;
     height: 10px;
     justify-content: center;
+    
+}
+img#pokebola.text-center:hover{
+    transform: translate(-20px);
+    
 }
 
+div.col-sm-4{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    transition: ease all .3s;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 0 20px 10px rgba(25, 25, 25, .1);
+    border-radius: 20px;
+}
+div.col-sm-4:hover{
+    transform: translate(-10px);
+}
+
+div.col{
+    margin: 50px;
+    transition: ease all .3s;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 0 20px 10px rgba(25, 25, 25, .1);
+    border-radius: 20px;
+
+}
+div.col:hover{
+    transform: translate(-10px);
+}
 
 /* cart principal home */
 div.carousel.slide{
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 /* se da margen al final para separar cart de info profes y unete */
 
+
+
 /* diseño de calendario */
+
+p.diashoras{
+    margin: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+tbody.poketablaejercicio{
+    background: #e9eff8a6;
+}
+table.tablepoke{
+    display: block; 
+    text-shadow: black 0.1em 0.1em 0.2em;
+    border: 5px solid #04a7d08c;
+}
+
+td {
+    background-color: #c6daf8;
+    color: #ffff00;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Pokemon Solid', sans-serif;
+
+  }
+
+
+/* calendario en media disminuira su tamaña   cuando las pantallas sean mas pequeñas */
+@media screen and (max-width: 1000px) {
+    div.calendario{
+        font-size: medium;
+    } 
+} 
+    
+@media screen and (max-width: 900px) {
+    table.tablepoke{
+        display: none;
+    }
+    }
+    
+
 caption {
     padding: 20px;
     font-size: 28px;
-    color: #3931cee3;
+    color: #1a01ffae;
     font-family: 'Pokemon Solid', sans-serif;
   }
   
   th {
-    background-color: #ffca3ac1;
-    color: #5524c8e3;
+    background-color: #ffff00;
+    color: #1a01ffae;
     font-family: 'Pokemon Solid', sans-serif;
     text-align: center;
+    margin-left: -100px;
   }
   
   td {
-    background-color: #5524c8e3;
-    color: #ffca3a;
+    background-color: #0d6efd;
+    color: #ffff00;
     padding: 20px;
     text-align: center;
     font-family: 'Pokemon Solid', sans-serif;
+    height: 100px;
+    width: 100px;
+  }
+  th.row.horariocalendario{
+    font-size: 20px;
+    
+  }
+
+  div.calendario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 50px;
+  }
+  h1.titulocalendario{
+    font-size: 100px;
+    font-weight: 600;
+    color: #ffff00;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    margin: 40px;
+  }
+  img.pokecale{
+    border-radius: 50%;
+   font-size: 150px;
+   animation-name: girarb;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   display: inline-block;
+  }
+
+  @keyframes girarb{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
   }
 /* finalde calendario*/  
+
+
+/* comienzo diseño de modal de calendario de ejercicio */
+div#exampleModal.modal.fade.show{
+    padding-right: 1000px;
+    display: block;
+}
+div.modal-content{
+    width: 1500px;
+    height: 900px;
+}
+h1.titulodemodalejercicio{
+    text-shadow: black 0.1em 0.1em 0.2em; 
+}
+
+button.btn.btn-primary.modaldeejercicio{
+    background-color: #ffff00;
+    text-shadow: black 0.1em 0.1em 0.2em; 
+   font-size: 30px;
+}
+
+/* contener total del modal de ejercicio */
+
+div.tituloejercicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:50px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.infoejercicio{
+    margin-right: 80px;
+    margin-bottom: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    
+}
+div.infoejerciciolvl{
+    margin-left: 100px;
+    margin-bottom: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.infoejercicioFT{
+    margin-left: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.infoejercicio1{
+    margin-right: 60px;
+    margin-left: 30px;
+    margin-top: -10px;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.infoejercicio1m{
+    margin-left: -50px;
+    margin-right: 200px;
+    margin-top: -10px;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.infoejercicio1t{  
+    margin-right: 180px;
+    margin-top: -10px;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.infoejercicio1g{
+    margin-left: 150px;
+    margin-top: -10px;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+div.tipoejercicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+hr{
+    border: 5px solid #0000008c;
+    width: 100%;
+    margin-top: -20px;
+}
+
+div.banner{
+    width: 1455px;
+    height: 150px;
+    background-color: black;
+}
+
+
+
+/* diseño1 div del home */
+div.diseño1{
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 153, 255, 0.745);
+    position: absolute;
+    z-index: -1000000;
+    margin-top: 20px ;
+    display: block;
+}
+
+
+div.diseño2{
+    width: 1970px;
+    height: 500px;
+    background-color: rgba(0, 153, 255, 0.745);
+    position: absolute;
+    z-index: -1000000;
+    margin-top: 20px ;
+    margin-left: -500px;
+    display: block;
+  
+} 
+
+@media screen and (max-width: 1000px) {
+    div.diseño2{
+       display: none; 
+    }
+    div.diseño1{
+        display: none;
+    }
+    }
+
+ div.diseño3{
+    width: 1970px;
+    height: 205px;
+    background-color: rgba(0, 153, 255, 0.745);
+    margin-left: -500px;
+    margin-top: 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }

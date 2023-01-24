@@ -2,9 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
 /* css de footer2 */
 *{
-    margin:0;
-    padding:0; 
-    box-sizing: border-box;
+    
     font-family: 'Pokemon Solid', sans-serif;
 }
 .footer{
@@ -13,7 +11,6 @@
     display: -ms-flex;
     display: -o-flex;
     display:flex;
-    position: absolute;
     flex-flow: row wrap;
     padding: 50px;
     color: rgb(202, 239, 253);
@@ -22,7 +19,7 @@
 .footer > *{
     flex: 1 100%;
     
-}
+} 
 .footer-left{
     margin-right: 1.25em;
     margin-bottom:2em;

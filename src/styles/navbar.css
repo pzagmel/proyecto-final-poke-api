@@ -1,0 +1,88 @@
+
+
+.iconos{
+    justify-content: space-between;
+    width: 20%;
+    margin: 5px;
+    background-color: #1f69d8;
+    border-radius: 8px;
+}
+
+.logo-gym{
+    max-width: 30%;
+}
+
+.nav-style{
+    background-color: #103873;
+    justify-content: space-between;
+}
+
+.button-menu{
+  background-color: #1f69d8;
+  align-self: flex-end;
+  width: 30%;
+  border: 2px solid black;
+}
+
+.mobile-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+  background-color: #103873;
+ 
+}
+
+.ul-li{
+  background-color: #1f69d8;
+  border: 2px solid black;
+  width: 30%;
+  align-self: flex-end;
+}
+
+.ul-li > ul{
+  text-align:left;
+}
+
+li > a{
+  color: black;
+}
+
+li > a:hover{
+  color: gray;
+}
+
+@media (max-width: 576px) {
+  .nav-style {
+    display: none;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
+@media (min-width: 577px) {    
+    .mobile-menu{
+      display: none !important;
+    }
+  }
+
+@media (max-width: 991px) and (min-width: 577px) {
+    .iconos {
+      display: none;
+    }
+  }
+
+  h1.titulonavbar{
+    color: #ffff00;
+    font-size: 50px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    
+  }
+
+  div.titupok{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
