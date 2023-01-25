@@ -50,7 +50,7 @@ export const Register = () => {
 			<input type="email" placeholder="Correo"/>
 			<input type="password" placeholder="Contraseña"/>
 			<input type="password" placeholder="Repetir Contraseña"/>
-			<input type="elefono" placeholder="+569 12345678" pattern="\x2b[0-9]+" required></input>
+			<input type="Telefono" placeholder="+569 12345678" pattern="\x2b[0-9]+" required></input>
 			<input type="Rut" placeholder="Rut"/>
 			<button type="submit">CREAR</button>
 		</form>
