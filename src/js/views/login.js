@@ -25,14 +25,14 @@ body: raw,
 redirect: 'follow'
 };
 
-fetch("https://3000-lukasoy-backendpokegym-h2fgbcggp3w.ws-us83.gitpod.io/login", requestOptions)
+fetch("https://3000-lukasoy-backendpokegym-h2fgbcggp3w.ws-us83.gitpod.io/profesor", requestOptions)
 .then(response => response.text())
 .then(result => console.log(result))
 .catch(error => console.log('error', error));
   }
 
    useEffect(() => {
-    fetch("https://3000-lukasoy-backendpokegym-h2fgbcggp3w.ws-us83.gitpod.io/login")
+    fetch("https://3000-lukasoy-backendpokegym-h2fgbcggp3w.ws-us83.gitpod.io/profesor")
       .then((data) => data.json())
       .then((response) => setLogin(response));
   }, []);
