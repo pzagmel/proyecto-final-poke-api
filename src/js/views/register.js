@@ -1,10 +1,8 @@
 import React from "react";
 import "../../styles/register.css";
-
 import { useNavigate } from "react-router";
-;
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router";
+
 
 
 

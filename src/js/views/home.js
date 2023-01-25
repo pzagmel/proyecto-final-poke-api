@@ -1,18 +1,10 @@
 import React from "react";
-
 import "../../styles/home.css";
-import tituloinfo from "../../img/TITULOINFO.png";
-import profesTitulo from "../../img/PROFESTITULO.png";
-import unete from "../../img/UNETETITULO.png";
 import pokebola from "../../img/pngegg 1.png";
 import personaltrainer1 from "../../img/personaltrainer1.gif";
 import kine from "../../img/kine.gif";
 import personaltrainer2 from "../../img/personaltrainer2.gif";
 import reto from "../../img/Tu Desafio.png";
-
-
->>>>>>>>> Temporary merge branch 2
-
 import "../../styles/home.css";
 import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";

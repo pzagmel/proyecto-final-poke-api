@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/login.css";
-import loginImage from "../../img/login.png";
+
 import pokebola from "../../img/POKEBOLA.png";
 import { Link } from "react-router-dom";
 
@@ -48,9 +48,9 @@ useEffect(()=>{
       <div className="row">
         <div className="col-1 login-style">
           <div className="login-card">
-            <h2>
-              <img src={loginImage} style={{ width: 300 }} />
-            </h2>
+            <h1 className="titulologin">
+              LOGIN
+            </h1>
             <form className="login-form">
             {login.map((item) => (
               <React.Fragment key={item.email}>
