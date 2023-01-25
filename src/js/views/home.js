@@ -11,6 +11,7 @@ import personaltrainer2 from "../../img/personaltrainer2.gif";
 import reto from "../../img/Tu Desafio.png";
 
 
+>>>>>>>>> Temporary merge branch 2
 
 import "../../styles/home.css";
 import { Card } from "../component/card.js";

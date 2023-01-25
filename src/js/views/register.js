@@ -1,8 +1,11 @@
 import React from "react";
 import "../../styles/register.css";
-import registro from "../../img/registro.png";
+
+import { useNavigate } from "react-router";
+;
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
+
 
 
 export const Register = () => {
@@ -52,6 +55,11 @@ export const Register = () => {
 			<input type="password" placeholder="Repetir Contraseña"/>
 			<input type="Telefono" placeholder="+569 12345678" pattern="\x2b[0-9]+" required></input>
 			<input type="Rut" placeholder="Rut"/>
+			<h3>eres profesor?</h3>
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            <label class="form-check-label" for="flexCheckDefault"/>
+			
+			
 			<button type="submit">CREAR</button>
 		</form>
 		</div>

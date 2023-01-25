@@ -11,6 +11,7 @@ export const Login = ({email,password}) => {
   /* login profesor */
 const [login, setLogin] = useState([]);
   
+
 function Actualizar() {
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
@@ -42,9 +43,6 @@ useEffect(()=>{
 /* final login profesor */
 
 
-
-
-
   return(
     <div className="container login-page">
       <div className="row">
@@ -54,8 +52,20 @@ useEffect(()=>{
               <img src={loginImage} style={{ width: 300 }} />
             </h2>
             <form className="login-form">
-              <input type="text" placeholder="Nombre de Usuario"  required /> 
-              <input type="password" placeholder="Contraseña" required />
+            {login.map((item) => (
+              <React.Fragment key={item.email}>
+               <input
+                  type="text"
+                  placeholder={`email: ${item.email}`}
+                  required
+                />
+                <input
+                type="password"
+                placeholder={`Contraseña: ${item.password}`}
+                required
+              />
+              </React.Fragment>
+            ))}
               <Link to="/recover" className="link link-style">
                   ¿Olvidaste tu contraseña?
                 </Link>
