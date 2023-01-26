@@ -72,7 +72,7 @@ class Login extends React.Component {
             <h1 className="titulologin">
               LOGIN
             </h1>
-            
+            <div className="background-form">
             <form onSubmit={this.manejoSubmit} >
             
             <input type="text"  className="fadeIn second" name="email" onChange={this.manejadorChange} placeholder="login"/>
@@ -89,11 +89,8 @@ class Login extends React.Component {
                   ¿No tienes cuenta? Registrate
                 </Link>
               </div>
-            
+            </div>
           </div>
-          <h5>
-           
-          </h5>
         </div>
       </div>
     </div>
