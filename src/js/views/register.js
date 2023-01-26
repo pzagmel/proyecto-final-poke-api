@@ -7,46 +7,13 @@ import { useState, useEffect } from "react";
 
 
 export const Register = () => {
-	const [pass,setPass] = useState('');
-	const [email,setEmail] = useState('');
-	const [usuario,setUsuario] = useState('');
-	const [fono,setFono]= useState('');
-	const [rut,setrut]=useState()
-	let navigate = useNavigate();
-
-	const [registro, setregistro] = useState([]);
-  
-
-	function Actualizar() {
-	var myHeaders = new Headers();
-	myHeaders.append("Content-Type", "application/json");
-	
-	var raw = JSON.stringify({});
-	
-	var requestOptions = {
-	method: 'GET',
-	headers: myHeaders,
-	body: raw,
-	redirect: 'follow'
-	};
-	
-	fetch("https://3000-lukasoy-backendpokegym-h2fgbcggp3w.ws-us83.gitpod.io/register", requestOptions)
-	.then(response => response.text())
-	.then(result => console.log(result))
-	.catch(error => console.log('error', error));
-	  }
-	
-	   useEffect(() => {
-		fetch("https://3000-lukasoy-backendpokegym-h2fgbcggp3w.ws-us83.gitpod.io/register")
-		  .then((data) => data.json())
-		  .then((response) => setLogin(response));
-	  }, []);
+	const[register, setregister]=useState([]);
 	useEffect(()=>{
-	  Actualizar();
-	}, [login]);
-	
-	/* final login profesor */
-	
+		fetch('https://3000-lukasoy-backendpokegym-45s657elbj8.ws-us84.gitpod.io/register')
+		.then(data=>data.json())
+		.then(response=>setlista)
+
+	},[])
 
 	
 	return(	

@@ -35,18 +35,25 @@ class Login extends React.Component {
 
     //enviamos los datos a la Apiurl que esta la ruta en el services y ademas los datos del formulario
     manejadorBoton=()=>{
-        let url=  "https://3000-lukasoy-backendpokegym-pgpg4zwa6kn.ws-us84.gitpod.io/login";
+        let url=  "https://3000-lukasoy-backendpokegym-45s657elbj8.ws-us84.gitpod.io/login";
         axios.post(url,this.state.form)
         .then(response =>{
-            if(response.data.status === 200)
-            {
-                console.log(response);
+            if(response.status === 200)
+            {   console.log(response.data.token);
+                const cookie = new Cookies();
+               cookie.set('token',response.data.token ,{path: '/'});
+                window.location.href='/perfilprofe';     
+            }
             
-               
-            }else
+           else if(response.status === 200)
+            {   console.log(response.data.token);
+                const cookie = new Cookies();
+               cookie.set('token',response.data.token ,{path: '/'});
+                window.location.href='/perfilcliente';    
+            }
+            
+            else
             {
-
-                console.log(response.data);
                 this.setState({
                     error : true,
                     errorMesg: response.data.message
@@ -100,7 +107,7 @@ class Login extends React.Component {
 
             {this.state.error === true &&
            
-                <div className="alert alert-danger" role="alert">
+                <div className="alert alert-danger" role="alert"> no se inicio
                         {this.state.errorMesg}
                 </div>
             }
