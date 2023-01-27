@@ -1,6 +1,8 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+
+			nombre:"",
 			demo: [
 				{
 					title: "FIRST",
@@ -19,19 +21,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
-			loadSomeData: () => {
+			login: (email, pass) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
 
-            register:(nombre, email, pass, run, telefono, rol) =>{
+            register:(nombre, apellido, email, pass, run, telefono, rol) =>{
+				const store = getStore()
+
 				var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
   "nombre": nombre,
-  "apellido": "",
+  "apellido": apellido,
   "email": email,
   "password": pass,
   "rut": run,
@@ -50,7 +54,7 @@ var requestOptions = {
 
 fetch("https://3000-lukasoy-backendpokegym-gyi5e2do75u.ws-us84.gitpod.io/register", requestOptions)
   .then(response => response.json())
-  .then(result => console.log(result))
+  .then(result => setStore({nombre:result.nombre}))
   .catch(error => console.log('error', error));
 			
 		 return true

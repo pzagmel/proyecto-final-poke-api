@@ -28,18 +28,19 @@ export const Register = () => {
 				let u = 		(evento.target[0].value)
 				let m = 		(evento.target[1].value)
 				let p = 		(evento.target[2].value)
-				let rp= 	(evento.target[3].value)
+				let rp= 		(evento.target[3].value)
 				let f = 		(evento.target[4].value)
 				let r = 		(evento.target[5].value) 
+				let rol = 		(evento.target[6].value)
 				
 					if(p!=rp){
 						alert("Contraseñas deben ser iguales")
 					}
-					if(u=='' || m=='' || p=='' || rp==''){
+					if(u=='' || m=='' || p=='' || rp==''|| rol==''){
 						alert("Debes completar los datos")
 					}
 					if(actions.register(u,m,p,f,r)){
-						alert("Registrado")
+						alert( "bienvenido"+store.nombre)
 						navigate('/login')
 					}
 					else{
@@ -48,14 +49,19 @@ export const Register = () => {
 					
 			}}>
 			<input type="text" placeholder="Nombre de Usuario"/>
+			<input type="text" placeholder="Apellido"/>
 			<input type="email" placeholder="Correo"/>
 			<input type="password" placeholder="Contraseña"/>
 			<input type="password" placeholder="Repetir Contraseña"/>
 			<input type="Telefono" placeholder="+569 12345678" pattern="\x2b[0-9]+" required/>
 			<input type="Rut" placeholder="Rut"/>
 			<h3>eres profesor?</h3>
-			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-            <label class="form-check-label" for="flexCheckDefault"/>
+			<select type="rol">
+				<option value="true">Profesor</option>
+				<option value="false">Estudiante</option>
+			</select>
+			{/* <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            <label className="form-check-label" for="flexCheckDefault"/> */}
 			
 			
 			<button type="submit">CREAR</button>

@@ -31,6 +31,7 @@ return(
 <div className="col-sm-4 ">
 <Card
 title={"Info!"}
+href="CardGroup.infogymhref"
 description={"Informacion de qué trata la app"}
 img2={pokebola}
 />
