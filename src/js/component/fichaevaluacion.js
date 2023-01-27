@@ -1,35 +1,52 @@
 import React from "react";
-import Machop from "../../img/Machop.png";
+import { useEffect, useState, useContext } from "react";
+import { Context } from "../store/appContext";
 
-window.onload = function () {
-  const botonNivel1 = document.querySelector(".hijo1");
-  const contenedor = document.querySelector(".Nivel1");
+// window.onload = function () {
+    //   const botonNivel1 = document.querySelector(".hijo1");
+    //   const contenedor = document.querySelector(".Nivel1");
 
-  const botonNivel2 = document.querySelector(".hijo2");
-  const contenedor1 = document.querySelector(".PadreNivel2");
+//   const botonNivel2 = document.querySelector(".hijo2");
+//   const contenedor1 = document.querySelector(".PadreNivel2");
 
-  const botonNivel3 = document.querySelector(".hijo3");
-  const contenedor2 = document.querySelector(".PadreNivel3");
+//   const botonNivel3 = document.querySelector(".hijo3");
+//   const contenedor2 = document.querySelector(".PadreNivel3");
 
-  botonNivel1.addEventListener("click", () => {
-    contenedor.classList.toggle("aumentado1");
-  });
+//   botonNivel1.addEventListener("click", () => {
+//     contenedor.classList.toggle("aumentado1");
+//   });
 
-  botonNivel2.addEventListener("click", () => {
-    contenedor1.classList.toggle("aumentado2");
-  });
+//   botonNivel2.addEventListener("click", () => {
+//     contenedor1.classList.toggle("aumentado2");
+//   });
 
-  botonNivel3.addEventListener("click", () => {
-    contenedor2.classList.toggle("aumentado3");
-  });
-};
+//   botonNivel3.addEventListener("click", () => {
+//     contenedor2.classList.toggle("aumentado3");
+//   });
+// };
 
-export const Fichaevaluacion = () => {
+export const Fichaevaluacion = ({
+  estatura,
+  peso,
+  porcentaje_musculo,
+  porcentaje_grasa,
+  nivel,
+}) => {
+  const { store , actions} = useContext(Context);
+
+
+
+  useEffect(() => {
+    
+        const poke = nivel == 1 ? 66 : nivel == 2 ? 67 : nivel == 3 ? 68 :  66 ;
+       actions.getPokemon(poke)
+  }, []);
+
   return (
     <div className="ejercicioscard mb-3 ">
       <div className="row g-0">
         <div className="col-md-4">
-          <img src={Machop} className="img-fluid rounded-start" />
+          <img src={store.pokemon} className="img-fluid rounded-start" />
         </div>
         <div className="col-md-8">
           <h5 className="card-titleficha text-center">
@@ -59,11 +76,11 @@ export const Fichaevaluacion = () => {
               <tbody id="bodytableinfo" className="table-group-divider">
                 <tr>
                   <td id="tdficha" scope="row">
-                    70
+                    {peso}
                   </td>
-                  <td id="tdficha">170</td>
-                  <td id="tdficha">40</td>
-                  <td id="tdficha">25</td>
+                  <td id="tdficha">{estatura}</td>
+                  <td id="tdficha">{porcentaje_grasa}</td>
+                  <td id="tdficha">{porcentaje_musculo}</td>
                 </tr>
               </tbody>
             </table>
@@ -88,13 +105,9 @@ export const Fichaevaluacion = () => {
                     data-bs-toggle="collapse"
                     aria-expanded="false"
                   >
-                   <div className="hijo1">Nivel 1</div>
-                    
+                    <div className="hijo1">Nivel 1</div>
                   </button>
-                  
-                  <div className="collapse" id="collapseExample">
-                    <div className="card card-bodyyy"></div>
-                  </div>
+                  <div className="collapse" id="collapseExample"></div>
                 </div>
               </div>
               <div className="PadreNivel2">
@@ -107,11 +120,11 @@ export const Fichaevaluacion = () => {
                       data-bs-target="#collapseExample1"
                       aria-expanded="false"
                       aria-controls="collapseExample1"
-                      value="option1"
+                      value="option2"
                     >
-                     <div className="hijo2">Nivel 2</div>
+                      <div className="hijo2">Nivel 2</div>
                     </button>
-                    <div className="collapse" id="collapseExample1"></div>
+                    <div className="collapse" id="collapseExample2"></div>
                   </div>
                 </div>
               </div>
@@ -122,12 +135,12 @@ export const Fichaevaluacion = () => {
                       class="btn btn-primary"
                       type="button"
                       data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample1"
+                      data-bs-target="#collapseExample3"
                       aria-expanded="false"
-                      aria-controls="collapseExample1"
-                      value="option1"
+                      aria-controls="collapseExample3"
+                      value="option3"
                     >
-                     <div className="hijo3">Nivel 3</div>
+                      <div className="hijo3">Nivel 3</div>
                     </button>
                     <div className="collapse" id="collapseExample1"></div>
                   </div>

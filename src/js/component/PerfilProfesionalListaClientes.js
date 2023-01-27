@@ -14,7 +14,7 @@ export const ListaClientes = () => (
   <div className="col-12" id="PrimeroPrimerin">
     <div className="row">
       <div className="PrincipalContainerDropdown">
-        <div ClassName="ContainerDropdownClientes">
+        <div className="ContainerDropdownClientes">
           <div className="dropdowndos">
             <button
               className="btn btn-secondary dropdown-toggle"
