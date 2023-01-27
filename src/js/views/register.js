@@ -56,14 +56,14 @@ export const Register = () => {
                         rol_profesor: true,
                       }));
                     } else {
-                      actions.infoRegister(JSON.stringify({
+                      actions.getinfoRegister(JSON.stringify({
                         nombre: USER,
                         email: MAIL,
                         password:PASS,
                         apellido: USER,
                         rut: RUT,
                         telefono: FONO,
-                        rol_estudiante: true,
+                        rol_profesor: false,
                       }));
                     }
                     alert("Registrado");

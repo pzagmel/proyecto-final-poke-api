@@ -28,13 +28,17 @@ const getState = ({ getStore, getActions, setStore }) => {
               "Content-Type": "application/json",
             },
             body: user,
+            redirect:"follow"
           }
         )
           .then((response) => response.json())
           .then((data) => {
             console.log('data', data)
-          });
+          })
+          .catch(error=>console.log("error",error))
       },
+
+      
     },
   };
 };

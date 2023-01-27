@@ -19,20 +19,20 @@ myHeaders.append("Content-Type", "application/json");
 var raw = JSON.stringify({});
 
 var requestOptions = {
-method: 'GET',
+method: 'POST',
 headers: myHeaders,
 body: raw,
 redirect: 'follow'
 };
 
-fetch("https://3000-lukasoy-backendpokegym-zamil8fu2k2.ws-us84.gitpod.io/profesor", requestOptions)
+fetch("https://3000-lukasoy-backendpokegym-zamil8fu2k2.ws-us84.gitpod.io/login", requestOptions)
 .then(response => response.text())
 .then(result => console.log(result))
 .catch(error => console.log('error', error));
   }
 
    useEffect(() => {
-    fetch("https://3000-lukasoy-backendpokegym-zamil8fu2k2.ws-us84.gitpod.io/profesor")
+    fetch("https://3000-lukasoy-backendpokegym-zamil8fu2k2.ws-us84.gitpod.io/login")
       .then((data) => data.json())
       .then((response) => setLogin(response));
   }, []);
@@ -52,20 +52,20 @@ useEffect(()=>{
               <img src={loginImage} style={{ width: 300 }} />
             </h2>
             <form className="login-form">
-            {login.map((item) => (
-              <React.Fragment key={item.email}>
+           
+             
                <input
                   type="text"
-                  placeholder={`email: ${item.email}`}
-                  required
+                  placeholder = "email"
+                  
                 />
                 <input
                 type="password"
-                placeholder={`Contraseña: ${item.password}`}
-                required
+                placeholder= "Contraseña"
+                
               />
-              </React.Fragment>
-            ))}
+            
+          
               <Link to="/recover" className="link link-style">
                   ¿Olvidaste tu contraseña?
                 </Link>
