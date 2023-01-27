@@ -1,40 +1,128 @@
 import React from "react";
 import "../../styles/login.css";
-import loginImage from "../../img/login.png";
-import pokebola from "../../img/POKEBOLA.png";
-import { Link } from "react-router-dom";
+import Cookies from 'universal-cookie';
+import {Link, NavLink, useNavigate} from 'react-router-dom';
+import axios from 'axios';
 
-import { InfoGym } from "../component/CardsINFOGYM";
-import { Formik, Form, Field } from "formik";
 
-export const Login = () => (
-  <>
-    <div className="container login-page">
+
+
+
+
+class Login extends React.Component {
+
+    state={
+        form:{
+            "email":"",
+            "password":""
+        },
+        error:false,
+        errorMesg:""
+    }
+    // esta funcion es el manejo para que no envie con los input vacios
+    manejoSubmit=e=>{
+        e.preventDefault();
+    }
+
+    //atrapamos lo que escribimos  en los input y los guardamos en el state que esta vacio mas arriba 
+    manejadorChange = async e=>{
+        await this.setState({
+            form:{
+                ...this.state.form,
+                [e.target.name]: e.target.value
+            }
+        })
+        
+    }
+
+    //enviamos los datos a la Apiurl que esta la ruta en el services y ademas los datos del formulario
+    manejadorBoton=()=>{
+        let url=  "https://3000-lukasoy-backendpokegym-pgpg4zwa6kn.ws-us84.gitpod.io/login";
+        axios.post(url,this.state.form)
+        .then(response =>{
+            if(response.status === 200)
+            {   console.log(response.data.user.rol_profesor /* == true */);
+                const cookie = new Cookies();
+               cookie.set('token',response.data.token ,{path: '/'});
+              /*   window.location.href='/perfilprofe';   */   
+            }
+            
+           if(response.status === 200)
+            {   console.log(response.data.user);
+                const cookie = new Cookies();
+               cookie.set('token',response.data.token ,{path: '/'});
+               /*  window.location.href='/perfilcliente';    */ 
+            }
+            
+            else
+            {
+                this.setState({
+                    error : true,
+                    errorMesg: response.data.message
+                    
+                })
+            }
+        }).catch(error =>{
+           
+            this.setState({
+                error : true,
+                errorMesg: "Error: Al conectar al servicio api"
+            });
+        })
+    }
+  
+    render() {
+      return (
+        <React.Fragment>
+<div className="container login-page">
       <div className="row">
         <div className="col-1 login-style">
           <div className="login-card">
-            <h2>
-              <img src={loginImage} style={{ width: 300 }} />
-            </h2>
-            <form className="login-form">
-              <input type="text" placeholder="Nombre de Usuario" required />
-              <input type="password" placeholder="Contraseña" required />
+            <h1 className="titulologin">
+              LOGIN
+            </h1>
+            
+            <form onSubmit={this.manejoSubmit} >
+            
+            <input type="text"  className="fadeIn second" name="email" onChange={this.manejadorChange} placeholder="login"/>
+            <input type="password"  className="fadeIn third" name="password" onChange={this.manejadorChange} placeholder="password"/>   
+            <input type="submit" className="fadeIn fourth" onClick={this.manejadorBoton} value="Log In"/>
+              </form>
+              
               <Link to="/recover" className="link link-style">
                   ¿Olvidaste tu contraseña?
                 </Link>
-              <button>Ingresar</button>
+              
               <div className="links-div">
                 <Link to="/register" className="link link-style">
                   ¿No tienes cuenta? Registrate
                 </Link>
               </div>
-            </form>
+            
           </div>
           <h5>
-            <img className="poke-img" src={pokebola} style={{ width: 75 }} />
+           
           </h5>
         </div>
       </div>
     </div>
-  </>
-);
+
+            {this.state.error === true &&
+           
+                <div className="alert alert-danger" role="alert"> no se inicio
+                        {this.state.errorMesg}
+                </div>
+            }
+
+      </React.Fragment>
+      );
+    }
+  }
+
+  export { Login };
+
+
+
+
+
+

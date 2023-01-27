@@ -23,7 +23,7 @@ export const Navbar = () => {
 					</Link>
 			  	</li>
 			  	<li className="nav-item d-none d-sm-block">
-					<Link className="nav-link" to="/">
+					<Link className="nav-link" to="/login">
 				 		 <img className="img-icon" src={iconLogin} alt="Icono usuario" />
 					</Link>
 			 	 </li>
@@ -41,8 +41,10 @@ export const Navbar2 = () => {
       <button className="button-menu" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? "Cerrar Menu" : "Abrir Menu"}
       </button>
+	 
       {menuOpen && (
-		<div className="ul-li">
+		
+		<div className="ul-li menu">
         <ul>
           <li>
             <a href="#">Ir al Calendario</a>

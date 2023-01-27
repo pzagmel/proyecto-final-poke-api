@@ -143,11 +143,9 @@ caption {
     height: 100px;
     width: 100px;
   }
-/* finalde calendario*/  
-  /* td.hora{
-    width: 1000px;
   th.row.horariocalendario{
     font-size: 20px;
+    
   }
  ERROR MI MERGE*/
  
@@ -324,3 +322,19 @@ div.diseño2{
     align-items: center;
     justify-content: center;
  }
+
+
+/*  registro */
+h1.registro{
+    color: #ffff00;
+    font-size: 60px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    padding: 20px;
+}
+
+h3.introinfo{
+    
+    font-size: 40px;
+    text-shadow: rgba(247, 247, 23, 0.585) 0.1em 0.1em 0.2em;
+    padding: 10px;
+}

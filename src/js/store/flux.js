@@ -24,6 +24,38 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
+
+            register:(nombre, email, pass, run, telefono, rol) =>{
+				var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "nombre": nombre,
+  "apellido": "",
+  "email": email,
+  "password": pass,
+  "rut": run,
+  "telefono": telefono,
+  "rol_profesor": rol,
+  "nivel": "",
+  "comentario": ""
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://3000-lukasoy-backendpokegym-gyi5e2do75u.ws-us84.gitpod.io/register", requestOptions)
+  .then(response => response.json())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+			
+		 return true
+           },
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

@@ -2,13 +2,13 @@ import React from "react";
 import Machop from "../../img/Machop.png";
 
 window.onload = function () {
-  const botonNivel1 = document.querySelector(".Nivel1");
-  const contenedor = document.querySelector(".PadreNivel1");
+  const botonNivel1 = document.querySelector(".hijo1");
+  const contenedor = document.querySelector(".Nivel1");
 
-  const botonNivel2 = document.querySelector(".Nivel2");
+  const botonNivel2 = document.querySelector(".hijo2");
   const contenedor1 = document.querySelector(".PadreNivel2");
 
-  const botonNivel3 = document.querySelector(".Nivel3");
+  const botonNivel3 = document.querySelector(".hijo3");
   const contenedor2 = document.querySelector(".PadreNivel3");
 
   botonNivel1.addEventListener("click", () => {
@@ -88,8 +88,10 @@ export const Fichaevaluacion = () => {
                     data-bs-toggle="collapse"
                     aria-expanded="false"
                   >
-                    Nivel 1
+                   <div className="hijo1">Nivel 1</div>
+                    
                   </button>
+                  
                   <div className="collapse" id="collapseExample">
                     <div className="card card-bodyyy"></div>
                   </div>
@@ -107,7 +109,7 @@ export const Fichaevaluacion = () => {
                       aria-controls="collapseExample1"
                       value="option1"
                     >
-                      Nivel 2
+                     <div className="hijo2">Nivel 2</div>
                     </button>
                     <div className="collapse" id="collapseExample1"></div>
                   </div>
@@ -125,7 +127,7 @@ export const Fichaevaluacion = () => {
                       aria-controls="collapseExample1"
                       value="option1"
                     >
-                      Nivel 3
+                     <div className="hijo3">Nivel 3</div>
                     </button>
                     <div className="collapse" id="collapseExample1"></div>
                   </div>
