@@ -34,15 +34,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
-  "nombre": nombre,
+  "nombre":nombre,
   "apellido": apellido,
   "email": email,
   "password": pass,
-  "rut": run,
   "telefono": telefono,
-  "rol_profesor": rol,
-  "nivel": "",
-  "comentario": ""
+  "rut": run,
+  "rol_profesor": rol
 });
 
 var requestOptions = {
@@ -52,11 +50,10 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://3000-lukasoy-backendpokegym-gyi5e2do75u.ws-us84.gitpod.io/register", requestOptions)
+fetch("https://3000-lukasoy-backendpokegym-6pim53sw1u4.ws-us84.gitpod.io/register", requestOptions)
   .then(response => response.json())
-  .then(result => setStore({nombre:result.nombre}))
+  .then(result => console.log(result))
   .catch(error => console.log('error', error));
-			
 		 return true
            },
 

@@ -26,12 +26,13 @@ export const Register = () => {
 		<form className="login-form" onSubmit={(evento)=>{
 				evento.preventDefault();
 				let u = 		(evento.target[0].value)
+				let a = 		(evento.target[0].value)
 				let m = 		(evento.target[1].value)
 				let p = 		(evento.target[2].value)
 				let rp= 		(evento.target[3].value)
 				let f = 		(evento.target[4].value)
 				let r = 		(evento.target[5].value) 
-				let rol = 		(evento.target[6].value)
+				
 				
 					if(p!=rp){
 						alert("Contraseñas deben ser iguales")
@@ -39,7 +40,7 @@ export const Register = () => {
 					if(u=='' || m=='' || p=='' || rp==''|| rol==''){
 						alert("Debes completar los datos")
 					}
-					if(actions.register(u,m,p,f,r)){
+					if(actions.register(u,a,m,p,f,r)){
 						alert( "bienvenido"+store.nombre)
 						navigate('/login')
 					}
