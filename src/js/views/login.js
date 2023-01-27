@@ -1,8 +1,10 @@
 import React from "react";
 import "../../styles/login.css";
 import Cookies from 'universal-cookie';
-import {Link, NavLink} from 'react-router-dom';
+import {Link, NavLink, useNavigate} from 'react-router-dom';
 import axios from 'axios';
+
+
 
 
 
@@ -35,21 +37,21 @@ class Login extends React.Component {
 
     //enviamos los datos a la Apiurl que esta la ruta en el services y ademas los datos del formulario
     manejadorBoton=()=>{
-        let url=  "https://3000-lukasoy-backendpokegym-45s657elbj8.ws-us84.gitpod.io/login";
+        let url=  "https://3000-lukasoy-backendpokegym-pgpg4zwa6kn.ws-us84.gitpod.io/login";
         axios.post(url,this.state.form)
         .then(response =>{
             if(response.status === 200)
-            {   console.log(response.data.token);
+            {   console.log(response.data.user.rol_profesor /* == true */);
                 const cookie = new Cookies();
                cookie.set('token',response.data.token ,{path: '/'});
-                window.location.href='/perfilprofe';     
+              /*   window.location.href='/perfilprofe';   */   
             }
             
-           else if(response.status === 200)
-            {   console.log(response.data.token);
+           if(response.status === 200)
+            {   console.log(response.data.user);
                 const cookie = new Cookies();
                cookie.set('token',response.data.token ,{path: '/'});
-                window.location.href='/perfilcliente';    
+               /*  window.location.href='/perfilcliente';    */ 
             }
             
             else
