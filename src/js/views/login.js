@@ -1,7 +1,8 @@
 import React from "react";
 import "../../styles/login.css";
 
-import {Link, NavLink, useNavigate} from 'react-router-dom';
+import {Link, NavLink, useNavigate, useContext} from 'react-router-dom';
+import { Context } from "../store/appContext";
 
 
 
@@ -11,7 +12,8 @@ import {Link, NavLink, useNavigate} from 'react-router-dom';
 
 export const Login= () => {
 
-   
+  let navigate = useNavigate();
+  const { store, actions } = useContext(Context);
       return (
        
 <div className="container login-page">
@@ -22,7 +24,17 @@ export const Login= () => {
               LOGIN
             </h1>
             
-            <form  >
+            <form className="login-register"  onSubmit={(evento) => {
+                  console.log("evento", evento);
+                  evento.preventDefault();
+                  let MAIL = evento.target[0].value;
+                  let PASS = evento.target[1].value;
+                  
+                  if ( MAIL == "" || PASS == "" ) {
+                    alert("Debes completar los datos");
+                  } else {
+                    actions.login(MAIL,PASS);
+                  }}} >
             
             <input type="text"  className="fadeIn second" name="email"  placeholder="login"/>
             <input type="password"  className="fadeIn third" name="password"  placeholder="password"/>   
