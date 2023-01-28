@@ -25,6 +25,9 @@ const getState = ({ getStore, getActions, setStore }) => {
             setStore({ pokemon: data.sprites.front_default });
           });
       },
+      login: () => {
+
+      },
       getinfoRegister: (user) => {
         fetch(
           "https://3000-lukasoy-backendpokegym-veqmyydcg1p.ws-us84.gitpod.io/register",

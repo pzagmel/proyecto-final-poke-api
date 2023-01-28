@@ -12,7 +12,8 @@ import { FaMapMarkerAlt, FaGlobe, FaMapPin, FaPhoneAlt, FaRegEnvelope } from "re
 export const Footergp = () => {
     return(
  <div>
-  <footer className="footer">
+   
+  <footer className="footerinfo">
             <div className="footer-left">
                <Link to="/" ><img src={Logo}  className="" width="250" alt=""/></Link>
                <h1 className="titulo">GYMPOKE</h1>

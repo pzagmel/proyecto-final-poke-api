@@ -17,7 +17,9 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Navbar2 } from "./component/navbar";
-import { Footergp } from "./component/footer2";
+import { Footerf } from "./component/footerfinal";
+/* import { Footergp } from "./component/footer2"; */
+
 
 
 
@@ -45,7 +47,7 @@ const Layout = () => {
 						<Route path="*" element={<Error404 />} />
 					</Routes>
 					
-					<Footergp />
+					<Footerf/>
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
