@@ -72,7 +72,7 @@ export const Home = () => {
         </div>
     </div>
     <div className="container"><InfoGym/></div>
-    <div> <Calendario/> </div>
+    <div id="calendar"><Calendario/> </div>
 	<div> <Comments/>   </div> 		  
 
 </>

@@ -17,12 +17,12 @@ export const Navbar = () => {
 			</div>
 			<ul className="navbar-nav ml-auto iconos">
 				<li className="nav-item d-none d-sm-block">
-					<Link className="nav-link" to="/">
-				 		 <img className="img-icon" src={iconCalendar} alt="Icono calendario" />
+					<Link className="nav-link" to="/#calendar">
+				 		 <img className="img-icon img-calendar" src={iconCalendar} alt="Icono calendario" />
 					</Link>
 			  	</li>
 			  	<li className="nav-item d-none d-sm-block">
-					<Link className="nav-link" to="/">
+					<Link className="nav-link" to="/login">
 				 		 <img className="img-icon" src={iconLogin} alt="Icono usuario" />
 					</Link>
 			 	 </li>
@@ -44,10 +44,10 @@ export const Navbar2 = () => {
 		<div className="ul-li">
         <ul>
           <li>
-            <a href="#">Ir al Calendario</a>
+            <a href="/#calendar">Ir al Calendario</a>
           </li>
           <li>
-            <a href="#">Login</a>
+            <a href="/login">Login</a>
           </li>
         </ul>
 		</div>
