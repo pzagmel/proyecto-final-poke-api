@@ -4,6 +4,7 @@ import personaltrainer1 from "../../img/personaltrainer1.gif";
 import kine from "../../img/kine.gif";
 import personaltrainer2 from "../../img/personaltrainer2.gif";
 import reto from "../../img/Tu Desafio.png";
+import { Link } from "react-router-dom";
 
 import "../../styles/home.css";
 import { Card } from "../component/card.js";
@@ -25,23 +26,29 @@ export const Home = () => {
       <div className="justify-content-center">
         <div className="row g-3 mb-2">
           <div className="col-sm-4 ">
+          <Link to="/#info-gym">
             <Card
               title={"Info!"}
               description={"Informacion de qué trata la app"}
               img2={pokebola}
             />
+            </Link>
           </div>
           <div className="col-sm-4 ">
+          <Link to="/#profes">
             <Card
               title={"Profes"}
               description={"Conoce a nuestros profesionales"}
               img2={pokebola}
             />
+            </Link>
           </div>
           <div className="col-sm-4 ">
+            <Link to="/register">
             <Card 
             title={"Únete"}
             img2={pokebola} />
+            </Link>
           </div>
         </div>
         <div className="row">
@@ -58,7 +65,7 @@ export const Home = () => {
           </div>
         </div>
         
-        <div className="row">
+        <div className="row" id="profes">
           <div className="col-sm-4">
             <Procard img={personaltrainer1} />
           </div>
@@ -71,7 +78,7 @@ export const Home = () => {
           </div>
         </div>
     </div>
-    <div className="container"><InfoGym/></div>
+    <div className="container" id="info-gym"><InfoGym/></div>
     <div> <Calendario/> </div>
 	<div> <Comments/>   </div> 		  
 
