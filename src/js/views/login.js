@@ -4,12 +4,6 @@ import "../../styles/login.css";
 import {Link, NavLink, useNavigate, useContext} from 'react-router-dom';
 import { Context } from "../store/appContext";
 
-
-
-
-
-
-
 export const Login= () => {
 
   let navigate = useNavigate();

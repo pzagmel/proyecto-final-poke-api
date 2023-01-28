@@ -86,3 +86,11 @@
         width: 100%;
     }
 }
+
+img.bienvenida{
+    width: 1000px;
+}
+div.bienvenido.container{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

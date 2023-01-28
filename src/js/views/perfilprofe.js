@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "../../styles/perfilprofe.css";
+import Bienvenido from "../../img/Bienvenidos.png";
 
 import { InfoGym } from "../component/CardsINFOGYM";
 import { Footer } from "../component/footer";
@@ -35,6 +36,9 @@ export const Perfilprofe = () => {
 
   return (
     <div>
+       <div className="container" id="bienvenido">
+                <img src={Bienvenido} style={{width:1300}}/>
+        </div>
       <h1> PerfilProfe</h1>
       <FichaPersonal />
       <ListaClientes />
