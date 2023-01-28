@@ -3,12 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       pokemon: [],
       infoRegister: [],
-    },
-
-    login: (email, pass) => {
-      /**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+      login:[]
     },
 
     actions: {
@@ -25,9 +20,23 @@ const getState = ({ getStore, getActions, setStore }) => {
             setStore({ pokemon: data.sprites.front_default });
           });
       },
-      login: () => {
-
+      login: (MAIL, PASS) => {
+        const store = getStore()
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
+        
+        fetch("https://3000-lukasoy-backendpokegym-veqmyydcg1p.ws-us84.gitpod.io/login", requestOptions)
+          .then(response => response.json())
+          .then(result => {setStore({login:result})
+          window.location.href = "/";
+          })          
+          .catch(error => console.log('error', error));
       },
+            
       getinfoRegister: (user) => {
         fetch(
           "https://3000-lukasoy-backendpokegym-veqmyydcg1p.ws-us84.gitpod.io/register",

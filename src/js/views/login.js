@@ -1,6 +1,5 @@
 import React from "react";
 import "../../styles/login.css";
-
 import { Link, NavLink, useNavigate, useContext } from "react-router-dom";
 import { Context } from "../store/appContext";
 
@@ -29,6 +28,7 @@ export const Login = () => {
                 } else {
                   actions.login(MAIL, PASS);
                 }
+           
               }}
             >
               <input
