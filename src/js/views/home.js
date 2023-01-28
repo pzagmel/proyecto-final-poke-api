@@ -1,20 +1,10 @@
 import React from "react";
-
 import "../../styles/home.css";
-import tituloinfo from "../../img/TITULOINFO.png";
-import profesTitulo from "../../img/PROFESTITULO.png";
-import unete from "../../img/UNETETITULO.png";
 import pokebola from "../../img/pngegg 1.png";
 import personaltrainer1 from "../../img/personaltrainer1.gif";
 import kine from "../../img/kine.gif";
 import personaltrainer2 from "../../img/personaltrainer2.gif";
 import reto from "../../img/Tu Desafio.png";
-import M1 from "../../img/Machop.png"
-import M2 from "../../img/Machoke.png"
-import M3 from "../../img/Machamp.png"
-
-
-
 import "../../styles/home.css";
 import { Card } from "../component/card.js";
 import { Longcard } from "../component/card.js";
@@ -24,7 +14,7 @@ import { Calendario } from "../component/calendario";
 import { Comments } from "../component/carousel";
 import Cardservice from "../component/cardinfogym";
 import { Link } from "react-router-dom";
-import { InfoGym } from "../component/CardsINFOGYM";
+
 
 
 
@@ -41,6 +31,7 @@ return(
 <div className="col-sm-4 ">
 <Card
 title={"Info!"}
+href="CardGroup.infogymhref"
 description={"Informacion de qué trata la app"}
 img2={pokebola}
 />

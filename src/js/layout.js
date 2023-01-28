@@ -17,8 +17,6 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Navbar2 } from "./component/navbar";
-
-import { Footer } from "./component/footer";
 import { Footergp } from "./component/footer2";
 
 
@@ -41,7 +39,7 @@ const Layout = () => {
 						<Route path="/perfilprofe" element={<Perfilprofe />} />
 						<Route path="/perfilcliente" element={<Perfilcliente />} />
 						<Route path="/register" element={<Register />} />
-						<Route path="/login" element={<Login />} />
+						<Route path="/login" element={<Login/>} />
 						<Route path="/recover" element={<RecoverPass />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<Error404 />} />

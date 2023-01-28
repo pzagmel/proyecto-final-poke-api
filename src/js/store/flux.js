@@ -5,6 +5,12 @@ const getState = ({ getStore, getActions, setStore }) => {
       infoRegister: [],
     },
 
+    login: (email, pass) => {
+      /**
+					fetch().then().then(data => setStore({ "foo": data.bar }))
+				*/
+    },
+
     actions: {
       getPokemon: async (poke) => {
         await fetch("https://pokeapi.co/api/v2/pokemon/" + poke, {
@@ -28,17 +34,15 @@ const getState = ({ getStore, getActions, setStore }) => {
               "Content-Type": "application/json",
             },
             body: user,
-            redirect:"follow"
+            redirect: "follow",
           }
         )
           .then((response) => response.json())
           .then((data) => {
-            console.log('data', data)
+            console.log("data", data);
           })
-          .catch(error=>console.log("error",error))
+          .catch((error) => console.log("error", error));
       },
-
-      
     },
   };
 };
