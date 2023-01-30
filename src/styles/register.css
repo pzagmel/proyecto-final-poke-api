@@ -9,7 +9,10 @@
 html,body{
     height: 100%;
 }*/
-
+div.row.registerinfo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 a,button{
     cursor:pointer;
 } 
@@ -37,6 +40,7 @@ a,button{
 }
 
 .login-card{
+    margin: 50px;
     width: 100%;
     padding: 70px 30px 44px;
     border-radius: 24px;
@@ -60,7 +64,8 @@ a,button{
     margin: 0 0 30px;
     font-weight: 500;
     font-size: 16px;
-    color: rgba(0, 0, 0, 0.38);  
+    color: #ffff00;
+    text-shadow: black 0.1em 0.1em 0.2em; 
 }
 
 .login-form{
@@ -88,6 +93,7 @@ a,button{
     border: 0;
     background: #216ce7;
     color: #ffff;
+    text-shadow: black 0.1em 0.1em 0.2em;
     font-weight: 600;
 }
 /*
@@ -97,6 +103,20 @@ a,button{
     align-items: center;
 }
 */
+h2.register{
+    color: #ffff00;
+    font-size: 60px;
+    text-shadow: black 0.3em 0.3em 0.3em;
+    padding: 20px;
+    margin-top:-70px;
+    margin-bottom: 40px;
+}
+h3.profe{
+    color: #ffff00;
+    text-shadow: black 0.1em 0.1em 0.2em;
+
+}
+
 
  
 

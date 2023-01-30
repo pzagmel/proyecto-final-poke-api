@@ -20,13 +20,13 @@ export const Register = () => {
   return (
     <>
       <div className="container" id="REGISTERHIJOMAYOR">
-        <div className="row">
+        <div className="row registerinfo">
           <div className="col-1">
             <div className="login-card" id="CONTAINERREGISTER">
-              <h2>
-                <img src={registro} style={{ width: 300 }} />
+              <h2 className="register">
+                REGISTRO
               </h2>
-              <h3>Introduce Información</h3>
+              <h3 className="registerinfo">Introduce Información</h3>
               <form
                 className="login-form"
                 onSubmit={(evento) => {
@@ -82,7 +82,7 @@ export const Register = () => {
                   required
                 ></input>
                 <input type="Rut" placeholder="Rut" />
-                <h3>eres profesor?</h3>
+                <h3 className="profe">eres profesor?</h3>
                 <input
                   class="form-check-input"
                   type="checkbox"

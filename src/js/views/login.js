@@ -1,13 +1,16 @@
-import React from "react";
+import React from "react"; 
+import { useContext } from "react";
 import "../../styles/login.css";
-
-import {Link, NavLink, useNavigate, useContext} from 'react-router-dom';
+import {Link, NavLink, useNavigate} from 'react-router-dom';
 import { Context } from "../store/appContext";
+
+
 
 export const Login= () => {
 
+ const { store, actions } = useContext(Context); 
   let navigate = useNavigate();
-  const { store, actions } = useContext(Context);
+  
       return (
        
 <div className="container login-page">
