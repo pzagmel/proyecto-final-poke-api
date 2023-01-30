@@ -1,23 +1,20 @@
 import React from "react";
 import "../../styles/register.css";
-import { useState, useEffect, useContext} from "react";
-import { Context } from "../store/appContext";
-import { useNavigate } from "react-router";
+import registro from "../../img/registro.png";
+import LOGOPOKEGYM from "../../img/LOGOPOKEGYM.png";
+
+import { InfoGym } from "../component/CardsINFOGYM";
+import { Footer } from "../component/footer";
+import { Footergp } from "../component/footer2";
 
 
-export const Register = () => {
-	
-	let navigate = useNavigate();
-	const{actions, store} = useContext(Context)
 
-	return(	
-  
-  
-   <div>
-   
-	<div className="container" id="REGISTERHIJOMAYOR" style={{ margin: 30, marginrigth:20 }}>
-			
-		<div className="row" >
+
+
+export const Register = () => (
+	<>
+	<div className="container">
+		<div className="row">
 			<div className="col-1">
 				
 	<div className="login-card" id="CONTAINERREGISTER">
@@ -66,6 +63,6 @@ export const Register = () => {
 	</div>
   
 	
-</div>
+</>
 )
-};
+
