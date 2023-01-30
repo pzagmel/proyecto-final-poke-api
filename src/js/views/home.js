@@ -24,42 +24,44 @@ return(
 <>
 <CartHome/>
 
-      <div className="diseño1"></div>
-      <div className="container">
-        <div className="justify-content-center">
-          <div className="row g-3 mb-2">
-            <div className="col-sm-4 ">
-              <Card
-                title={"Info!"}
-                description={"Informacion de qué trata la app"}
-                img2={pokebola}
-              />
-            </div>
-            <div className="col-sm-4 ">
-              <Card
-                title={"Profes"}
-                description={"Conoce a nuestros profesionales"}
-                img2={pokebola}
-              />
-            </div>
-            <div className="col-sm-4 ">
-              <Link to="/register">
-                {" "}
-                <Card title={"Únete"} img2={pokebola} />
-              </Link>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <Longcard
-                title={"Reto de la Semana"}
-                img={reto}
-                description={"-100 Burpies"}
-                description2={"-50 Sentadillas Bulgaras"}
-                description3={"-Plancha de 1 minuto"}
-              />
-            </div>
-          </div>
+<div className="diseño1"></div>
+<div className="container">
+<div className="justify-content-center">
+<div className="row g-3 mb-2">
+<div className="col-sm-4 ">
+<Card
+title={"Info!"}
+href="CardGroup.infogymhref"
+description={"Informacion de qué trata la app"}
+img2={pokebola}
+/>
+</div>
+<div className="col-sm-4 ">
+<Card
+title={"Profes"}
+description={"Conoce a nuestros profesionales"}
+img2={pokebola}
+/>
+</div>
+<div className="col-sm-4 ">
+<Link to="/register"> <Card
+title={"Únete"}
+img2={pokebola} /></Link>
+</div>
+</div>
+<div className="row">
+<div className="col">
+<Longcard
+title={"Reto de la Semana"}
+img={
+reto
+}
+description={"-100 Burpies"}
+description2={"-50 Sentadillas Bulgaras"}
+description3={"-Plancha de 1 minuto"}
+/>
+</div>
+</div>
 
 <div className="diseño2"> </div>
 <div className="row">

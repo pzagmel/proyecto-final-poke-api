@@ -5,7 +5,7 @@ export const Card = ({ title, description, img2 }) => {
   return (
     <div className="card bg-primary h-100">
       <h5 className="card-title text-center">{title}</h5>
-      <div className="card-body">
+      <div className="card-body" >
         {description && <p className="card-text text-center">{description}</p>}
       </div>
       <img id="pokebola" className="text-center" src={img2}  />
