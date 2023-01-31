@@ -1,4 +1,22 @@
+ul.navbar-nav.ml-auto.iconos{
+  width: 200px;
+  height: 50px;
+}
 
+img.img-icon{
+  width: 120px;
+  margin-left: 0px;
+  margin-top: -30px;
+  
+}
+img.img-icon2{
+  margin-top: -15px;
+}
+
+img.logo-gym{
+  width: 170px;
+  margin-top: -35px;
+}
 
 .iconos{
     justify-content: space-between;
@@ -9,12 +27,17 @@
 }
 
 .logo-gym{
-    max-width: 30%;
+    width: 150px;
+    margin-top: 5px;
 }
 
 .nav-style{
     background-color: #103873;
-    justify-content: space-between;
+    
+}
+div.navbar-header.logo{
+  width: 100px;
+  height: 100px;
 }
 
 .button-menu{
@@ -50,6 +73,9 @@ li > a{
 
 li > a:hover{
   color: gray;
+}
+h1.titulonavbar{
+  display: flex;
 }
 
 @media (max-width: 576px) {

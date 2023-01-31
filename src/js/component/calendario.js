@@ -7,7 +7,7 @@ import { GymBall } from "./modalcalendario/gymball";
 
 export const Calendario = () => {
     return(
-        <div className="container calen"> 
+        <div className="container calen" id="calendario"> 
         <div className="diseño3">
           <img className="pokecale" src={Pokebola} alt=""/><h1 className="titulocalendario">CALENDARIO</h1> <img className="pokecale"src={Pokebola} alt=""/></div>
         <div className="calendario"> 

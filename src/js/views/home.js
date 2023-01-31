@@ -13,7 +13,8 @@ import { CartHome } from "../component/cardhome";
 import { Calendario } from "../component/calendario";
 import { Comments } from "../component/carousel";
 import Cardservice from "../component/cardinfogym";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
+
 
 
 
@@ -29,23 +30,24 @@ return(
 <div className="justify-content-center">
 <div className="row g-3 mb-2">
 <div className="col-sm-4 ">
-<Card
+<Link  to="infogymhref" spy={true} smooth={true} offset={50} duration={500}><Card
 title={"Info!"}
 href="CardGroup.infogymhref"
 description={"Informacion de qué trata la app"}
 img2={pokebola}
-/>
+/></Link>
 </div>
 <div className="col-sm-4 ">
-<Card
+<Link  to="cardporfe" spy={true} smooth={true} offset={50} duration={500}><Card
 title={"Profes"}
 description={"Conoce a nuestros profesionales"}
 img2={pokebola}
-/>
+/></Link>
 </div>
 <div className="col-sm-4 ">
-<Link to="/register"> <Card
-title={"Únete"}
+<Link to="calendario" spy={true} smooth={true} offset={50} duration={500}> <Card
+title={"Calendario"}
+description={"Elige un actividad para potenciarte"}
 img2={pokebola} /></Link>
 </div>
 </div>
@@ -64,7 +66,7 @@ description3={"-Plancha de 1 minuto"}
 </div>
 
 <div className="diseño2"> </div>
-<div className="row">
+<div className="row" id="cardporfe">
 <div className="col-sm-4">
 <Procard img={personaltrainer1} />
 </div>

@@ -24,14 +24,18 @@ div.col-sm-6.col-md-6.col-lg-6.col-xl-6.pull-xs-left{
 
 img.logofinalfooter{
     margin-left: 50px;
-    margin-top: 5px;
+    margin-top: -30px;
+    width: 200px;
+    
 }
 div.iconofooter{
-    margin-left: 80px;
-    margin-top: 5px;
+    margin-left: 60px;
+    margin-top: -40px;
+    
 }
 
 a.iconofooter{
+    margin-top: -50px;
     padding: 5px;
 }
 a.nav-item.nav-link{

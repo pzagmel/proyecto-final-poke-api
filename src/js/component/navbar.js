@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../img/logo.png"
-import iconCalendar from "../../img/icon-calendar.png"
+import logo from "../../img/logofinal.png"
+import Pokebola from "../../img/pokedos.png"
 import iconLogin from "../../img/icon-login.png"
 import "../../styles/navbar.css";
 
 
+
 export const Navbar = () => {
+	
 	return (
 		<nav className="navbar navbar-expand-lg nav-style">
 		  <div className="container-fluid">
@@ -17,17 +19,22 @@ export const Navbar = () => {
 			</div>
 			<div className="titupok"><h1 className="titulonavbar">POKEGYM</h1></div>
 			<ul className="navbar-nav ml-auto iconos">
-				<li className="nav-item d-none d-sm-block">
-					<Link className="nav-link" to="/">
-				 		 <img className="img-icon" src={iconCalendar} alt="Icono calendario" />
+				
+				 	<li className="nav-item d-none d-sm-block"> 
+				
+					<Link to="/register"> 
+				 <img className="img-icon" src={Pokebola} /> 
 					</Link>
+					
 			  	</li>
+				
 			  	<li className="nav-item d-none d-sm-block">
 					<Link className="nav-link" to="/login">
-				 		 <img className="img-icon" src={iconLogin} alt="Icono usuario" />
+				 		 <img className="img-icon2" src={iconLogin} alt="Icono usuario" />
 					</Link>
 			 	 </li>
 			</ul>
+			
 		  </div>
 		</nav>
 	  );
