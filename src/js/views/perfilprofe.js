@@ -1,7 +1,8 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import "../../styles/perfilprofe.css";
-
+import { Link, NavLink, useNavigate, useSearchParams } from "react-router-dom";
+import { Context } from "../store/appContext";
 import { InfoGym } from "../component/CardsINFOGYM";
 import { Footer } from "../component/footer";
 import { Footergp } from "../component/footer2";
@@ -9,8 +10,10 @@ import { FichaPersonal } from "../component/FijaPersonal";
 import { ListaClientes } from "../component/PerfilProfesionalListaClientes";
 import { Fichaevaluacion } from "../component/fichaevaluacion";
 
+
 export const Perfilprofe = () => {
   
+  const { store, actions } = useContext(Context);
   const [list, setList] = useState([]);
   useEffect(() => {
     var myHeaders = new Headers();
