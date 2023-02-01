@@ -77,9 +77,7 @@ export const Calendario = () => {
     </tr>
   </tbody>
 </table>
-</div>
-      
-         
+</div>    
     </div>
     )
 }
