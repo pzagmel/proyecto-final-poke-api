@@ -31,11 +31,14 @@ export const Login= () => {
                     alert("Debes completar los datos");
                   } else {
                     actions.login(MAIL,PASS);
-                  }}} >
+                  }}}>
+            <div className="background-form">
+            
             
             <input type="text"  className="fadeIn second" name="email"  placeholder="login"/>
             <input type="password"  className="fadeIn third" name="password"  placeholder="password"/>   
             <input type="submit" className="fadeIn fourth"  value="Log In"/>
+            </div>
               </form>
               
               <Link to="/recover" className="link link-style">
@@ -47,14 +50,11 @@ export const Login= () => {
                   ¿No tienes cuenta? Registrate
                 </Link>
               </div>
-            
+            </div>
           </div>
-          <h5>
-           
-          </h5>
         </div>
       </div>
-    </div>
+    
 
           
       );
