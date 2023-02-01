@@ -68,13 +68,17 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((data) => {
             console.log("data", data);
             sessionStorage.setItem("token", data.token);
-            if (data.code == 200);
-            setStore({
-              userInfo: jwt_decode(data.token).sub,
-              login: true,
-              token: data.token,
-            });
-            //recibo token y debo guardarlo en store, luego desencriptarlo
+            if (data.status == 200) {
+              setStore({
+                userInfo: jwt_decode(data.token).sub,
+                login: true,
+                token: data.token,
+              });
+            }else if (data.status == 400){
+              alert (data.msg)
+            }
+            
+            //recibo tokene y debo guardarlo en store, luego desencriptarlo
           })
           .catch((error) => console.log("error", error));
       },
