@@ -20,7 +20,9 @@ export const Login= () => {
             <h1 className="titulologin">
               LOGIN
             </h1>
-            
+            {token && token != "" && token != undefined ?  (
+              "Ingresaste con un token " + token ) 
+              : (
             <form className="login-register"  onSubmit={(evento) => {
                   console.log("evento", evento);
                   evento.preventDefault();
@@ -37,7 +39,7 @@ export const Login= () => {
             <input type="password"  className="fadeIn third" name="password"  placeholder="password"/>   
             <input type="submit" className="fadeIn fourth"  value="Log In"/>
               </form>
-              
+              )}
               <Link to="/recover" className="link link-style">
                   ¿Olvidaste tu contraseña?
                 </Link>
@@ -47,8 +49,9 @@ export const Login= () => {
                   ¿No tienes cuenta? Registrate
                 </Link>
               </div>
-            
-          </div>
+                
+          </div> 
+              
           <h5>
            
           </h5>
