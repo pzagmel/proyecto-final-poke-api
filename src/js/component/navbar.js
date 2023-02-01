@@ -1,14 +1,16 @@
 import React, { useState, } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../img/logofinal.png"
+import Logout from "../../img/logout.png"
 import Pokebola from "../../img/pokedos.png"
-import iconLogin from "../../img/icon-login.png"
+import Perfil from "../../img/perfil.png"
+import login from "../../img/icon-login.png"
 import "../../styles/navbar.css";
 
 
 
 export const Navbar = () => {
-	
+	/* const { store, actions } = useContext(Context);  */
 	return (
 		<nav className="navbar navbar-expand-lg nav-style">
 		  <div className="container-fluid">
@@ -30,9 +32,20 @@ export const Navbar = () => {
 				
 			  	<li className="nav-item d-none d-sm-block">
 					<Link className="nav-link" to="/login">
-				 		 <img className="img-icon2" src={iconLogin} alt="Icono usuario" />
+				 		 <img className="img-icon2" src={login} alt="Icono usuario" />
 					</Link>
+					    
 			 	 </li>
+                  
+					<li className="nav-item d-none d-sm-block">
+					 <img className="img-icon4" src={Perfil} alt="Icono usuario" /> 
+				  </li>
+				  
+				  <li className="nav-item d-none d-sm-block">
+					 <img className="img-icon3" src={Logout} alt="Icono usuario" /> 
+				  </li>
+				  
+				  
 			</ul>
 			
 		  </div>
