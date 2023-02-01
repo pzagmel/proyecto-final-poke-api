@@ -105,6 +105,10 @@ td {
   }
 
 
+.titulo-calendario{
+    height: 250px;
+}
+
 /* calendario en media disminuira su tamaña   cuando las pantallas sean mas pequeñas */
 @media screen and (max-width: 1000px) {
     div.calendario{
@@ -312,12 +316,13 @@ div.diseño2{
     }
     }
 
+@media screen and (max-width: 900px) {
+    .calen{
+        display: none;
+    }
+}    
  div.diseño3{
-    width: 1970px;
-    height: 205px;
     background-color: rgba(0, 153, 255, 0.745);
-    margin-left: -500px;
-    margin-top: 20px ;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,5 +1,8 @@
-.links-div{
-    display: inline-flex;
+.links-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: auto;
 }
 
 .link-style {
@@ -8,11 +11,14 @@
     font-size: 12px;
     text-align: left;
     text-decoration-line: none;
+    margin-right: 10px;
+    margin-top: 2%;
 }
 
-.login-style{
+.login-style {
     width: 100%;
     margin-top: 5%;
+    padding-bottom: 20px;
 }
 
 .poke-img{
@@ -34,4 +40,129 @@ h1.titulologin{
         margin-top:-70px;
         margin-bottom: 40px;
     
+}
+
+form{
+    display: grid;
+}
+
+.login-card {
+    display: flex;
+    flex-direction: column;
+}
+  
+.fadeIn.second {
+    align-self: flex-start;
+    border-radius: 15px;
+    background-color: #d9d9d9;
+}
+  
+.fadeIn.third {
+    align-self: center;
+    border-radius: 15px;
+    margin-top: 3%;
+    background-color: #d9d9d9;
+}
+  
+.fadeIn.fourth {
+    align-self: flex-end;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 1%;
+    margin-top: 3%;
+    background-color: seashell;
+}
+
+.background-form{
+    background-color: #6190d7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 25px solid #1f69d8;
+    margin-top: -10%;
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    text-indent: 5px;
+}
+
+@media only screen and (min-width: 340px) and (max-width: 670px) {
+    .links-div {
+    flex-wrap: wrap;
+    align-items: center;
+    }
+    
+    .link-style {
+    font-size: 16px;
+    margin: 10px;
+    }
+    
+    .login-style {
+    padding: 10px;
+    }
+    
+    h1.titulologin {
+    font-size: 60px;
+    }
+    
+    .fadeIn.second {
+    width: 80%;
+    margin: 10px;
+    }
+    
+    .fadeIn.third {
+    width: 80%;
+    margin: 10px;
+    }
+    
+    .fadeIn.fourth {
+    width: 80%;
+    margin: 10px;
+    }
+    
+    .background-form {
+    border: none;
+    margin-top: 0;
+    }
+}
+    
+@media only screen and (min-width: 671px) and (max-width: 1024px) {
+    .links-div {
+    flex-wrap: wrap;
+    align-items: center;
+    }
+    
+    .link-style {
+    font-size: 16px;
+    margin: 10px;
+    }
+    
+    .login-style {
+    padding: 10px;
+    }
+    
+    h1.titulologin {
+    font-size: 80px;
+    }
+    
+    .fadeIn.second {
+    width: 80%;
+    margin: 10px;
+    }
+    
+    .fadeIn.third {
+    width: 80%;
+    margin: 10px;
+    }
+    
+    .fadeIn.fourth {
+    width: 80%;
+    margin: 10px;
+    }
+    
+    .background-form {
+    border: none;
+    margin-top: 0;
+    }
 }
