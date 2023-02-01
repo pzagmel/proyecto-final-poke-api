@@ -15,7 +15,6 @@ fetch ("https://3000-lukasoy-backendpokegym-veqmyydcg1p.ws-us84.gitpod.io/login"
 
   }
 
-
   return (
     <div className="container login-page">
       <div className="row">

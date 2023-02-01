@@ -26,7 +26,7 @@ import { Context } from "../store/appContext";
 // };
 
 export const Fichaevaluacion = ({
-  estatura,
+  
   peso,
   porcentaje_musculo,
   porcentaje_grasa,
@@ -60,9 +60,6 @@ export const Fichaevaluacion = ({
                     Peso (kg)
                   </th>
                   <th id="thficha" scope="col">
-                    Estatura (cm)
-                  </th>
-                  <th id="thficha" scope="col">
                     % de Grasa
                   </th>
                   <th id="thficha" scope="col">
@@ -75,7 +72,6 @@ export const Fichaevaluacion = ({
                   <td id="tdficha" scope="row">
                     {peso}
                   </td>
-                  <td id="tdficha">{estatura}</td>
                   <td id="tdficha">{porcentaje_grasa}</td>
                   <td id="tdficha">{porcentaje_musculo}</td>
                 </tr>

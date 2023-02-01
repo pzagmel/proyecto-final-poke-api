@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/Footer.css";
 import { Link } from "react-router-dom";
-import Logo from "../../img/LOGOPOKEGYM.png"
+import Logo from "../../img/logofinal.png"
 import FB from "../../img/FB.png"
 import MAIL from "../../img/MAIL.png"
 import TW from "../../img/TW.png"

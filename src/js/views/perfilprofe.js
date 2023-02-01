@@ -3,6 +3,8 @@ import { useEffect, useState, useContext } from "react";
 import "../../styles/perfilprofe.css";
 import { Link, NavLink, useNavigate, useSearchParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import Bienvenido from "../../img/Bienvenidos.png";
+
 import { InfoGym } from "../component/CardsINFOGYM";
 import { Footer } from "../component/footer";
 import { Footergp } from "../component/footer2";
@@ -38,6 +40,9 @@ export const Perfilprofe = () => {
 
   return (
     <div>
+       <div className="container" id="bienvenido">
+                <img src={Bienvenido} style={{width:1300}}/>
+        </div>
       <h1> PerfilProfe</h1>
       <FichaPersonal />
       <ListaClientes />
