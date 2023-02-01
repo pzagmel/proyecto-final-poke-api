@@ -3,8 +3,8 @@ import { useEffect, useState, useContext } from "react";
 import { Context } from "../store/appContext";
 
 // window.onload = function () {
-    //   const botonNivel1 = document.querySelector(".hijo1");
-    //   const contenedor = document.querySelector(".Nivel1");
+//   const botonNivel1 = document.querySelector(".hijo1");
+//   const contenedor = document.querySelector(".Nivel1");
 
 //   const botonNivel2 = document.querySelector(".hijo2");
 //   const contenedor1 = document.querySelector(".PadreNivel2");
@@ -32,14 +32,11 @@ export const Fichaevaluacion = ({
   porcentaje_grasa,
   nivel,
 }) => {
-  const { store , actions} = useContext(Context);
-
-
+  const { store, actions } = useContext(Context);
 
   useEffect(() => {
-    
-        const poke = nivel == 1 ? 66 : nivel == 2 ? 67 : nivel == 3 ? 68 :  66 ;
-       actions.getPokemon(poke)
+    const poke = nivel == 1 ? 66 : nivel == 2 ? 67 : nivel == 3 ? 68 : 66;
+    actions.getPokemon(poke);
   }, []);
 
   return (

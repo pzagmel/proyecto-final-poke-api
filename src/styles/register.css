@@ -33,6 +33,17 @@ a,button{
         padding: 0;
     }
 } */
+h2.register{
+    color: #ffff00;
+    font-size: 80px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    
+}
+h3.infoprofe{
+    color: #ffff00;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
 #REGISTERHIJOMAYOR{
     display: flex;
     justify-content: center;

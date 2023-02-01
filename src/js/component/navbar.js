@@ -2,9 +2,9 @@ import React, { useState, } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../img/logofinal.png"
 import Logout from "../../img/logout.png"
-import Pokebola from "../../img/pokedos.png"
-import Perfil from "../../img/perfil.png"
-import login from "../../img/icon-login.png"
+import Pokebola from "../../img/registrar.png"
+import Perfil from "../../img/perfillisto.png"
+import login from "../../img/loggin.png"
 import "../../styles/navbar.css";
 
 
