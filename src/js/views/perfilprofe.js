@@ -1,6 +1,8 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import "../../styles/perfilprofe.css";
+import { Link, NavLink, useNavigate, useSearchParams } from "react-router-dom";
+import { Context } from "../store/appContext";
 import Bienvenido from "../../img/Bienvenidos.png";
 
 import { InfoGym } from "../component/CardsINFOGYM";
@@ -10,8 +12,12 @@ import { FichaPersonal } from "../component/FijaPersonal";
 import { ListaClientes } from "../component/PerfilProfesionalListaClientes";
 import { Fichaevaluacion } from "../component/fichaevaluacion";
 
+
+
 export const Perfilprofe = () => {
+  let navigate = useNavigate();
   
+  const { store, actions } = useContext(Context);
   const [list, setList] = useState([]);
   useEffect(() => {
     var myHeaders = new Headers();
@@ -34,12 +40,15 @@ export const Perfilprofe = () => {
       });
   }, []);
 
+/* if (user) {  */
   return (
+    
     <div>
        <div className="container" id="bienvenido">
                 <img src={Bienvenido} style={{width:1300}}/>
+                <h1 className="usuario">Profesor {store.userInfo?.nombre} </h1>
         </div>
-      <h1> PerfilProfe</h1>
+      
       <FichaPersonal />
       <ListaClientes />
       <div className="row rowfichaej">
@@ -58,4 +67,11 @@ export const Perfilprofe = () => {
       </div>
     </div>
   );
-};
+}/*  else {
+  navigate("*");
+  return null;
+  
+}}; */
+
+
+ 

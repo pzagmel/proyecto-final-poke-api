@@ -2,14 +2,14 @@ import React from "react";
 import pokebola from "../../img/POKEBOLA.png";
 import "../../styles/PPClientes.css";
 
-window.onload = function () {
-  const boton = document.querySelector(".dropdown-toggle");
-  const contenedor = document.querySelector(".PrincipalContainerDropdown");
+// window.onload = function () {
+//   const boton = document.querySelector(".dropdown-toggle");
+//   const contenedor = document.querySelector(".PrincipalContainerDropdown");
 
-  boton.addEventListener("click", () => {
-    contenedor.classList.toggle("aumentado");
-  });
-};
+//   boton.addEventListener("click", () => {
+//     contenedor.classList.toggle("aumentado");
+//   });
+// };
 export const ListaClientes = () => (
   <div className="col-12" id="PrimeroPrimerin">
     <div className="row">

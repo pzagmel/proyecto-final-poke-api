@@ -8,95 +8,98 @@ import registro from "../../img/registro.png";
 // import { Footergp } from "../component/footer2";
 import { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
-import { useNavigate } from "react-router";
+import { Navigate, useNavigate } from "react-router";
 
 export const Register = () => {
-//   const [pass, setPass] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [usuario, setUsuario] = useState("");
+  //   const [pass, setPass] = useState("");
+  //   const [email, setEmail] = useState("");
+  //   const [usuario, setUsuario] = useState("");
   let navigate = useNavigate();
   const { store, actions } = useContext(Context);
+  const token = sessionStorage.getItem("token");
+  const register = async (evento) => {
 
+    evento.preventDefault();
+    let USER = evento.target[0].value;
+    let MAIL = evento.target[1].value;
+    let PASS = evento.target[2].value;
+    let REPPASS = evento.target[3].value;
+    let FONO = evento.target[4].value;
+    let RUT = evento.target[5].value; /* AUN NO SE VERIFICA */
+    if (PASS != REPPASS) {
+      alert("Contraseñas deben ser iguales");
+    }
+    if (USER == "" || MAIL == "" || PASS == "" || REPPASS == "") {
+      alert("Debes completar los datos");
+    } else {     
+      await actions.getinfoRegister(
+        JSON.stringify({
+          nombre: USER,
+          email: MAIL,
+          password: PASS,
+          apellido: USER,
+          rut: RUT,
+          telefono: FONO,
+          rol: evento.target[6].checked,
+        })
+      );
+      alert("Registrado");
+      navigate("/login")       
+    }
+  };
+  /* useEffect(()=>{
+    const {userInfo:{rol}}=store
+    console.log('rol', rol)
+    if (rol!==null){
+    if (rol){
+      navigate("/perfilprofe");
+    }else{
+      navigate("/perfilcliente");
+    }
+  }
+
+  }, [store.userInfo.rol]); */
+  
   return (
-    <>
-      <div className="container" id="REGISTERHIJOMAYOR">
-        <div className="row registerinfo">
-          <div className="col-1">
-            <div className="login-card" id="CONTAINERREGISTER">
-              <h2 className="register">
-                REGISTRO
-              </h2>
-              <h3 className="registerinfo">Introduce Información</h3>
-              <form
-                className="login-form"
-                onSubmit={(evento) => {
-                  console.log("evento", evento);
-                  evento.preventDefault();
-                  let USER = evento.target[0].value;
-                  let MAIL = evento.target[1].value;
-                  let PASS = evento.target[2].value;
-                  let REPPASS = evento.target[3].value;
-                  let FONO = evento.target[4].value;
-                  let RUT = evento.target[5].value; /* AUN NO SE VERIFICA */
-                  if (PASS != REPPASS) {
-                    alert("Contraseñas deben ser iguales");
-                  }
-                  if (USER == "" || MAIL == "" || PASS == "" || REPPASS == "") {
-                    alert("Debes completar los datos");
-                  } else {
-                    if (evento.target[6].checked) {
-                      //profesor si es true
-                      actions.getinfoRegister(JSON.stringify({
-                        nombre: USER,
-                        email: MAIL,
-                        password:PASS,
-                        apellido: USER,
-                        rut: RUT,
-                        telefono: FONO,
-                        rol_profesor: true,
-                      }));
-                    } else {
-                      actions.infoRegister(JSON.stringify({
-                        nombre: USER,
-                        email: MAIL,
-                        password:PASS,
-                        apellido: USER,
-                        rut: RUT,
-                        telefono: FONO,
-                        rol_estudiante: true,
-                      }));
-                    }
-                    alert("Registrado");
-                    navigate("/login");
-                  }
-                }}
-              >
-                <input type="text" placeholder="Nombre de Usuario" />
-                <input type="email" placeholder="Correo" />
-                <input type="password" placeholder="Contraseña" />
-                <input type="password" placeholder="Repetir Contraseña" />
-                <input
-                  type="telefono"
-                  placeholder="+569 12345678"
-                //   pattern="\x2b[0-9]"
-                  required
-                ></input>
-                <input type="Rut" placeholder="Rut" />
-                <h3 className="profe">eres profesor?</h3>
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckDefault"
-                />
-                <label class="form-check-label" for="flexCheckDefault" />
-
-                <button type="submit">CREAR</button>
-              </form>
-            </div>
-          </div>
+    <>      
+      {token && token != "" && token != undefined ? (
+        "you are registed in with this token " + token
+      ) : (
+        <div className="container" id="REGISTERHIJOMAYOR">
+          <div className="row registerinfo">
+            <div className="col-1">
+              <div className="login-card" id="CONTAINERREGISTER">
+                <h2 className="register">
+                  Registrate{" "}
+                </h2>{" "}
+                <h3> Introduce Información </h3>
+                <form className="login-form" onSubmit={register}>
+                  <input type="text" placeholder="Nombre de Usuario" />
+                  <input type="email" placeholder="Correo" />
+                  <input type="password" placeholder="Contraseña" />
+                  <input type="password" placeholder="Repetir Contraseña" />
+                  <input
+                    type="telefono"
+                    placeholder="+569 12345678"
+                    //   pattern="\x2b[0-9]"
+                    required
+                  ></input>{" "}
+                  <input type="Rut" placeholder="Rut" />
+                  <h3 className="infoprofe"> eres profesor ? </h3>{" "}
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label className="form-check-label" htmlFor="flexCheckDefault" />
+                  <button type="submit"> CREAR </button>{" "}
+                </form>{" "}
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
         </div>
-      </div>
+      )}{" "}
     </>
   );
 };

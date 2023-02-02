@@ -24,8 +24,9 @@ table.table.align-middle{
     border-collapse: inherit;
 }
 th#thficha{
-    background-color: red;
-    text-shadow: 5px 5px 10px white;
+    background-color: rgb(139, 80, 234);
+    color: #fafafa;
+    text-shadow: #021f49 0.1em 0.1em 0.2em;
 }
 td#tdficha{
     background-color: #0a58ca;
@@ -33,28 +34,30 @@ td#tdficha{
 }
 h5.card-titleficha.text-center{
     margin-top: 10px;
-    color:#0a58ca;
-    text-shadow: 5px 5px 10px white;
+    color: #ffff00;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-size: 30px;
 }
 h6.card-subtitle.mb-2.text-center{
-    color:#0a58ca;
-    text-shadow: 5px 5px 10px white;
+    color: #fafafa;
+    text-shadow: #021f49 0.1em 0.1em 0.2em;
+    font-size: 20px;
 }
 
 h5.card-titleretro{
-    color:#0a58ca;
-    text-shadow: 5px 5px 10px white;
+    color: #fafafa;
+    text-shadow: #021f49 0.1em 0.1em 0.2em;
 }
 h5.card-titlejercicios{
-    color:#0a58ca;
-    text-shadow: 5px 5px 10px white;
+    color: #fafafa;
+    text-shadow: #021f49 0.1em 0.1em 0.2em;
     margin-top: 15px;
     
 }
 div#cardtextretro{
     background-color: white;
     border-radius: 5px;
-    border-block: 5px solid red;
+    border-block: 5px solid rgb(139, 80, 234);
     height: 112px;
     width: 1000px;
 }
@@ -83,4 +86,10 @@ div.col-md-8{
 .aumentado3 {
     width: 23%;
     height: 250px;
+}
+
+div.col-sm-12{
+    color: #ffcc00;
+    text-shadow: #021f49 0.1em 0.1em 0.2em;
+    font-size: 17px;
 }

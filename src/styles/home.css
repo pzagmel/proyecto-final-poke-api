@@ -343,3 +343,12 @@ h3.introinfo{
     text-shadow: rgba(247, 247, 23, 0.585) 0.1em 0.1em 0.2em;
     padding: 10px;
 }
+/* comienzo de tamaño de pokem api en ficha de evaluacion */
+img.img-fluid.rounded-start{
+    width: 1000px;
+}
+
+h5.card-titleficha.text-center{
+    color: #ffff00;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
