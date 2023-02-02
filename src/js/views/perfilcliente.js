@@ -13,6 +13,10 @@ import { Context } from "../store/appContext";
 
 export const Perfilcliente = () => {
         const { store, actions } = useContext(Context);
+        useEffect(() => {
+       actions.tokenValidation("/perfilcliente")
+        }, [])
+        
  return(    
       <div className="container">
       

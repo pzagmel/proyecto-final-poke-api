@@ -43,7 +43,7 @@ export const Register = () => {
           rol: evento.target[6].checked,
         })
       );
-      alert("Registrado");
+      //alert("Registrado");
       
     }
   };
@@ -61,8 +61,7 @@ export const Register = () => {
   }, [store.userInfo.rol]);
   
   return (
-    <>
-      
+    <>      
       {token && token != "" && token != undefined ? (
         "you are registed in with this token " + token
       ) : (
