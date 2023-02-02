@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect, useState, useContext } from "react";
 import "../../styles/perfilprofe.css";
-import Bienvenido from "../../img/Bienvenidos.png";
-
 import { Link, NavLink, useNavigate, useSearchParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import Bienvenido from "../../img/Bienvenidos.png";
+
 import { InfoGym } from "../component/CardsINFOGYM";
 import { Footer } from "../component/footer";
 import { Footergp } from "../component/footer2";
@@ -13,7 +13,9 @@ import { ListaClientes } from "../component/PerfilProfesionalListaClientes";
 import { Fichaevaluacion } from "../component/fichaevaluacion";
 
 
+
 export const Perfilprofe = () => {
+  let navigate = useNavigate();
   
   const { store, actions } = useContext(Context);
   const [list, setList] = useState([]);
@@ -38,11 +40,13 @@ export const Perfilprofe = () => {
       });
   }, []);
 
+/* if (user) {  */
   return (
+    
     <div>
        <div className="container" id="bienvenido">
                 <img src={Bienvenido} style={{width:1300}}/>
-                <h1 className="usuario">Profesor {store.user?.userinfo?.nombre} </h1>
+                <h1 className="usuario">Profesor {store.userInfo?.nombre} </h1>
         </div>
       
       <FichaPersonal />
@@ -63,4 +67,11 @@ export const Perfilprofe = () => {
       </div>
     </div>
   );
-};
+}/*  else {
+  navigate("*");
+  return null;
+  
+}}; */
+
+
+ 

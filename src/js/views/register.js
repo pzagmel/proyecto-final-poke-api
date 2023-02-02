@@ -44,10 +44,10 @@ export const Register = () => {
         })
       );
       alert("Registrado");
-      
+      navigate("/login")       
     }
   };
-  useEffect(()=>{
+  /* useEffect(()=>{
     const {userInfo:{rol}}=store
     console.log('rol', rol)
     if (rol!==null){
@@ -58,11 +58,10 @@ export const Register = () => {
     }
   }
 
-  }, [store.userInfo.rol]);
+  }, [store.userInfo.rol]); */
   
   return (
-    <>
-      
+    <>      
       {token && token != "" && token != undefined ? (
         "you are registed in with this token " + token
       ) : (

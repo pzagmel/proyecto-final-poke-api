@@ -1,58 +1,84 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import "../../styles/login.css";
-import { Link, NavLink, useNavigate, useSearchParams } from "react-router-dom";
-import login from "../../img/login.png";
+import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const Login = () => {
   const { store, actions } = useContext(Context);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  let navigate = useNavigate();
+
+  const login = (evento) => {
+    console.log("evento", evento);
+    evento.preventDefault();
+    let MAIL = evento.target[0].value;
+    let PASS = evento.target[1].value;
+    let rememberMe = evento.target[2].checked;
+
+    if (MAIL == "" || PASS == "") {
+      alert("Debes completar los datos");
+    } else {
+      actions.login(MAIL, PASS, rememberMe);
+    }
+  };
+
+  const llamada = async () => {
+    const ruta = await actions.tokenValidation("/login");
+    console.log('ruta',ruta)
+    if (typeof ruta === "string") {
+      navigate(ruta);
+    }
+  };
   
-  const handleClick = () => {
-
-fetch ("https://3000-lukasoy-backendpokegym-veqmyydcg1p.ws-us84.gitpod.io/login")
-
+  useEffect(() => {
+    llamada();
+  }, []);
+  
+  useEffect(()=>{
+    const {userInfo:{rol}}=store
+    console.log('rol', rol)
+    if (rol!==null){
+    if (rol){
+      navigate("/perfilprofe");
+    }else{
+      navigate("/perfilcliente");
+    }
   }
-
-
+  }, [store.userInfo.rol]);
   return (
     <div className="container login-page">
       <div className="row">
         <div className="col-1 login-style">
           <div className="login-card">
-            <h1 className="titulologin">
-              Login
-            </h1>
+            <h1 className="titulologin">LOGIN</h1>
 
-            <form
-              className="login-register"
-              onSubmit={(evento) => {
-                console.log("evento", evento);
-                evento.preventDefault();
-                let MAIL = evento.target[0].value;
-                let PASS = evento.target[1].value;
-
-                if (MAIL == "" || PASS == "") {
-                  alert("Debes completar los datos");
-                } else {
-                  actions.login(MAIL, PASS);
-                }
-              }}
-            >
+            <form className="login-register" onSubmit={login}>
               <input
                 type="text"
                 className="fadeIn second"
                 name="email"
-                placeholder="email" value= {email} onChange={(e)=>setEmail(e.target.value)}
+                placeholder="login"
               />
               <input
                 type="password"
                 className="fadeIn third"
                 name="password"
-                placeholder="password" value= {password} onChange={(e)=>setPassword(e.target.value)}
+                placeholder="password"
               />
-              <input type="submit" onClick={handleClick} className="fadeIn fourth" value="Log In" />
+              <div className="form-check">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label
+                  className="form-check-label"
+                  /* htmlFor="flexCheckIndeterminate "*/
+                >
+                  Remember me
+                </label> 
+              </div>
+              <input type="submit" className="fadeIn fourth" value="Log In" />
             </form>
 
             <Link to="/recover" className="link link-style">

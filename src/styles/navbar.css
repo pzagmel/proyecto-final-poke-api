@@ -1,19 +1,19 @@
 ul.navbar-nav.ml-auto.iconos{
-  width: 330px;
+  width: 200px;
   height: 50px;
   margin-right: 100px;
 }
 
 img.img-icon{
   width: 120px;
-  margin-top: -37px;
+  margin-top: -40px;
   margin-left: -20px;
  
   
 }
 img.img-icon2{
   width: 90px;
-  margin-top: -27px;
+  margin-top: -15px;
   margin-left: -35px;
 }
 
@@ -92,6 +92,8 @@ li > a:hover{
 h1.titulonavbar{
   display: flex;
 }
+
+
 
 @media (max-width: 576px) {
   .nav-style {
