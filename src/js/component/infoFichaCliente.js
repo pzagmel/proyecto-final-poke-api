@@ -1,32 +1,37 @@
-import React from "react";
+import React,{ useContext} from "react";
 import pokebola from "../../img/POKEBOLA.png";
 import logoPerfil from "../../img/perfil-logo.png";
 import "../../styles/Fichapersonal.css";
+import { Context } from "../store/appContext";
 
 
-export const InfoFicha = () => (
-    <div>
+
+export const InfoFicha = () => {
+
+const { store, actions } = useContext(Context);
+   
+  return( 
+   <div>
         <div >
             <div className="container infomasficha">
                 <div className="info-personal">
                     <h2 className="h2-text">Información Personal</h2>
                     <ul className="ListaDatos">
-                        <li> Nombre Completo: </li>
-                        <li> Fecha de Ingreso: </li>
-                        <li> Clases: </li>
+                        <li className="infocliente"> Nombre Completo: {store.user?.userinfo?.nombre} </li>
+                        <li className="infocliente"> Clases: </li>
                     </ul>
                  </div>
                  <div className="container-logo-ficha">
                     <div className="logo-perfil">
-                        <img src={logoPerfil}/>
+                        <h1 className="tituloperfil">Perfil</h1>
                     </div> 
                     <div className="ficha-evaluacion">
                          <h2 className="h2-text">Ficha de Evaluación</h2>
                             <ul className="ListaDatosFicha">
-                                <li> Indices: </li>
-                                <li> Medidas: </li>
-                                <li> Índice Masa Corporal: </li>
-                                <li> Índice Grasa Corporal: </li>
+                                <li className="infocliente"> Indices: </li>
+                                <li className="infocliente"> Medidas: </li>
+                                <li className="infocliente"> Índice Masa Corporal: </li>
+                                <li className="infocliente"> Índice Grasa Corporal: </li>
                             </ul>
                     </div>
                 </div>
@@ -34,5 +39,5 @@ export const InfoFicha = () => (
         </div>
     </div>
         
-
-)
+   
+)}

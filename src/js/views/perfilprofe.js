@@ -42,8 +42,9 @@ export const Perfilprofe = () => {
     <div>
        <div className="container" id="bienvenido">
                 <img src={Bienvenido} style={{width:1300}}/>
+                <h1 className="usuario">Profesor {store.user?.userinfo?.nombre} </h1>
         </div>
-      <h1> PerfilProfe</h1>
+      
       <FichaPersonal />
       <ListaClientes />
       <div className="row rowfichaej">

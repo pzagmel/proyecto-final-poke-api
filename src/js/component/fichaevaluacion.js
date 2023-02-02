@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState, useContext } from "react";
 import { Context } from "../store/appContext";
 
+
 // window.onload = function () {
 //   const botonNivel1 = document.querySelector(".hijo1");
 //   const contenedor = document.querySelector(".Nivel1");

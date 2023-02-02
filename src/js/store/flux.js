@@ -33,6 +33,12 @@ const getState = ({ getStore, getActions, setStore }) => {
             setStore({ pokemon: data.sprites.front_default });
           });
       },
+
+      logout:() =>{
+       sessionStorage.removeItem("token");
+       console.log("login out");
+       setStore({token:null});
+      },
       login: (MAIL, PASS) => {
         const store = getStore();
 

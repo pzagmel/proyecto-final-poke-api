@@ -1,7 +1,19 @@
+
+h1.tituloperfil{
+  color: yellow;
+  text-shadow: rgb(3, 33, 120) 0.1em 0.1em 0.2em;
+  font-size: 100px;
+}
+h2.h2-text{
+  color: rgba(237, 237, 131, 0.988);
+  text-shadow: rgb(3, 33, 120)0.1em 0.3em 0.3em;
+}
+
 .Ficha {
     width:40%;
     height: 30%;
     background-color: #6190D7;
+    
     border: 5px;
     margin: 0px;
     border-radius: 30px;
@@ -11,6 +23,12 @@
   background-color: #6190D7;
   width: 300px;
   height: 100px;
+  
+  }
+  li.infocliente{
+    color: #fff;
+    text-shadow: rgb(3, 33, 120) 0.1em 0.1em 0.2em;
+    font-size: 20px;
   }
 
 #CajaPadre{
