@@ -13,7 +13,7 @@
         height: 10%;
         background-color: #6190D7;
         border: 5px;
-        margin: 0px;
+        
         border-radius: 30px;
 }
 #ListaDropdown{
@@ -23,6 +23,7 @@
 #DropDownPrincipal{
     width: 20%;
     height: 20%;
+    margin: 50px;
 }
 
 @media screen and (max-width: 600px) {
@@ -44,9 +45,10 @@
   .PrincipalContainerDropdown{
       border: 0px;
       margin: 10px;
+      margin-left: 100px;
       padding: 20px;
       background-color: #1F69D8;
-      width: 12%;
+      width: 1300px;
       height: 60%;
       border-radius: 20px;
   }
@@ -55,3 +57,26 @@
     width: 23%;
     height: 250px;
     }
+
+  button#dropdownMenu2.dropdown-toggle{
+    background: transparent;
+    order: 2px solid transparent;
+    width: 1px;
+    height: 1px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: yellow;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-size: 40px;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    margin-top: -10px;
+  }
+  h1.botontitulo{
+    color: yellow;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-size: 40px;
+    margin-top: -40px;
+    margin-left: -20px;
+  }

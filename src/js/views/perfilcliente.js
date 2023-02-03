@@ -15,9 +15,9 @@ import { Fichaevaluacion } from "../component/fichaevaluacion";
 export const Perfilcliente = () => {
         let navigate = useNavigate();
         const { store, actions } = useContext(Context);
-        useEffect(() => {
+        /* useEffect(() => {
        actions.tokenValidation("/perfilcliente")
-        }, [])
+        }, []) */
             
         return(
                 <div className="container">
@@ -28,6 +28,7 @@ export const Perfilcliente = () => {
                         <h1 className="usuario"> {store.userInfo?.nombre} </h1>
                       </div>
                       <div>
+                        
                         <InfoFicha />
                         <Fichaevaluacion/>
                       </div>

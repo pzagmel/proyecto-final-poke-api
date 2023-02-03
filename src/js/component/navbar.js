@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useContext, useReducer } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../img/logofinal.png"
+import logo from "../../img/loginpokegym.png"
 import Logout from "../../img/logout.png"
 import Pokebola from "../../img/registrar.png"
 import Perfil from "../../img/perfillisto.png"
 import login from "../../img/loggin.png"
 import "../../styles/navbar.css";
 import { Context } from "../store/appContext";
-import { useInternalNotification } from "antd/es/notification/useNotification";
 
 
 

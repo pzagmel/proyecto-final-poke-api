@@ -21,6 +21,7 @@ export const FichaPersonal = () => {
                     <li> email: {store.userInfo?.email} </li>
                     <li> Cargo: Profesor </li>
                     <li> Fono:{store.userInfo?.telefono}  </li>
+                    <li> Horario:Diurno </li>
                   </ul>
            </div>
            </div>
