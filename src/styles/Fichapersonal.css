@@ -1,10 +1,41 @@
+div.fichaentera{
+  background-color: #6190D7 ;
+  height: 300px;
+  width:800px;
+  border-radius: 30px;
+  
+}
 
-h1.tituloperfil{
+h1.tituloperfilprofe{
   color: yellow;
   text-shadow: rgb(3, 33, 120) 0.1em 0.1em 0.2em;
-  font-size: 100px;
+  font-size: 40px;
+  display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
 }
-h2.h2-text{
+
+img.lucario{
+  width:150px;
+}
+
+ul.col-6.lista1{
+  display: flex;
+  flex-direction: row;
+  /* align-content: flex-end; */
+  justify-content: center;
+  align-items: stretch;
+}
+ul.col-6.lista2{
+  margin-top: 5px;
+  font-size: x-large;
+color: #fff;
+text-shadow: rgb(3, 33, 120)0.1em 0.3em 0.3em;
+}
+/* h2.h2-text{
   color: rgba(237, 237, 131, 0.988);
   text-shadow: rgb(3, 33, 120)0.1em 0.3em 0.3em;
 }
@@ -19,7 +50,7 @@ h2.h2-text{
     border-radius: 30px;
   }
   
-.cuadrado {
+div.ficha {
   background-color: #6190D7;
   width: 300px;
   height: 100px;
@@ -40,11 +71,9 @@ h2.h2-text{
   height: 40%;
   border-radius: 20px;
 }
-#CajaHijoFicha{
-  margin-left: 20%;
-}
-#ListaTOTAL{
-  width: 100%;
+
+ul.ListaTOTAL{
+  width: 100px;
   height: 30%;
   margin:30px;
   padding: 20px;
@@ -53,4 +82,4 @@ h2.h2-text{
   }
   li.profesional.nombre{
     margin:50px;  
-}
+} */

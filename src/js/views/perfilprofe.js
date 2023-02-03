@@ -40,15 +40,14 @@ export const Perfilprofe = () => {
       });
   }, []);
 
-/* if (user) {  */
-  return (
-    
+
+return (
+  store.token ? (
     <div>
-       <div className="container" id="bienvenido">
-                <img src={Bienvenido} style={{width:1300}}/>
-                <h1 className="usuario">Profesor {store.userInfo?.nombre} </h1>
-        </div>
-      
+      <div className="container" id="bienvenido">
+        <img src={Bienvenido} style={{width:1300}}/>
+        <h1 className="usuario">Profesor {store.userInfo?.nombre} </h1>
+      </div>
       <FichaPersonal />
       <ListaClientes />
       <div className="row rowfichaej">
@@ -66,12 +65,11 @@ export const Perfilprofe = () => {
         })}
       </div>
     </div>
-  );
-}/*  else {
-  navigate("*");
-  return null;
-  
-}}; */
+  ) : (
+    window.location.href = "*"
+  )
+);
+}
 
 
  

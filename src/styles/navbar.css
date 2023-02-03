@@ -93,6 +93,16 @@ h1.titulonavbar{
   display: flex;
 }
 
+button.botonlogout{
+  width: 1px;
+  height: 1px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: transparent;
+  border: 2px solid transparent;
+}
 
 
 @media (max-width: 576px) {

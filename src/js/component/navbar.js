@@ -56,7 +56,7 @@ export const Navbar = () => {
 
 						:
 						(<li className="nav-item d-none d-sm-block">
-							<button onClick={() => actions.logout()}><img className="img-icon3" src={Logout} alt="Icono usuario" /> </button>
+							<button onClick={() => actions.logout()} className="botonlogout"><img className="img-icon3" src={Logout} alt="Icono usuario" /> </button>
 						</li>
 						)}
 				</ul>
