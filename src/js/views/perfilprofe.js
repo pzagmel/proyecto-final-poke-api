@@ -50,7 +50,7 @@ export const Perfilprofe = () => {
       </div>
       <h1> PerfilProfe</h1>
 
-      <FichaPersonal />
+      <FichaPersonal  />
      
      
           <ListaClientes
