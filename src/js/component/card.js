@@ -21,7 +21,7 @@ export const Longcard = ({
   description3,
 }) => {
   return (
-    <div className="card text-bg-light">
+    <div className="card text-bg-light retoDia">
   <img src={img} className="card-img" />
   <div className="card-img-overlay">
     <h5 id="titlereto" className="card-title">{title}</h5>
