@@ -15,6 +15,7 @@ export const Navbar = () => {
 				<img className="logo-gym" src={logo} alt="Logo" />
 			  </Link>
 			</div>
+			<div className="titupok"><h1 className="titulonavbar">POKEGYM</h1></div>
 			<ul className="navbar-nav ml-auto iconos">
 				<li className="nav-item d-none d-sm-block">
 					<Link className="nav-link" to="/">

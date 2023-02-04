@@ -1,12 +1,86 @@
-body{
+/* body{
     background-color: #0A2A69;
-}
+} 
+ */
+/* intenten de no tocar el body afecta a los demas componentes */
 #Padre {
     position:relative;
 }
 #img{
     position:absolute;
     left:0;
-    bottom:5px;
+    bottom:5px;   
+}
+
+/* css de fichas  */
+
+div.ejercicioscard.mb-3{
+    background-color: #0dcaf0;
+}
+div.col.colfichas{
+    transform: none;
+}
+table.table.align-middle{
+    border-collapse: inherit;
+}
+th#thficha{
+    background-color: red;
+    text-shadow: 5px 5px 10px white;
+}
+td#tdficha{
+    background-color: #0a58ca;
+    font-size: 45px;
+}
+h5.card-titleficha.text-center{
+    margin-top: 10px;
+    color:#0a58ca;
+    text-shadow: 5px 5px 10px white;
+}
+h6.card-subtitle.mb-2.text-center{
+    color:#0a58ca;
+    text-shadow: 5px 5px 10px white;
+}
+
+h5.card-titleretro{
+    color:#0a58ca;
+    text-shadow: 5px 5px 10px white;
+}
+h5.card-titlejercicios{
+    color:#0a58ca;
+    text-shadow: 5px 5px 10px white;
+    margin-top: 15px;
     
+}
+div#cardtextretro{
+    background-color: white;
+    border-radius: 5px;
+    border-block: 5px solid red;
+    height: 112px;
+    width: 1000px;
+}
+div.col-md-8{
+    margin-top:65px;
+}
+
+/* .ContenedorNivel1{
+    border:0px;
+    margin:10px;
+    padding:20px;
+    background-color: #1F69D8;
+    width: 40%;
+    height: 40%;
+    border-radius: 20px;
+
+} */
+.aumentado1 {
+    width: 80%;
+    height: 250px;
+}
+.aumentado2 {
+    width: 23%;
+    height: 250px;
+}
+.aumentado3 {
+    width: 23%;
+    height: 250px;
 }
