@@ -17,13 +17,13 @@ export const ListaClientes = () => (
         <div className="ContainerDropdownClientes">
           <div className="dropdowndos">
             <button
-              className="btn btn-secondary dropdown-toggle"
+              className=" dropdown-toggle"
               type="button"
               id="dropdownMenu2"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Tus Clientes
+             <h1 className="botontitulo">Tus Clientes</h1> 
             </button>
 
             <ul

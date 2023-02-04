@@ -1,39 +1,30 @@
 import React from "react";
 import pokebola from "../../img/POKEBOLA.png";
+import lucario from "../../img/lucario.jpg"
+import { Context } from "../store/appContext";
 import "../../styles/Fichapersonal.css";
+import { useEffect, useState, useContext } from "react";
 
 export const FichaPersonal = () => {
-  const profesionales = [
-    {
-      nombre: "ASH",
-      apellido: "KEPSHUP",
-      info: "ENTRENADOR POKEMON",
-      horario: "DIURNO",
-    },
-    /*    { nombre: 'Misty', apellido: 'Mistison', info: 'ENTRENADORA POKEMON', horario:'NOCTURNO' } */
-  ];
+  const { store, actions } = useContext(Context);
 
   return (
-    <div className="conteiner" id="CajaPadre">
-      <h1> Información del Profesional </h1>{" "}
-      <div className="row-6" id="CajaHijoFicha">
-        <div className="col">
-          <div className="CuadroFicha">
-            <div className="Ficha">
-              {profesionales.map((profesional ,i) => {
-                return (
-                  <ul id="ListaTOTAL" key={"elm"+i}>
-                    <li> Nombre: {profesional.nombre} </li>{" "}
-                    <li> Apellido: {profesional.apellido} </li>{" "}
-                    <li> Cargo: {profesional.info} </li>{" "}
-                    <li> Horario: {profesional.horario} </li>{" "}
+    <div className="conteiner CajaPadre" >
+      <div className="fichaentera">
+      <h1 className="tituloperfilprofe"> Información del Profesional </h1>
+      <div className="row CajaHijoFicha" >
+      <ul className="col-6 lista1" >
+      <img src={lucario} className="lucario" alt="..."/>
+      </ul>
+                  <ul className="col-6 lista2" >
+                    <li> Nombre: {store.userInfo?.nombre} </li>
+                    <li> email: {store.userInfo?.email} </li>
+                    <li> Cargo: Profesor </li>
+                    <li> Fono:{store.userInfo?.telefono}  </li>
+                    <li> Horario:Diurno </li>
                   </ul>
-                );
-              })}
-            </div>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>
+           </div>
+           </div>
     </div>
   );
 };

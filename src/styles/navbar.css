@@ -18,8 +18,8 @@ img.img-icon2{
 }
 
 img.logo-gym{
-  width: 170px;
-  margin-top: -35px;
+  width: 130px;
+  margin-top: -15px;
 }
 
 img.img-icon3{
@@ -93,6 +93,16 @@ h1.titulonavbar{
   display: flex;
 }
 
+button.botonlogout{
+  width: 1px;
+  height: 1px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: transparent;
+  border: 2px solid transparent;
+}
 
 
 @media (max-width: 576px) {
