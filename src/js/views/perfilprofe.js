@@ -35,6 +35,7 @@ export const Perfilprofe = () => {
     };
     fetch(
       "https://3000-lukasoy-backendpokegym-dy4657cuuns.ws-us85.gitpod.io/user",
+      "https://3000-lukasoy-backendpokegym-ll1koxuj4po.ws-us85.gitpod.io/?vscodeBrowserReqId=1675480161829/user",
       requestOptions
     )
       .then((data) => data.json())
@@ -52,7 +53,7 @@ return (
        <div className="container" id="bienvenido">
                 <img src={Bienvenido} style={{width:1300}}/>
         </div>
-      <h1> PerfilProfe</h1>
+      <h1 className="nombreprofe"> {store.userInfo?.nombre}</h1>
       <FichaPersonal />
      
      

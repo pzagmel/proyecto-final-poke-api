@@ -3,6 +3,16 @@
 } 
  */
 /* intenten de no tocar el body afecta a los demas componentes */
+h1.nombreprofe{
+    display: flex;
+    justify-content:  space-around;
+    margin-top: -100px;
+    margin-bottom: 100px;
+    color: #ffff00;
+    text-shadow: black 0.1em 0.1em 0.2em;
+
+}
+
 #Padre {
     position:relative;
 }
