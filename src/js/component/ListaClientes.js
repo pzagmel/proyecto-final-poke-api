@@ -16,6 +16,31 @@ import { Context } from "../store/appContext";
 export const ListaClientes = ({ data }) => {
   const { store, actions } = useContext(Context);
   const [list, setList] = useState([]);
+  
+  // useEffect(() => {
+  
+  //   var myHeaders = new Headers();
+  // myHeaders.append("Authorization", `Bearer ${localStorage.getItem("token")}`);
+  // myHeaders.append("Content-Type", "application/json");
+  
+  // var raw = JSON.stringify({});
+  
+  // var requestOptions = {
+  //   method: 'GET',
+  //   headers: myHeaders,
+  //   body: raw,
+  //   redirect: 'follow'
+  // };
+  
+  // fetch("https://3000-lukasoy-backendpokegym-veqmyydcg1p.ws-us85.gitpod.io/ficha/", requestOptions)
+  // .then((data) => data.json())
+  // .then((response) => {
+    
+  //   setList(response.user);
+  // })
+  // .catch((error) => console.log("error", error));
+  
+  // }, []);
 
   return (
     <div className="col-12" id="PrimeroPrimerin">
@@ -24,10 +49,10 @@ export const ListaClientes = ({ data }) => {
           <div className="ContainerDropdownClientes">
             <div className="dropdowndos">
               
-              <select key={data.nombre} className="form-select" aria-label="Default select example">              
+              <select onClick={(e)=> console.log(e.target.value)} key={data.nombre} className="form-select" aria-label="Default select example">              
             {data.map((user) => {
               return ( 
-               <option value={user.id}> {user.nombre + " " + user.apellido} </option>             
+               <option value={user.id} >{user.nombre + " " + user.apellido} </option>             
                );
               })}            
               </select>                                     
