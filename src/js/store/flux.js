@@ -53,7 +53,7 @@ const getState = ({
 
         fetch(
 
-            "https://3000-lukasoy-backendpokegym-6a7isqv97gp.ws-us85.gitpod.io/login", {
+            "https://3000-lukasoy-backendpokegym-dy4657cuuns.ws-us85.gitpod.io/login", {
               method: "POST",
               headers: myHeaders,
               body: JSON.stringify({
@@ -104,7 +104,7 @@ const getState = ({
           myHeaders.append("Authorization", `Bearer ${token}`);
           try {
             await fetch(
-                "https://3000-lukasoy-backendpokegym-veqmyydcg1p.ws-us85.gitpod.io/token", {
+                "https://3000-lukasoy-backendpokegym-dy4657cuuns.ws-us85.gitpod.io/token", {
                   method: "POST",
                   headers: myHeaders,
                   redirect: "follow",
@@ -156,7 +156,7 @@ const getState = ({
 
       getinfoRegister: async (user) => {
         fetch(
-            "https://3000-lukasoy-backendpokegym-6a7isqv97gp.ws-us85.gitpod.io/register", {
+            "https://3000-lukasoy-backendpokegym-dy4657cuuns.ws-us85.gitpod.io/register", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

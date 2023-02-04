@@ -23,14 +23,20 @@ export const ListaClientes = ({ data }) => {
         <div className="PrincipalContainerDropdown">
           <div className="ContainerDropdownClientes">
             <div className="dropdowndos">
-              
-              <select key={data.nombre} className="form-select" aria-label="Default select example">              
-            {data.map((user) => {
-              return ( 
-               <option value={user.id}> {user.nombre + " " + user.apellido} </option>             
-               );
-              })}            
-              </select>                                     
+              <select
+                onClick={(e) => console.log(e.target.value)}
+                key={data.nombre}
+                className="form-select"
+                aria-label="Default select example"
+              >
+                {data.map((user) => {
+                  return (
+                    <option value={user.id}>
+                      {user.nombre + " " + user.apellido}{" "}
+                    </option>
+                  );
+                })}
+              </select>
             </div>
           </div>
         </div>
