@@ -18,9 +18,10 @@ export const Perfilprofe = () => {
   const { store, actions } = useContext(Context);
   const [list, setList] = useState([]);
 
+
   useEffect(() => {
     var myHeaders = new Headers();
-    myHeaders.append("Authorization", `Bearer ${localStorage.getItem("token")}`);
+    myHeaders.append("Authorization", `Bearer ${store.token}`);
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
@@ -34,20 +35,19 @@ export const Perfilprofe = () => {
       redirect: "follow",
     };
     fetch(
-      "https://3000-lukasoy-backendpokegym-ll1koxuj4po.ws-us85.gitpod.io/?vscodeBrowserReqId=1675480161829/user",
+      "https://3000-yellow-primate-b4plzi4m7cq.ws-us85.gitpod.io/user",
       requestOptions
     )
-      .then((data) => data.json())
-      .then((response) => {
-        console.log("response", response);
-        setList(response.user);
-      })
+      .then((response) => response.json())
+      .then((data)=> {
+        console.log({data})
+        setList(data.user)})
       .catch((error) => console.log("error", error));
   }, []);
 
 
 return (
-  store.token ? (
+  
     <div>
        <div className="container" id="bienvenido">
                 <img src={Bienvenido} style={{width:1300}}/>
@@ -61,9 +61,7 @@ return (
           />
       
     </div>
-  ) : (
-    window.location.href = "*"
-  )
+  
 );
 }
 

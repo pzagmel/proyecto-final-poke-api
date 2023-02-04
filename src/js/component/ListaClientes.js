@@ -16,7 +16,6 @@ import { Context } from "../store/appContext";
 export const ListaClientes = ({ data }) => {
   const { store, actions } = useContext(Context);
   const [list, setList] = useState([]);
-  
   // useEffect(() => {
   
   //   var myHeaders = new Headers();
@@ -43,16 +42,17 @@ export const ListaClientes = ({ data }) => {
   // }, []);
 
   return (
+    data ? (
     <div className="col-12" id="PrimeroPrimerin">
       <div className="row">
         <div className="PrincipalContainerDropdown">
           <div className="ContainerDropdownClientes">
             <div className="dropdowndos">
               
-              <select onClick={(e)=> console.log(e.target.value)} key={data.nombre} className="form-select" aria-label="Default select example">              
+              <select className="form-select" aria-label="Default select example">              
             {data.map((user) => {
               return ( 
-               <option value={user.id} >{user.nombre + " " + user.apellido} </option>             
+               <option key={user.name} value={user.id} >{user.nombre} </option>             
                );
               })}            
               </select>                                     
@@ -60,6 +60,6 @@ export const ListaClientes = ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div>) : null
   );
 };
