@@ -76,25 +76,15 @@ export const Register = () => {
                 <form className="login-form" onSubmit={register}>
                   <input type="text" placeholder="Nombre de Usuario" />
                   <input type="email" placeholder="Correo" />
-                  <input type="password" placeholder="Contraseña" />
-                  <input type="password" placeholder="Repetir Contraseña" />
-                  <input
-                    type="telefono"
-                    placeholder="+569 12345678"
-                    //   pattern="\x2b[0-9]"
-                    required
-                  ></input>{" "}
+                  <input type="password" placeholder="Contraseña" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="La contraseña debe tener al menos 8 caracteres, incluir mayúsculas, minúsculas y números" />
+                  <input type="password" placeholder="Repetir Contraseña" id="confirm_password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="La contraseña debe tener al menos 8 caracteres, incluir mayúsculas, minúsculas y números" />
+                  <input type="telefono" placeholder="+569 12345678" required />
                   <input type="Rut" placeholder="Rut" />
-                  <h3 className="infoprofe"> eres profesor ? </h3>{" "}
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
-                  />
+                  <h3 className="infoprofe"> eres profesor ? </h3>
+                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                   <label className="form-check-label" htmlFor="flexCheckDefault" />
-                  <button type="submit"> CREAR </button>{" "}
-                </form>{" "}
+                  <button type="submit">CREAR</button>
+              </form>
               </div>{" "}
             </div>{" "}
           </div>{" "}
