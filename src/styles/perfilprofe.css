@@ -7,7 +7,8 @@ h1.nombreprofe{
     display: flex;
     justify-content:  space-around;
     margin-top: -100px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
+    margin-left:150px;
     color: #ffff00;
     text-shadow: black 0.1em 0.1em 0.2em;
 

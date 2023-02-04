@@ -13,6 +13,7 @@ import { ListaClientes } from "../component/ListaClientes";
 import { Fichaevaluacion } from "../component/fichaevaluacion";
 
 
+
 export const Perfilprofe = () => {
   
   const { store, actions } = useContext(Context);
@@ -35,7 +36,7 @@ export const Perfilprofe = () => {
       redirect: "follow",
     };
     fetch(
-      "https://3000-yellow-primate-b4plzi4m7cq.ws-us85.gitpod.io/user",
+      "https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/user",
       requestOptions
     )
       .then((response) => response.json())
@@ -45,24 +46,23 @@ export const Perfilprofe = () => {
       .catch((error) => console.log("error", error));
   }, []);
 
-
-return (
   
+
+  return store.token ? (
     <div>
-       <div className="container" id="bienvenido">
-                <img src={Bienvenido} style={{width:1300}}/>
-        </div>
+      <div className="container" id="bienvenido">
+        <img src={Bienvenido} style={{width:1300}}/>
+      </div>
       <h1 className="nombreprofe"> {store.userInfo?.nombre}</h1>
       <FichaPersonal />
-     
-     
-          <ListaClientes
-          data= {list}
-          />
-      
+      <ListaClientes
+        data={list}
+        />
+        
     </div>
-  
-);
+  ) : (
+    window.location.href = "*"
+  );
 }
 
 

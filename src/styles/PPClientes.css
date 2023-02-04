@@ -1,3 +1,10 @@
+/* div.fade.modal.show{}
+display:flex;
+width:200px; */
+modal.modalficha{
+  display: flex;
+  width: 200px;
+}
 
 .ContainerDropdownClientes{
     border: 0px;

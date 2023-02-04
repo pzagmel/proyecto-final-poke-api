@@ -108,7 +108,7 @@ export const Fichaevaluacion = ({
                 <div className="Nivel2">
                   <div>
                     <button
-                      class="btn btn-primary"
+                      className="btn btn-primary"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseExample1"
@@ -126,7 +126,7 @@ export const Fichaevaluacion = ({
                 <div className="Nivel3">
                   <div>
                     <button
-                      class="btn btn-primary"
+                      className="btn btn-primary"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseExample3"
