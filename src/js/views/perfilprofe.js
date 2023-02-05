@@ -18,7 +18,7 @@ export const Perfilprofe = () => {
 
   useEffect(() => {
     var myHeaders = new Headers();
-    myHeaders.append("Authorization", `Bearer ${localStorage.getItem("token")}`);
+    myHeaders.append("Authorization", `Bearer ${store.token}`);
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
@@ -32,13 +32,13 @@ export const Perfilprofe = () => {
       redirect: "follow",
     };
     fetch(
-      "https://3000-lukasoy-backendpokegym-veqmyydcg1p.ws-us85.gitpod.io/user",
+      "https://3000-yellow-primate-b4plzi4m7cq.ws-us85.gitpod.io/user",
       requestOptions
     )
-      .then((data) => data.json())
-      .then((response) => {
-        console.log("response", response);
-        setList(response.user);
+      .then((response) => response.json())
+      .then((data) => {
+        console.log({ data });
+        setList(data.user);
       })
       .catch((error) => console.log("error", error));
   }, []);
@@ -48,15 +48,11 @@ export const Perfilprofe = () => {
       <div className="container" id="bienvenido">
         <img src={Bienvenido} style={{ width: 1300 }} />
       </div>
-      <h1> PerfilProfe</h1>
+      <h1 className="nombreprofe"> {store.userInfo?.nombre}</h1>
+      <FichaPersonal />
 
-      <FichaPersonal  />
-     
-     
-          <ListaClientes
-          data= {list}
-          />
-      
+      <ListaClientes data={list} />
     </div>
   );
 };
+

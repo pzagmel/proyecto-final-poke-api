@@ -16,30 +16,40 @@ import { Context } from "../store/appContext";
 export const ListaClientes = ({ data }) => {
   const { store, actions } = useContext(Context);
   const [list, setList] = useState([]);
-  
+  const [showFichaevaluacion, setShowFichaevaluacion] = useState(false);
+
+  function modalinfo(user) {
+    setUser(user);
+    setShowFichaevaluacion(true);
+  }
+
+  function modalclose() {
+    setUser(null);
+    setShowFichaevaluacion(false);
+  }
   // useEffect(() => {
-  
+
   //   var myHeaders = new Headers();
   // myHeaders.append("Authorization", `Bearer ${localStorage.getItem("token")}`);
   // myHeaders.append("Content-Type", "application/json");
-  
+
   // var raw = JSON.stringify({});
-  
+
   // var requestOptions = {
   //   method: 'GET',
   //   headers: myHeaders,
   //   body: raw,
   //   redirect: 'follow'
   // };
-  
+
   // fetch("https://3000-lukasoy-backendpokegym-veqmyydcg1p.ws-us85.gitpod.io/ficha/", requestOptions)
   // .then((data) => data.json())
   // .then((response) => {
-    
+
   //   setList(response.user);
   // })
   // .catch((error) => console.log("error", error));
-  
+
   // }, []);
 
   return (
@@ -48,14 +58,28 @@ export const ListaClientes = ({ data }) => {
         <div className="PrincipalContainerDropdown">
           <div className="ContainerDropdownClientes">
             <div className="dropdowndos">
-              
-              <select onClick={(e)=> console.log(e.target.value)} key={data.nombre} className="form-select" aria-label="Default select example">              
-            {data.map((user) => {
-              return ( 
-               <option value={user.id} >{user.nombre + " " + user.apellido} </option>             
-               );
-              })}            
-              </select>                                     
+              <select
+                onClick={(e) => console.log(e.target.value)}
+                key={data.nombre}
+                className="form-select"
+                aria-label="Default select example"
+              >
+                {data.map((user) => {
+                  return (
+                    <option value={user.id}>
+                      {user.nombre + " " + user.apellido}{" "}
+                    </option>
+                  );
+                })}
+              </select>
+              {/* <Modal className="modalficha" show={true} onHide={() => modalclose()}>
+               <Modal.Header closeButton >
+                   <Modal.Title>Fichaevaluacion</Modal.Title>
+</Modal.Header>
+<Modal.Body>
+<Fichaevaluacion />
+</Modal.Body>
+</Modal> */}
             </div>
           </div>
         </div>
