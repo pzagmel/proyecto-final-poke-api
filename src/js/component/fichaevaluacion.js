@@ -69,18 +69,12 @@ export const Fichaevaluacion = () => {
                   aria-label=".form-select-sm example"
                 >
                   <option selected> Musculatura</option>
-                  <option value="1">
-                  Barbell Curl 1 kilo - 5 kilo
-                  </option>
-                  <option value="2">
-                  Dumbbell Curl 5 kilo - 10 kilo
-                  </option>
+                  <option value="1">Barbell Curl 1 kilo - 5 kilo</option>
+                  <option value="2">Dumbbell Curl 5 kilo - 10 kilo</option>
                   <option value="3">
-                  Dumbbell Hammer Curl 10kilo - 15 kilo
+                    Dumbbell Hammer Curl 10kilo - 15 kilo
                   </option>
-                  <option value="3">
-                  Chin Ups
-                  </option>
+                  <option value="3">Chin Ups</option>
                 </select>
 
                 <select
@@ -89,7 +83,9 @@ export const Fichaevaluacion = () => {
                 >
                   <option selected>Triceps</option>
                   <option value="1">Barbell Bench Press kilos - 5 kilos</option>
-                  <option value="2">Dumbbell Incline Bench Press 5 kilos - 10 kilos</option>
+                  <option value="2">
+                    Dumbbell Incline Bench Press 5 kilos - 10 kilos
+                  </option>
                   <option value="3">Barbell Upright Row 15 + </option>
                 </select>
 
@@ -98,15 +94,9 @@ export const Fichaevaluacion = () => {
                   aria-label=".form-select-sm example"
                 >
                   <option selected>Barbell Low Bar Good Morning</option>
-                  <option value="1">
-                      5 kilos - 10 kilos
-                  </option>
-                  <option value="2">
-                    5 kilo - 10 kilo
-                  </option>
-                  <option value="3">
-                     10kilo - 15 kilo
-                  </option>
+                  <option value="1">5 kilos - 10 kilos</option>
+                  <option value="2">5 kilo - 10 kilo</option>
+                  <option value="3">10kilo - 15 kilo</option>
                 </select>
 
                 <select
@@ -114,20 +104,30 @@ export const Fichaevaluacion = () => {
                   aria-label=".form-select-sm example"
                 >
                   <option selected>abdominales</option>
-                  <option value="1">Hand Plank 60 segundos 3 repeticiones</option>
+                  <option value="1">
+                    Hand Plank 60 segundos 3 repeticiones
+                  </option>
                   <option value="2">Crunches 30 repeticiones</option>
-                  <option value="3">Forearm Plank 60 segundos 5 repeticiones </option>
+                  <option value="3">
+                    Forearm Plank 60 segundos 5 repeticiones{" "}
+                  </option>
                 </select>
                 <select
                   class="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
                   <option selected>abdominales</option>
-                  <option value="1">Forward Lunges 30 repeticiones por lado</option>
-                  <option value="2">Barbell Hip Thrust 15 levantadas por 3 secciones</option>
-                  <option value="3">Barbell Squat 5 - 20 kilos  10 levantadas por 3 secciones </option>
+                  <option value="1">
+                    Forward Lunges 30 repeticiones por lado
+                  </option>
+                  <option value="2">
+                    Barbell Hip Thrust 15 levantadas por 3 secciones
+                  </option>
+                  <option value="3">
+                    Barbell Squat 5 - 20 kilos 10 levantadas por 3 secciones{" "}
+                  </option>
                 </select>
-                
+
                 <select
                   class="form-select form-select-sm"
                   aria-label=".form-select-sm example"
@@ -135,9 +135,10 @@ export const Fichaevaluacion = () => {
                   <option selected>cardio</option>
                   <option value="1">trotadora 25 minutos </option>
                   <option value="2">Eliptica 25 minutos</option>
-                  <option value="3">bicicleta  30 minutos</option>
+                  <option value="3">bicicleta 30 minutos</option>
                 </select>
               </div>
+              
             </div>
           </div>
         </div>

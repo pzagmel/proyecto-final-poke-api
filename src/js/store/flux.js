@@ -53,7 +53,7 @@ const getState = ({
 
         fetch(
 
-            "https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/login", {
+            "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/login", {
               method: "POST",
               headers: myHeaders,
               body: JSON.stringify({
@@ -104,7 +104,7 @@ const getState = ({
           myHeaders.append("Authorization", `Bearer ${token}`);
           try {
             await fetch(
-                "https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/token", {
+                "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/token", {
                   method: "POST",
                   headers: myHeaders,
                   redirect: "follow",
@@ -156,7 +156,7 @@ const getState = ({
 
       getinfoRegister: async (user) => {
         fetch(
-            "https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/register", {
+            "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/register", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -200,7 +200,7 @@ const getState = ({
           redirect: 'follow'
         };
         
-        fetch("https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/ficha/id", requestOptions)
+        fetch("https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/ficha/id", requestOptions)
           .then(response => response.text())
           .then(result => console.log(result))
           .catch(error => console.log('error', error));
