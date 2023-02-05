@@ -200,7 +200,7 @@ const getState = ({
           redirect: 'follow'
         };
         
-        fetch("https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/ficha/id", requestOptions)
+        fetch("https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/ficha", requestOptions)
           .then(response => response.text())
           .then(result => console.log(result))
           .catch(error => console.log('error', error));
