@@ -52,41 +52,36 @@ export const Fichaevaluacion = () => {
         <div className="cardejercicios">
           <h5 className="card-titlejercicios">Tu Plan De Entrenamiento</h5>
           <div>
-            <div className="row">
+            <div className="row selectejercicio">
               <div className="PadreNivel1">
                 <select
-                  class="form-select form-select-lg mb-3"
+                  className="form-select form-select-lg mb-3 "
                   aria-label=".form-select-lg example"
                 >
-                  <option selected>Niveles</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
+                  <option selected className="nivel">Nivel</option>
+                  <option className="nivel" value="1">1</option>
                 </select>
 
                 <select
-                  class="form-select form-select-sm"
+                  className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
-                  <option selected> Musculatura</option>
-                  <option value="1">Barbell Curl 1 kilo - 5 kilo</option>
-                  <option value="2">Dumbbell Curl 5 kilo - 10 kilo</option>
-                  <option value="3">
-                    Dumbbell Hammer Curl 10kilo - 15 kilo
+                  <option selected className="nivel"> Musculatura</option>
+                  <option  className="nivel" value="1">
+                  Barbell Curl 1 kilo - 5 kilo
+                  </option>
+                  <option  className="nivel" value="3">
+                  Chin Ups 5 repeticiones de 5 secciones
                   </option>
                   <option value="3">Chin Ups</option>
                 </select>
 
                 <select
-                  class="form-select form-select-sm"
+                  className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
                   <option selected>Triceps</option>
-                  <option value="1">Barbell Bench Press kilos - 5 kilos</option>
-                  <option value="2">
-                    Dumbbell Incline Bench Press 5 kilos - 10 kilos
-                  </option>
-                  <option value="3">Barbell Upright Row 15 + </option>
+                  <option  className="nivel" value="1">Barbell Bench Press kilos - 5 kilos</option>
                 </select>
 
                 <select
@@ -94,48 +89,106 @@ export const Fichaevaluacion = () => {
                   aria-label=".form-select-sm example"
                 >
                   <option selected>Barbell Low Bar Good Morning</option>
-                  <option value="1">5 kilos - 10 kilos</option>
-                  <option value="2">5 kilo - 10 kilo</option>
-                  <option value="3">10kilo - 15 kilo</option>
+                  <option  className="nivel" value="1">
+                      5 kilos - 10 kilos
+                  </option>
+                </select>
+
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Abdominales</option>
+                  <option  className="nivel" value="1">Hand Plank 60 segundos 3 repeticiones</option>
+                  
+                </select>
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Bíceps femoral</option>
+                  <option  className="nivel" value="1">Forward Lunges 30 repeticiones por lado</option>
+                  
+                </select>
+                
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Cardio</option>
+                  <option  className="nivel"value="1">trotadora 25 minutos </option>
+                  <option  className="nivel"value="2">Eliptica 25 minutos</option>
+                  <option  className="nivel"value="3">bicicleta  30 minutos</option>
+                </select>
+              </div>
+            </div>
+            <div className="row selectejercicio">
+              <div className="PadreNivel1">
+                <select
+                  className="form-select form-select-lg mb-3 "
+                  aria-label=".form-select-lg example"
+                >
+                  <option selected className="nivel">Nivel</option>
+                  <option className="nivel" value="1">3</option>
+                </select>
+
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected className="nivel"> Musculatura</option>
+                  <option  className="nivel" value="1">
+                  Barbell Incline Bench Press  15 kilos - 25 kilos
+                  </option>
+                  <option  className="nivel" value="3">
+                  Chin Ups 15 repeticiones con peso entre 10-40 kilos 3 secciones
+                  </option>
+                </select>
+
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Triceps</option>
+                  <option  className="nivel" value="1">Barbell Bench Press 10 kilos - 15 kilos</option>
                 </select>
 
                 <select
                   class="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
-                  <option selected>abdominales</option>
-                  <option value="1">
-                    Hand Plank 60 segundos 3 repeticiones
-                  </option>
-                  <option value="2">Crunches 30 repeticiones</option>
-                  <option value="3">
-                    Forearm Plank 60 segundos 5 repeticiones{" "}
-                  </option>
-                </select>
-                <select
-                  class="form-select form-select-sm"
-                  aria-label=".form-select-sm example"
-                >
-                  <option selected>abdominales</option>
-                  <option value="1">
-                    Forward Lunges 30 repeticiones por lado
-                  </option>
-                  <option value="2">
-                    Barbell Hip Thrust 15 levantadas por 3 secciones
-                  </option>
-                  <option value="3">
-                    Barbell Squat 5 - 20 kilos 10 levantadas por 3 secciones{" "}
+                  <option selected>Barbell Low Bar Good Morning</option>
+                  <option  className="nivel" value="1">
+                      10 kilos - 15 kilos
                   </option>
                 </select>
 
                 <select
-                  class="form-select form-select-sm"
+                  className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
-                  <option selected>cardio</option>
-                  <option value="1">trotadora 25 minutos </option>
-                  <option value="2">Eliptica 25 minutos</option>
-                  <option value="3">bicicleta 30 minutos</option>
+                  <option selected>Abdominales</option>
+                  <option  className="nivel" value="1">Barbell Situp 10 kilos por lado 15 repeticiones 3 secciones</option>
+                  <option  className="nivel" value="1">Forearm Plank 60 segundos 3 repeticiones</option>
+                  
+                </select>
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Bíceps femoral</option>
+                  <option  className="nivel" value="1">Forward Lunges 30 repeticiones por lado</option>
+                  
+                </select>
+
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Cardio</option>
+                  <option  className="nivel"value="1">trotadora 45 minutos elevacion de montaña  </option>
+                  <option  className="nivel"value="2">Eliptica 45 minutos mayor dificultad</option>
+                  <option  className="nivel"value="3">bicicleta  60 minutos mayor en estado de subida</option>
                 </select>
               </div>
               
