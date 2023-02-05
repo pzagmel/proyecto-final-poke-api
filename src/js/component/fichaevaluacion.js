@@ -46,9 +46,6 @@ export const Fichaevaluacion = () => {
                     Peso (kg)
                   </th>
                   <th id="thficha" scope="col">
-                    Estatura (cm)
-                  </th>
-                  <th id="thficha" scope="col">
                     % de Grasa
                   </th>
                   <th id="thficha" scope="col">
@@ -61,7 +58,6 @@ export const Fichaevaluacion = () => {
                   <td id="tdficha" scope="row">
                     70
                   </td>
-                  <td id="tdficha">170</td>
                   <td id="tdficha">40</td>
                   <td id="tdficha">25</td>
                 </tr>
@@ -81,55 +77,79 @@ export const Fichaevaluacion = () => {
           <div>
             <div className="row">
               <div className="PadreNivel1">
-                <div className="Nivel1">
-                  <button
-                    className="btn btn-primary collapse-toggle"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    aria-expanded="false"
-                  >
-                    Nivel 1
-                  </button>
-                  <div className="collapse" id="collapseExample">
-                    <div className="card card-bodyyy"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="PadreNivel2">
-                <div className="Nivel2">
-                  <div>
-                    <button
-                      class="btn btn-primary"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample1"
-                      aria-expanded="false"
-                      aria-controls="collapseExample1"
-                      value="option1"
-                    >
-                      Nivel 2
-                    </button>
-                    <div className="collapse" id="collapseExample1"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="PadreNivel3">
-                <div className="Nivel3">
-                  <div>
-                    <button
-                      class="btn btn-primary"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample1"
-                      aria-expanded="false"
-                      aria-controls="collapseExample1"
-                      value="option1"
-                    >
-                      Nivel 3
-                    </button>
-                    <div className="collapse" id="collapseExample1"></div>
-                  </div>
-                </div>
+                <select
+                  class="form-select form-select-lg mb-3"
+                  aria-label=".form-select-lg example"
+                >
+                  <option selected>Niveles</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+
+                <select
+                  class="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected> Musculatura</option>
+                  <option value="1">
+                  Barbell Curl 1 kilo - 5 kilo
+                  </option>
+                  <option value="2">
+                  Dumbbell Curl 5 kilo - 10 kilo
+                  </option>
+                  <option value="3">
+                  Dumbbell Hammer Curl 10kilo - 15 kilo
+                  </option>
+                  <option value="3">
+                  Chin Ups
+                  </option>
+                </select>
+
+                <select
+                  class="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Triceps</option>
+                  <option value="1">Barbell Bench Press kilos - 5 kilos</option>
+                  <option value="2">Dumbbell Incline Bench Press 5 kilos - 10 kilos</option>
+                  <option value="3">Barbell Upright Row 15 + </option>
+                </select>
+
+                <select
+                  class="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Barbell Low Bar Good Morning</option>
+                  <option value="1">
+                      5 kilos - 10 kilos
+                  </option>
+                  <option value="2">
+                    5 kilo - 10 kilo
+                  </option>
+                  <option value="3">
+                     10kilo - 15 kilo
+                  </option>
+                </select>
+
+                <select
+                  class="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>abdominales</option>
+                  <option value="1">Hand Plank 60 segundos 3 repeticiones</option>
+                  <option value="2">Crunches 30 repeticiones</option>
+                  <option value="3">Forearm Plank 60 segundos 5 repeticiones </option>
+                </select>
+                <select
+                  class="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>abdominales</option>
+                  <option value="1">Forward Lunges 30 repeticiones por lado</option>
+                  <option value="2">Barbell Hip Thrust 15 levantadas por 3 secciones</option>
+                  <option value="3">Barbell Squat 5 - 20 kilos  10 levantadas por 3 secciones </option>
+                </select>
               </div>
             </div>
           </div>

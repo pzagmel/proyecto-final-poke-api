@@ -183,6 +183,28 @@ const getState = ({
           })
           .catch((error) => console.log("error", error));
       },
+      postficha:() =>{
+        var raw = JSON.stringify({
+          "id": "",
+          "id_usuario": "",
+          "peso": "",
+          "porcentaje_grasa": "",
+          "porcentaje_musculo": "",
+          "nivel": ""
+        });
+        
+        var requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
+        
+        fetch("https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/ficha/id", requestOptions)
+          .then(response => response.text())
+          .then(result => console.log(result))
+          .catch(error => console.log('error', error));
+      }
     },
   };
 };
