@@ -1,4 +1,29 @@
 
+ button.dropdown-toggle{
+  background: #1F69D8;
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+ } 
+ p.tucliente{
+  color: #ffffff;
+  font-size: 20px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  padding: 5px;
+ }
+
+  ul.dropdown-menu.user.show{
+  width:500px;
+ } 
+ div.listacliente{
+  color: #dae908;
+  font-size: 20px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  width: 500px;
+  
+ }
+
+
 .ContainerDropdownClientes{
     border: 0px;
     margin: 10px;

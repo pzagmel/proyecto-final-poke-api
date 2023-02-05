@@ -66,18 +66,18 @@ const getState = ({
           .then((response) => response.json())
           .then((result) => {
             if (result.status == 200) {
-              if (rememberMe) {
-                if (typeof Storage !== "undefined") {
+               if (rememberMe) {
+                 if (typeof Storage !== "undefined") {
                   localStorage.setItem("token", result.token);
                 } else {
                   console.log("LocalStorage no soportado en este navegador");
-                }
+                } 
               } else {
                 if (typeof Storage !== "undefined") {
                   sessionStorage.setItem("token", result.token);
                 } else {
                   console.log("sessionStorage no soportado en este navegador");
-                }
+                } 
               }
               setStore({
                 userInfo: jwt_decode(result.token).sub,
@@ -183,6 +183,28 @@ const getState = ({
           })
           .catch((error) => console.log("error", error));
       },
+      postficha:() =>{
+        var raw = JSON.stringify({
+          "id": "",
+          "id_usuario": "",
+          "peso": "",
+          "porcentaje_grasa": "",
+          "porcentaje_musculo": "",
+          "nivel": ""
+        });
+        
+        var requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
+        
+        fetch("https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/ficha/id", requestOptions)
+          .then(response => response.text())
+          .then(result => console.log(result))
+          .catch(error => console.log('error', error));
+      }
     },
   };
 };

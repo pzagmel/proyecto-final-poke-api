@@ -11,7 +11,6 @@ import { Register } from "./views/register";
 import { Login } from "./views/login";
 import { RecoverPass } from "./views/recoverpass";
 import { Perfilcliente } from "./views/perfilcliente";
-import { Error404 } from "./views/404";
 
 import injectContext from "./store/appContext";
 
@@ -20,6 +19,9 @@ import { Navbar2 } from "./component/navbar";
 import { Footerf } from "./component/footerfinal";
 /* import { Footergp } from "./component/footer2"; */
 
+import { Footer } from "./component/footer";
+import { Footerf } from "./component/footer2";
+import { Error404 } from "./views/404";
 
 
 
@@ -44,7 +46,7 @@ const Layout = () => {
 						<Route path="/login" element={<Login/>} />
 						<Route path="/recover" element={<RecoverPass />} />
 						<Route path="/single/:theid" element={<Single />} />
-						<Route path="*" element={<Error404 />} />
+						<Route path="*" element={<Error404/>} />
 					</Routes>
 					
 					<Footerf/>

@@ -3,77 +3,39 @@ import { useEffect, useState, useContext } from "react";
 import pokebola from "../../img/POKEBOLA.png";
 import "../../styles/PPClientes.css";
 import { Context } from "../store/appContext";
+import { Modal } from 'react-bootstrap';
+import { Fichaevaluacion } from "./fichaevaluacion";
+import pokebolalista from "../../img/pokebolalista.png"
 
-// window.onload = function () {
-//   const boton = document.querySelector(".dropdown-toggle");
-//   const contenedor = document.querySelector(".PrincipalContainerDropdown");
-
-//   boton.addEventListener("click", () => {
-//     contenedor.classList.toggle("aumentado");
-//   });
-// };
 
 export const ListaClientes = ({ data }) => {
-  const { store, actions } = useContext(Context);
-  const [list, setList] = useState([]);
+    const [selectedUser, setSelectedUser] = useState(null);
   
-  // useEffect(() => {
+    const handleClick = (user) => {
+      setSelectedUser(user);
+    };
   
-  //   var myHeaders = new Headers();
-  // myHeaders.append("Authorization", `Bearer ${localStorage.getItem("token")}`);
-  // myHeaders.append("Content-Type", "application/json");
-  
-  // var raw = JSON.stringify({});
-  
-  // var requestOptions = {
-  //   method: 'GET',
-  //   headers: myHeaders,
-  //   body: raw,
-  //   redirect: 'follow'
-  // };
-  
-  // fetch("https://3000-lukasoy-backendpokegym-veqmyydcg1p.ws-us85.gitpod.io/ficha/", requestOptions)
-  // .then((data) => data.json())
-  // .then((response) => {
-    
-  //   setList(response.user);
-  // })
-  // .catch((error) => console.log("error", error));
-  
-  // }, []);
-
-  return (
-    <div className="col-12" id="PrimeroPrimerin">
-      <div className="row">
-        <div className="PrincipalContainerDropdown">
-          <div className="ContainerDropdownClientes">
-            <div className="dropdowndos">
-              <select
-                onClick={(e) => console.log(e.target.value)}
-                key={data.nombre}
-                className="form-select"
-                aria-label="Default select example"
-              >
-                {data.map((user) => {
-                  return (
-                    <option value={user.id}>
-                      {user.nombre + " " + user.apellido}{" "}
-                    </option>
-                  );
-                })}
-              </select>
-              
-              <select onClick={(e)=> console.log(e.target.value)} key={data.nombre} className="form-select" aria-label="Default select example">              
-            {data.map((user) => {
-              return ( 
-               <option value={user.id} >{user.nombre + " " + user.apellido} </option>             
-               );
-              })}            
-              </select>                                     
-            </div>
-          </div>
-        </div>
+    return (
+      <div>
+<div className="dropdown-center">
+  <button className="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   <p className="tucliente">Tus clientes POKEGYM</p> 
+  </button>
+  <ul className="dropdown-menu user">
+   <div className="listacliente">
+          {data.map((user) => {
+            return ( 
+              <div key={user.nombre} onClick={() => handleClick(user)}> <img src={pokebolalista}/> {user.nombre}</div>             
+            );
+          })}
+        </div> 
+  </ul>
+</div>  
+        {selectedUser && (
+          <Fichaevaluacion user={selectedUser} />
+        )}
       </div>
-    </div>
-  );
-};
+    );
+  };
+  
+  export default ListaClientes

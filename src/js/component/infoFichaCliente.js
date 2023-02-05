@@ -1,6 +1,4 @@
 import React,{useContext} from "react";
-import pokebola from "../../img/POKEBOLA.png";
-import logoPerfil from "../../img/perfil-logo.png";
 import "../../styles/Fichapersonal.css";
 import { Context } from "../store/appContext";
 
