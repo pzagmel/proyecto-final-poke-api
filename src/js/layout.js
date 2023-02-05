@@ -8,7 +8,9 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Perfilprofe } from "./views/perfilprofe";
 import { Register } from "./views/register";
-
+import { Login } from "./views/login";
+import { RecoverPass } from "./views/recoverpass";
+import { Perfilcliente } from "./views/perfilcliente";
 
 import injectContext from "./store/appContext";
 
@@ -16,7 +18,9 @@ import { Navbar } from "./component/navbar";
 import { Navbar2 } from "./component/navbar";
 
 import { Footer } from "./component/footer";
-import { Footergp } from "./component/footer2";
+import { Footerf } from "./component/footer2";
+import { Error404 } from "./views/404";
+
 
 
 //create your first component
@@ -35,12 +39,15 @@ const Layout = () => {
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/perfilprofe" element={<Perfilprofe />} />
+						<Route path="/perfilcliente" element={<Perfilcliente />} />
 						<Route path="/register" element={<Register />} />
+						<Route path="/login" element={<Login />} />
+						<Route path="/recover" element={<RecoverPass />} />
 						<Route path="/single/:theid" element={<Single />} />
-						<Route path="*" element={<h1>Not found!</h1>} />
+						<Route path="*" element={<Error404/>} />
 					</Routes>
 					
-					<Footergp />
+					<Footerf/>
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>

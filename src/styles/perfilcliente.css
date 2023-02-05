@@ -1,0 +1,111 @@
+.h1-text, .h2-text {
+    text-align: center;
+    color: #ffff;
+    margin-top: 5%;
+}
+
+.info-personal {
+    background-color: #1f69d8;
+    text-align: left;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    height: 400px;
+    width: 40%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.infomasficha {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo-perfil {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.ficha-evaluacion {
+    background: #6190D7;
+    border-radius: 5px;
+    width: 95%;
+    float: right;
+    align-self: flex-start;
+    order: 2;
+    margin-top: -6%;
+    margin-bottom: 1%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 270px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.ListaDatos, .ListaDatosFicha{
+    color: #ffff;
+}
+
+.logo-perfil > img {
+    order: 1;
+    width: 445px;
+}
+
+.container-logo-ficha {
+    width: 60%;
+    flex-direction: column;
+}
+
+h1.usuario{
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: -130px;
+    margin-bottom: 200px;
+    margin-left: 20px;
+    color: #ffff;
+    font-size: 60px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+@media (max-width: 767px) {
+    .infomasficha{
+        flex-direction: column;
+    }
+    
+    .container-logo-ficha {
+        order: 1;
+        width: 80%;
+    }
+
+    .info-personal {
+        order: 2;
+        width: 80%;
+        margin-bottom: 5%;
+    }
+
+    .logo-perfil > img {
+        width: 200px;
+        margin-top: 10%;
+    }
+
+    .ficha-evaluacion{
+        margin-bottom: 5%;
+        width: 100%;
+    }
+}
+
+img.bienvenida{
+    width: 1000px;
+}
+div.bienvenido.container{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

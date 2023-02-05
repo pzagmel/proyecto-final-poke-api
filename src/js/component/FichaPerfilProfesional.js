@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import perfil from "../../img/perfil-pixalart.png"
 
 

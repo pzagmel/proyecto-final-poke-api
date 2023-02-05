@@ -1,18 +1,58 @@
+ul.navbar-nav.ml-auto.iconos{
+  width: 200px;
+  height: 50px;
+  margin-right: 100px;
+}
+
+img.img-icon{
+  width: 120px;
+  margin-top: -40px;
+  margin-left: -20px;
+ 
+  
+}
+img.img-icon2{
+  width: 90px;
+  margin-top: -15px;
+  margin-left: -35px;
+}
+
+img.logo-gym{
+  width: 130px;
+  margin-top: -15px;
+}
+
+img.img-icon3{
+  width: 90px;
+  margin-top: -19px;
+  margin-left: -5px;
+}
+img.img-icon4{
+  width: 90px;
+  margin-top: -19px;
+  margin-left: -10px;
+}
+
 .iconos{
     justify-content: space-between;
     width: 20%;
-    margin: 2%;
+    margin: 5px;
     background-color: #1f69d8;
     border-radius: 8px;
 }
 
 .logo-gym{
-    max-width: 55%;
+    width: 150px;
+    margin-top: 5px;
 }
 
 .nav-style{
     background-color: #103873;
-    justify-content: space-between;
+    
+}
+div.navbar-header.logo{
+  width: 100px;
+  height: 100px;
 }
 
 .button-menu{
@@ -28,6 +68,7 @@
   justify-content: flex-end;
   text-align: right;
   background-color: #103873;
+ 
 }
 
 .ul-li{
@@ -48,6 +89,21 @@ li > a{
 li > a:hover{
   color: gray;
 }
+h1.titulonavbar{
+  display: flex;
+}
+
+button.botonlogout{
+  width: 1px;
+  height: 1px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: transparent;
+  border: 2px solid transparent;
+}
+
 
 @media (max-width: 576px) {
   .nav-style {
@@ -69,4 +125,17 @@ li > a:hover{
     .iconos {
       display: none;
     }
+  }
+
+  h1.titulonavbar{
+    color: #ffff00;
+    font-size: 50px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    
+  }
+
+  div.titupok{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }

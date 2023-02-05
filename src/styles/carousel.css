@@ -1,3 +1,7 @@
+div.comentariocliente{
+    margin-bottom: 50px;
+}
+
 .img-style{
     max-width: 150px;
 }
@@ -6,11 +10,12 @@
     background-color: #8fb0d5;
     max-width: 90%;
     border-radius: 83px;
+    margin-bottom: 20px;
 }
 
 .img-text{
     display: flex;
-    background-color: #0b2b69;
+    background-color: #0b2a69;
     max-width: 60%;
     margin: 18px auto;
     border-radius: 10px;
@@ -40,11 +45,11 @@
     max-width: 95%;
   }
 
-body {
+ /* body {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+  } */
 
 .img-div, .text-div {
     padding: 5%;
