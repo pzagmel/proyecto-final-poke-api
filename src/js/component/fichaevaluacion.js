@@ -1,29 +1,6 @@
 import React from "react";
 import Machop from "../../img/Machop.png";
 
-window.onload = function () {
-  const botonNivel1 = document.querySelector(".Nivel1");
-  const contenedor = document.querySelector(".PadreNivel1");
-
-  const botonNivel2 = document.querySelector(".Nivel2");
-  const contenedor1 = document.querySelector(".PadreNivel2");
-
-  const botonNivel3 = document.querySelector(".Nivel3");
-  const contenedor2 = document.querySelector(".PadreNivel3");
-
-  botonNivel1.addEventListener("click", () => {
-    contenedor.classList.toggle("aumentado1");
-  });
-
-  botonNivel2.addEventListener("click", () => {
-    contenedor1.classList.toggle("aumentado2");
-  });
-
-  botonNivel3.addEventListener("click", () => {
-    contenedor2.classList.toggle("aumentado3");
-  });
-};
-
 export const Fichaevaluacion = () => {
   return (
     <div className="ejercicioscard mb-3 ">
@@ -149,6 +126,16 @@ export const Fichaevaluacion = () => {
                   <option value="1">Forward Lunges 30 repeticiones por lado</option>
                   <option value="2">Barbell Hip Thrust 15 levantadas por 3 secciones</option>
                   <option value="3">Barbell Squat 5 - 20 kilos  10 levantadas por 3 secciones </option>
+                </select>
+                
+                <select
+                  class="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>cardio</option>
+                  <option value="1">trotadora 25 minutos </option>
+                  <option value="2">Eliptica 25 minutos</option>
+                  <option value="3">bicicleta  30 minutos</option>
                 </select>
               </div>
             </div>
