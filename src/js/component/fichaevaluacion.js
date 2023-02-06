@@ -75,11 +75,11 @@ export const Fichaevaluacion = () => {
                     Brazos
                   </option>
                   <option className="nivel" value="1">
-                    Biceps: Flexión de codo con mancuernas 1 Kilo - 5 Kilo / 3
+                    Bíceps: Flexión de codo con mancuernas 1 Kilo - 5 Kilo / 3
                     Series / 10 Repeticiones
                   </option>
                   <option className="nivel" value="3">
-                    Triceps: Extencion de codo con polea 1 Kilo - 5 Kilos / 3
+                    Tríceps: Extencion de codo con polea 1 Kilo - 5 Kilos / 3
                     Series / 10 Repeticiones
                   </option>
                   <option className="nivel" value="3">
@@ -95,7 +95,7 @@ export const Fichaevaluacion = () => {
                   <option value={0}>Pecho</option>
                   <option className="nivel" value="1">
                     Elevación de mancuernas - 5 Kilos / 3 Series / 10
-                    Repeticions
+                    Repeticiones
                   </option>
                 </select>
 
@@ -168,11 +168,11 @@ export const Fichaevaluacion = () => {
                     Brazos
                   </option>
                   <option className="nivel" value="1">
-                    Biceps: Flexión de codo con mancuernas 5 Kilos - 10 Kilos /
+                    Bíceps: Flexión de codo con mancuernas 5 Kilos - 10 Kilos /
                     3 Series / 10 Repeticiones
                   </option>
                   <option className="nivel" value="1">
-                    Triceps: Extencion de codo con polea 5 Kilos - 10 Kilos / 3
+                    Tríceps: Extención de codo con polea 5 Kilos - 10 Kilos / 3
                     Series / 10 Repeticiones
                   </option>
                   <option className="nivel" value="3">
@@ -188,7 +188,7 @@ export const Fichaevaluacion = () => {
                   <option value={0}>Pecho</option>
                   <option className="nivel" value="1">
                     Elevación de barra con inclinación 10 a 20 Kilos / 3 Series
-                    / 10 Repeticions
+                    / 10 Repeticiones
                   </option>
                 </select>
 
@@ -266,7 +266,7 @@ export const Fichaevaluacion = () => {
                     3 Series / 10 Repeticiones
                   </option>
                   <option className="nivel" value="1">
-                    Triceps: Extencion de codo con polea  10+ Kilos / 3
+                    Tríceps: Extención de codo con polea  10+ Kilos / 3
                     Series / 10 Repeticiones
                   </option>
                   <option className="nivel" value="3">
