@@ -30,11 +30,11 @@ export const Perfilcliente = () => {
                       <div>
                         
                         <InfoFicha />
-                        <Fichaevaluacion/>
+                        <Fichaevaluacion /* se tiene que pintar los cambios */ />
                       </div>
                     </div>
                   ) : (
-                        window.location.href = "*"
+                        window.location.href = "/"
                       )}
                 </div>
               )}

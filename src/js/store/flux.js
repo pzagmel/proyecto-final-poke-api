@@ -53,7 +53,7 @@ const getState = ({
 
         fetch(
 
-          "https://3000-lukasoy-backendpokegym-cipvw25rxgz.ws-us85.gitpod.io/login", {
+            "https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/login", {
               method: "POST",
               headers: myHeaders,
               body: JSON.stringify({
@@ -104,7 +104,7 @@ const getState = ({
           myHeaders.append("Authorization", `Bearer ${token}`);
           try {
             await fetch(
-              "https://3000-lukasoy-backendpokegym-cipvw25rxgz.ws-us85.gitpod.io/token", {
+                "https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/token", {
                   method: "POST",
                   headers: myHeaders,
                   redirect: "follow",
@@ -156,7 +156,7 @@ const getState = ({
 
       getinfoRegister: async (user) => {
         fetch(
-          "https://3000-lukasoy-backendpokegym-cipvw25rxgz.ws-us85.gitpod.io/register", {
+            "https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/register", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -183,28 +183,36 @@ const getState = ({
           })
           .catch((error) => console.log("error", error));
       },
-      postficha:() =>{
-        var raw = JSON.stringify({
-          "id": "",
-          "id_usuario": "",
-          "peso": "",
-          "porcentaje_grasa": "",
-          "porcentaje_musculo": "",
-          "nivel": ""
-        });
-        
-        var requestOptions = {
-          method: 'POST',
-          headers: myHeaders,
-          body: raw,
-          redirect: 'follow'
-        };
-        
-        fetch("https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/ficha/id", requestOptions)
-          .then(response => response.text())
-          .then(result => console.log(result))
-          .catch(error => console.log('error', error));
-      }
+    },
+    postfichaprofe:()=>{
+
+      var myHeaders = new Headers();
+      myHeaders.append("Authorization", `Bearer ${store.token}`);
+      /* bearer tiene que llamar el token delrol:true de user para que pueda editar la ficha segun id del rol:false */
+      myHeaders.append("Content-Type", "application/json");
+      
+      var raw = JSON.stringify({
+        id: "",
+        id_usuario: "",
+        peso: "",
+        porcentaje_grasa: "",
+        porcentaje_musculo: "",
+        nivel: ""
+      });
+      
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+    useEffect(()=>{
+      fetch("https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/ficha", requestOptions)
+      .then(response => response.json())
+      .then(data => {console.log(data);
+      });
+    });
+
     },
   };
 };
