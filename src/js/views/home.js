@@ -14,6 +14,8 @@ import { Calendario } from "../component/calendario";
 import { Comments } from "../component/carousel";
 import Cardservice from "../component/cardinfogym";
 import { Link } from "react-scroll";
+import RetoDias from "../component/retoDias";
+
 
 
 
@@ -53,17 +55,11 @@ img2={pokebola} /></Link>
 </div>
 <div className="row">
 <div className="col">
-<Longcard
-title={"Reto de la Semana"}
-img={
-reto
-}
-description={"-100 Burpies"}
-description2={"-50 Sentadillas Bulgaras"}
-description3={"-Plancha de 1 minuto"}
-/>
+<RetoDias/>
 </div>
+
 </div>
+
 
 <div className="diseño2"> </div>
 <div className="row" id="cardporfe">

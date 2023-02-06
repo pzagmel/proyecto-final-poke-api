@@ -105,6 +105,10 @@ td {
   }
 
 
+.titulo-calendario{
+    height: 250px;
+}
+
 /* calendario en media disminuira su tamaña   cuando las pantallas sean mas pequeñas */
 @media screen and (max-width: 1000px) {
     div.calendario{
@@ -314,13 +318,39 @@ div.diseño2{
     }
     }
 
+@media screen and (max-width: 900px) {
+    .calen{
+        display: none;
+    }
+}    
  div.diseño3{
-    width: 1970px;
-    height: 205px;
     background-color: rgba(0, 153, 255, 0.745);
-    margin-left: -500px;
-    margin-top: 20px ;
     display: flex;
     align-items: center;
     justify-content: center;
  }
+
+
+/*  registro */
+h1.registro{
+    color: #ffff00;
+    font-size: 60px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    padding: 20px;
+}
+
+h3.introinfo{
+    
+    font-size: 40px;
+    text-shadow: rgba(247, 247, 23, 0.585) 0.1em 0.1em 0.2em;
+    padding: 10px;
+}
+/* comienzo de tamaño de pokem api en ficha de evaluacion */
+img.img-fluid.rounded-start{
+    width: 1000px;
+}
+
+h5.card-titleficha.text-center{
+    color: #ffff00;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}

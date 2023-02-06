@@ -11,7 +11,7 @@ export const Fichaevaluacion = () => {
     <div className="ejercicioscard mb-3 ">
       <div className="row g-0">
         <div className="col-md-4">
-          <img src={Machop} className="img-fluid rounded-start" />
+          <img src={store.pokemon} className="img-fluid rounded-start" />
         </div>
         <div className="col-md-8">
           <h5 className="card-titleficha text-center">
@@ -38,7 +38,7 @@ export const Fichaevaluacion = () => {
               <tbody id="bodytableinfo" className="table-group-divider">
                 <tr>
                   <td id="tdficha" scope="row">
-                    70
+                    {peso}
                   </td>
                   <td id="tdficha">40</td>
                   <td id="tdficha">25</td>

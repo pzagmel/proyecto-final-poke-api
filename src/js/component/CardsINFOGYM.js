@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "../../styles/InfoGym.css";
 import M1 from "../../img/Machop.png"
 import M2 from "../../img/Machoke.png"
@@ -16,43 +16,22 @@ export const InfoGym = ({
     }) => {
     return (
     <div>
-        
-    <div className="" id="Padre">
-        <div>
-        <div id="PrimeraRow" className="row-4">
-            <img id="Pk1" src={ImgPokemon} style={{width: 100, height: "auto"}}/>
-            <h1>{TituloInfoGYM}</h1>
-            <p> {DescripcionInfoGYM}</p>
-        </div>   
-=======
-    <div className="container" id="Padre">
-        <div className="col">
-        <div id="PrimeraRow" className="row-4">
-            <img id="Pk1" src={M1} style={{width: 100, height: "auto"}}/>
-            <h1>Evoluciona</h1>
-            <p> En este gimnasio podrás hacer ejercicio y ver tu evolución igual a tu pokemon favorito </p>
-        </div>
-        <div className="SegundaRow">
-            <img id="Pk2" src={M2} style={{width: 100, height: "auto"}}/>
-            <h1>Ejercita</h1>
-            <p> Dependiendo del peso que vayas aumentando y tu constancia</p>
-        </div>
-        <div className="TerceraRow">
-            <img id="Pk3" src={M3} style={{width: 100, height: "auto"}}/>
-            <h1>Se tu mejor versión</h1>
-            <p> Podrás convertirte en tu pokemon favorito, siendo fuerte y teniendo un estado física ideal</p>
-        </div>
-        </div>
-    </div>
-    <img id="img" src={pokebola}/>
-
-
+         
+      <Card className="infogym">
+        <Card.Img variant="top" src={ImgPokemon} />
+        <Card.Body className="info1">
+          <Card.Title><h1 className="tituloinfo">{TituloInfoGYM}</h1></Card.Title>
+          <Card.Text>
+            <h3>{DescripcionInfoGYM}</h3>
+          </Card.Text>
+        </Card.Body> 
+      </Card>
+     <div><img id="img" src={pokebola}/></div>
+      
+   
 
     </div>
     
-
-    </div>
-    </div>
     
     
 );
