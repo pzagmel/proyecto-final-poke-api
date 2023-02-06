@@ -1,10 +1,6 @@
 import jwt_decode from "jwt-decode";
 
-const getState = ({
-  getStore,
-  getActions,
-  setStore
-}) => {
+const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
       pokemon: [],
@@ -26,25 +22,40 @@ const getState = ({
       getPokemon: (poke) => {
         console.log("pokemon", poke);
         fetch("https://pokeapi.co/api/v2/pokemon/" + poke, {
-            headers: {
-              "Content-Type": "application/json",
-            },
-            method: "GET",
-          })
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "GET",
+        })
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
             setStore({
-              pokemon: data.sprites.front_default
+              pokemon: data.sprites.front_default,
             });
           });
       },
-      
-      logout:() =>{
-       sessionStorage.removeItem("token");
-       console.log("login out");
-       setStore({token:null});
-       window.location.href = "/";
+
+      logout: () => {
+        sessionStorage.removeItem("token");
+        localStorage.removeItem("token");
+        console.log("login out");
+        setStore({
+          pokemon: [],
+          infoRegister: [],
+          userInfo: {
+            nombre: "",
+            apellido: "",
+            email: "",
+            password: "",
+            telefono: "",
+            rut: "",
+            rol: null,
+          },
+          login: false,
+          token: "",
+        });
+        window.location.href = "/";
       },
       login: (MAIL, PASS, rememberMe) => {
         var myHeaders = new Headers();
@@ -52,32 +63,32 @@ const getState = ({
         myHeaders.append("Access-Control-Allow-Credentials", "*");
 
         fetch(
-
-            "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/login", {
-              method: "POST",
-              headers: myHeaders,
-              body: JSON.stringify({
-                email: MAIL,
-                password: PASS
-              }),
-              redirect: "follow",
-            }
-          )
+          "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/login",
+          {
+            method: "POST",
+            headers: myHeaders,
+            body: JSON.stringify({
+              email: MAIL,
+              password: PASS,
+            }),
+            redirect: "follow",
+          }
+        )
           .then((response) => response.json())
           .then((result) => {
             if (result.status == 200) {
-               if (rememberMe) {
-                 if (typeof Storage !== "undefined") {
+              if (rememberMe) {
+                if (typeof Storage !== "undefined") {
                   localStorage.setItem("token", result.token);
                 } else {
                   console.log("LocalStorage no soportado en este navegador");
-                } 
+                }
               } else {
                 if (typeof Storage !== "undefined") {
                   sessionStorage.setItem("token", result.token);
                 } else {
                   console.log("sessionStorage no soportado en este navegador");
-                } 
+                }
               }
               setStore({
                 userInfo: jwt_decode(result.token).sub,
@@ -93,23 +104,25 @@ const getState = ({
 
       tokenValidation: async (ruta) => {
         let token = "";
-        let retorno=null;
+        let retorno = "/";
         if (typeof localStorage.getItem("token") == "string") {
           token = localStorage.getItem("token");
         } else if (typeof sessionStorage.getItem("token") == "string") {
           token = sessionStorage.getItem("token");
         }
+
         if (token !== "") {
           var myHeaders = new Headers();
           myHeaders.append("Authorization", `Bearer ${token}`);
           try {
             await fetch(
-                "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/token", {
-                  method: "POST",
-                  headers: myHeaders,
-                  redirect: "follow",
-                }
-              )
+              "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/token",
+              {
+                method: "POST",
+                headers: myHeaders,
+                redirect: "follow",
+              }
+            )
               .then((response) => response.json())
               .then((data) => {
                 console.log(data);
@@ -120,13 +133,17 @@ const getState = ({
                     login: true,
                     token: token,
                   });
-                  if (user.rol) {
-                    console.log('sale por user.rol', )
-                    if (ruta != "/perfilprofe") retorno= "/perfilprofe";
-                    console.log('se pasa perfilprofe en rol')
-                  } else if (ruta != "/perfilcliente") retorno= "/perfilcliente";
+                  if (user.rol != null) {
+                    if ( user.rol)
+                      retorno = "/perfilprofe";
+
+                    else
+                      retorno = "/perfilcliente";
+                  } else {
+                    retorno = "/login";
+                  }
                 } else {
-                  retorno= "/login";
+                  retorno = "/login";
                 }
               });
           } catch (e) {
@@ -146,25 +163,26 @@ const getState = ({
             localStorage.clear();
             sessionStorage.clear();
 
-            if (ruta != "/login") retorno= "/login";
+            if (ruta != "/login") return "/login";
           }
         } else {
-          if (ruta != "/login") retorno= "/login";
+          if (ruta != "/login") retorno = "/login";
         }
         return retorno;
       },
 
       getinfoRegister: async (user) => {
         fetch(
-            "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/register", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: user,
-              redirect: "follow",
-            }
-          )
+          "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/register",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: user,
+            redirect: "follow",
+          }
+        )
           .then((response) => response.json())
           .then((data) => {
             console.log("data", data);
@@ -183,28 +201,31 @@ const getState = ({
           })
           .catch((error) => console.log("error", error));
       },
-      postficha:() =>{
+      postficha: () => {
         var raw = JSON.stringify({
-          "id": "",
-          "id_usuario": "",
-          "peso": "",
-          "porcentaje_grasa": "",
-          "porcentaje_musculo": "",
-          "nivel": ""
+          id: "",
+          id_usuario: "",
+          peso: "",
+          porcentaje_grasa: "",
+          porcentaje_musculo: "",
+          nivel: "",
         });
-        
+
         var requestOptions = {
-          method: 'POST',
+          method: "POST",
           headers: myHeaders,
           body: raw,
-          redirect: 'follow'
+          redirect: "follow",
         };
-        
-        fetch("https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/ficha/id", requestOptions)
-          .then(response => response.text())
-          .then(result => console.log(result))
-          .catch(error => console.log('error', error));
-      }
+
+        fetch(
+          "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/ficha/id",
+          requestOptions
+        )
+          .then((response) => response.text())
+          .then((result) => console.log(result))
+          .catch((error) => console.log("error", error));
+      },
     },
   };
 };

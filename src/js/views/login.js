@@ -22,41 +22,46 @@ export const Login = () => {
   };
 
   const llamada = async () => {
-    const ruta = await actions.tokenValidation("/login");
-    console.log('ruta',ruta)
-    if (typeof ruta === "string") {
-      navigate(ruta);
+
+    if (sessionStorage.getItem("token") || localStorage.getItem("token")) {
+    
+      const ruta = await actions.tokenValidation("/login");
+      console.log("ruta", ruta);
+      if (typeof ruta === "string") {
+        navigate(ruta);
+      }
     }
   };
-  
+
   useEffect(() => {
     llamada();
   }, []);
-  
-  useEffect(()=>{
-    const {userInfo:{rol}}=store
-    console.log('rol', rol)
-    if (rol!==null){
-    if (rol){
-      navigate("/perfilprofe");
-    }else{
-      navigate("/perfilcliente");
+
+  useEffect(() => {
+    const {
+      userInfo: { rol },
+    } = store;
+    console.log("rol", rol);
+    if (rol !== null) {
+      if (rol) {
+        navigate("/perfilprofe");
+      } else {
+        navigate("/perfilcliente");
+      }
     }
-  }
   }, [store.userInfo.rol]);
   return (
     <div className="container login-page">
       <div className="row">
         <div className="col-1 login-style">
           <div className="login-card">
-            <h1 className="titulologin">LOGIN</h1>
-
+            <h1 className="titulologin"> LOGIN </h1>
             <form className="login-register" onSubmit={login}>
               <input
                 type="text"
                 className="fadeIn second"
                 name="email"
-                placeholder="login"
+                placeholder="email"
               />
               <input
                 type="password"
@@ -64,36 +69,36 @@ export const Login = () => {
                 name="password"
                 placeholder="password"
               />
-               <div className="form-check">
+              <div className="form-check">
                 <input
                   className="form-check-input"
                   type="checkbox"
                   value=""
                   id="flexCheckIndeterminate"
-                /> 
-                 <label
+                />
+                <label
                   className="form-check-label"
-                   htmlFor="flexCheckIndeterminate "
+                  htmlFor="flexCheckIndeterminate "
                 >
-                  Remember me
-                </label>  
-              </div>
-              <input type="submit" className="fadeIn fourth" value="Log In" /> 
+                  Remember me{" "}
+                </label>{" "}
+              </div>{" "}
+              <input type="submit" className="fadeIn fourth" value="Log In" />
             </form>
-
             <Link to="/recover" className="link link-style">
-              ¿Olvidaste tu contraseña?
+              {" "}
+              ¿Olvidaste tu contraseña ?
             </Link>
-
             <div className="links-div">
               <Link to="/register" className="link link-style">
-                ¿No tienes cuenta? Registrate
-              </Link>
-            </div>
-          </div>
-          <h5></h5>
-        </div>
-      </div>
+                {" "}
+                ¿No tienes cuenta ? Registrate{" "}
+              </Link>{" "}
+            </div>{" "}
+          </div>{" "}
+          <h5> </h5>{" "}
+        </div>{" "}
+      </div>{" "}
     </div>
   );
 };

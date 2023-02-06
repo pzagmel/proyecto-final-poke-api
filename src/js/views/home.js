@@ -17,9 +17,6 @@ import { Link } from "react-scroll";
 
 
 
-
-
-
 export const Home = () => {
 return(
 <>
