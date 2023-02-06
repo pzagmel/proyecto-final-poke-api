@@ -49,8 +49,8 @@ export const Fichaevaluacion = () => {
           <h5 className="card-titleretro">Retroalomentacion del profesional</h5>
           <div className="row cardtextretro">
             <div className="col-sm-12">
-              Pepito realiza correctamente sus ejercicios con Xkilogramos, de
-              seguir asi aumentaremos el peso y repeticiones.
+              Estudiante realiza correctamente sus ejercicios, de seguir asi
+              aumentaremos progresivamente el peso y repeticiones.
             </div>
           </div>
         </div>
@@ -63,20 +63,11 @@ export const Fichaevaluacion = () => {
                   className="form-select form-select-lg mb-3 "
                   aria-label=".form-select-lg example"
                 >
-                  <option selected className="nivel">Nivel</option>
-                  <option className="nivel" value="1">1</option>
-                </select>
-
-                <select
-                  className="form-select form-select-sm"
-                  aria-label=".form-select-sm example"
-                >
-                  <option selected className="nivel"> Musculatura</option>
-                  <option  className="nivel" value="1">
-                  Barbell Curl 1 kilo - 5 kilo
+                  <option selected className="nivel">
+                    Nivel
                   </option>
-                  <option  className="nivel" value="3">
-                  Chin Ups 5 repeticiones de 5 secciones
+                  <option className="nivel" value="1">
+                    1
                   </option>
                 </select>
 
@@ -84,17 +75,42 @@ export const Fichaevaluacion = () => {
                   className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
-                  <option selected>Triceps</option>
-                  <option  className="nivel" value="1">Barbell Bench Press kilos - 5 kilos</option>
+                  <option selected className="nivel">
+                    {" "}
+                    Brazos
+                  </option>
+                  <option className="nivel" value="1">
+                    Biceps: Flexión de codo con mancuernas 1 Kilo - 5 Kilo / 3
+                    Series / 10 Repeticiones
+                  </option>
+                  <option className="nivel" value="3">
+                    Triceps: Extencion de codo con polea 1 Kilo - 5 Kilos / 3
+                    Series / 10 Repeticiones
+                  </option>
+                  <option className="nivel" value="3">
+                    Hombros: Elevación de hombros con mancuernas - 5 Kilos / 3
+                    Series / 10 Repeticions
+                  </option>
+                </select>
+
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Pecho</option>
+                  <option className="nivel" value="1">
+                    Elevación de mancuernas - 5 Kilos / 3 Series / 10
+                    Repeticions
+                  </option>
                 </select>
 
                 <select
                   class="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
-                  <option selected>Barbell Low Bar Good Morning</option>
-                  <option  className="nivel" value="1">
-                      5 kilos - 10 kilos
+                  <option selected>Espalda</option>
+                  <option className="nivel" value="1">
+                    Máquina de descenso - 10kg / 3 Series / 10 Repeticiones
                   </option>
                 </select>
 
@@ -103,26 +119,34 @@ export const Fichaevaluacion = () => {
                   aria-label=".form-select-sm example"
                 >
                   <option selected>Abdominales</option>
-                  <option  className="nivel" value="1">Hand Plank 60 segundos 3 repeticiones</option>
-                  
+                  <option className="nivel" value="1">
+                    Plancha con codos extendidos por 30 segundos 3 Series
+                  </option>
                 </select>
                 <select
                   className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
-                  <option selected>Bíceps femoral</option>
-                  <option  className="nivel" value="1">Forward Lunges 30 repeticiones por lado</option>
-                  
+                  <option selected>Piernas</option>
+                  <option className="nivel" value="1">
+                    Estocadas / 30 Repeticiones por pierna
+                  </option>
                 </select>
-                
+
                 <select
                   className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
                   <option selected>Cardio</option>
-                  <option  className="nivel"value="1">trotadora 25 minutos </option>
-                  <option  className="nivel"value="2">Eliptica 25 minutos</option>
-                  <option  className="nivel"value="3">bicicleta  30 minutos</option>
+                  <option className="nivel" value="1">
+                    Trotadora 25 minutos / 5km{" "}
+                  </option>
+                  <option className="nivel" value="2">
+                    Elíptica 25 minutos / Resistencia 5
+                  </option>
+                  <option className="nivel" value="3">
+                    Bicicleta 30 minutos /Resistencia 5
+                  </option>
                 </select>
               </div>
             </div>
@@ -132,20 +156,11 @@ export const Fichaevaluacion = () => {
                   className="form-select form-select-lg mb-3 "
                   aria-label=".form-select-lg example"
                 >
-                  <option selected className="nivel">Nivel</option>
-                  <option className="nivel" value="1">3</option>
-                </select>
-
-                <select
-                  className="form-select form-select-sm"
-                  aria-label=".form-select-sm example"
-                >
-                  <option selected className="nivel"> Musculatura</option>
-                  <option  className="nivel" value="1">
-                  Barbell Incline Bench Press  15 kilos - 25 kilos
+                  <option selected className="nivel">
+                    Nivel
                   </option>
-                  <option  className="nivel" value="3">
-                  Chin Ups 15 repeticiones con peso entre 10-40 kilos 3 secciones
+                  <option className="nivel" value="1">
+                    2
                   </option>
                 </select>
 
@@ -153,17 +168,42 @@ export const Fichaevaluacion = () => {
                   className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
-                  <option selected>Triceps</option>
-                  <option  className="nivel" value="1">Barbell Bench Press 10 kilos - 15 kilos</option>
+                  <option selected className="nivel">
+                    {" "}
+                    Brazos
+                  </option>
+                  <option className="nivel" value="1">
+                    Biceps: Flexión de codo con mancuernas 5 Kilos - 10 Kilos /
+                    3 Series / 10 Repeticiones
+                  </option>
+                  <option className="nivel" value="1">
+                    Triceps: Extencion de codo con polea 5 Kilos - 10 Kilos / 3
+                    Series / 10 Repeticiones
+                  </option>
+                  <option className="nivel" value="3">
+                    Hombros: Elevación de hombros con mancuernas 5 Kilos - 10
+                    Kilos / 3 Series / 10 Repeticiones
+                  </option>
+                </select>
+
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Pecho</option>
+                  <option className="nivel" value="1">
+                    Elevación de barra con inclinación 10 a 20 Kilos / 3 Series
+                    / 10 Repeticions
+                  </option>
                 </select>
 
                 <select
                   class="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
-                  <option selected>Barbell Low Bar Good Morning</option>
-                  <option  className="nivel" value="1">
-                      10 kilos - 15 kilos
+                  <option selected>Espalda</option>
+                  <option className="nivel" value="1">
+                  Dominadas 3 Series / 10 Repeticiones 
                   </option>
                 </select>
 
@@ -172,27 +212,126 @@ export const Fichaevaluacion = () => {
                   aria-label=".form-select-sm example"
                 >
                   <option selected>Abdominales</option>
-                  <option  className="nivel" value="1">Barbell Situp 10 kilos por lado 15 repeticiones 3 secciones</option>
-                  <option  className="nivel" value="1">Forearm Plank 60 segundos 3 repeticiones</option>
-                  
+                  <option className="nivel" value="1">
+                    Plancha con codos apoyados por 60 segundos 3 Series
+                  </option>
                 </select>
                 <select
                   className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
-                  <option selected>Bíceps femoral</option>
-                  <option  className="nivel" value="1">Forward Lunges 30 repeticiones por lado</option>
-                  
+                  <option selected>Piernas</option>
+                  <option className="nivel" value="1">
+                    Máquina de extención de rodilla 10 Kilos - 20 Kilos / 3
+                    Series / 10 Repeticiones{" "}
+                  </option>
                 </select>
-                
+
                 <select
                   className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
                   <option selected>Cardio</option>
-                  <option  className="nivel"value="1">trotadora 45 minutos elevacion de montaña  </option>
-                  <option  className="nivel"value="2">Eliptica 45 minutos mayor dificultad</option>
-                  <option  className="nivel"value="3">bicicleta  60 minutos mayor en estado de subida</option>
+                  <option className="nivel" value="1">
+                    Trotadora 45 minutos / 7km/h / Inclinación opcional{" "}
+                  </option>
+                  <option className="nivel" value="2">
+                    Elíptica 45 minutos / Resistencia 10
+                  </option>
+                  <option className="nivel" value="3">
+                    Bicicleta 60 minutos / Resistencia 10
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div className="row selectejercicio">
+              <div className="PadreNivel1">
+                <select
+                  className="form-select form-select-lg mb-3 "
+                  aria-label=".form-select-lg example"
+                >
+                  <option selected className="nivel">
+                    Nivel
+                  </option>
+                  <option className="nivel" value="1">
+                    3
+                  </option>
+                </select>
+
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected className="nivel">
+                 
+                    Brazos
+                  </option>
+                  <option className="nivel" value="1">
+                    Biceps: Flexión de codo con barra 20+ Kilos /
+                    3 Series / 10 Repeticiones
+                  </option>
+                  <option className="nivel" value="1">
+                    Triceps: Extencion de codo con polea  10+ Kilos / 3
+                    Series / 10 Repeticiones
+                  </option>
+                  <option className="nivel" value="3">
+                    Hombros: Elevación de hombros con barra 15+ Kilos  / 3 Series / 10 Repeticiones
+                  </option>
+                </select>
+
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Pecho</option>
+                  <option className="nivel" value="1">
+                  Elevación de barra con inclinación 30 Kilos + / 3 Series
+                    / 12 Repeticions
+                  </option>
+                </select>
+
+                <select
+                  class="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Espalda</option>
+                  <option className="nivel" value="1">
+                  Dominadas 4 Series / 10 Repeticiones / 5 Kilos o +
+                  </option>
+                </select>
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Abdominales</option>
+                  <option className="nivel" value="1">
+                    Barbell Situp 10 kilos 3 Series 15 / Repeticiones 
+                  </option>               
+                </select>
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Piernas</option>
+                  <option className="nivel" value="1">
+                    Sentadillas con barra 30kg + / 4 Series / 12 Repeticiones
+                  </option>
+                </select>
+
+                <select
+                  className="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected>Cardio</option>
+                  <option className="nivel" value="1">
+                    Trotadora 60 minutos / 8km/h / Inclinación opcional
+                  </option>
+                  <option className="nivel" value="2">
+                    Eliptica 60 minutos / Resistencia +10
+                  </option>
+                  <option className="nivel" value="3">
+                    Bicicleta 60 minutos / Resistencia 10+
+                  </option>
                 </select>
               </div>
             </div>
