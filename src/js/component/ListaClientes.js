@@ -32,7 +32,7 @@ export const ListaClientes = ({ data }) => {
   </ul>
 </div>  
         {selectedUser && (
-          <Fichaevaluacion user={selectedUser} />
+          <Fichaevaluacion user={selectedUser} /* editar peso,porcentaje de grasa,porcentaje de musculo */ />
         )}
       </div>
     );

@@ -1,7 +1,12 @@
-import React from "react";
+import React,{useEffect, useContext } from "react";
 import Machop from "../../img/Machop.png";
+import { Context } from "../store/appContext";
+
 
 export const Fichaevaluacion = () => {
+  const { store, actions } = useContext(Context);
+ 
+
   return (
     <div className="ejercicioscard mb-3 ">
       <div className="row g-0">

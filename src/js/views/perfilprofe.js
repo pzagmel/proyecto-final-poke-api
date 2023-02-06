@@ -61,7 +61,7 @@ export const Perfilprofe = () => {
         
     </div>
   ) : (
-    window.location.href = "*"
+    window.location.href = "/"
   );
 }
 

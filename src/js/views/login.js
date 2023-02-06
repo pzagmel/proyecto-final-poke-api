@@ -64,20 +64,20 @@ export const Login = () => {
                 name="password"
                 placeholder="password"
               />
-               <div className="form-check">
+               {/* <div className="form-check">
                 <input
                   className="form-check-input"
                   type="checkbox"
                   value=""
                   id="flexCheckIndeterminate"
                 /> 
-                 <label
+                 {<label
                   className="form-check-label"
                    htmlFor="flexCheckIndeterminate "
                 >
                   Remember me
                 </label>  
-              </div>
+              </div> */}
               <input type="submit" className="fadeIn fourth" value="Log In" /> 
             </form>
 
