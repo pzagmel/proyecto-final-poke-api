@@ -74,7 +74,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         myHeaders.append("Access-Control-Allow-Credentials", "*");
 
         fetch(
-          "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/login",
+          "https://3000-lukasoy-backendpokegym-jgq27cn95ig.ws-us85.gitpod.io/login",
           {
             method: "POST",
             headers: myHeaders,
@@ -126,7 +126,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           myHeaders.append("Authorization", `Bearer ${token}`);
           try {
             await fetch(
-              "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/token",
+              "https://3000-lukasoy-backendpokegym-jgq27cn95ig.ws-us85.gitpod.io/token",
               {
                 method: "POST",
                 headers: myHeaders,
@@ -183,7 +183,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getinfoRegister: async (user) => {
         fetch(
-          "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/register",
+          "https://3000-lukasoy-backendpokegym-jgq27cn95ig.ws-us85.gitpod.io/register",
           {
             method: "POST",
             headers: {
@@ -243,7 +243,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           redirect: 'follow',
           body: raw
         };       
-        fetch("https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/ficha", requestOptions)
+        fetch("https://3000-lukasoy-backendpokegym-jgq27cn95ig.ws-us85.gitpod.io/ficha", requestOptions)
           .then(response => response.json())
           .then(result => console.log(result))
           .catch(error => console.log('error', error));

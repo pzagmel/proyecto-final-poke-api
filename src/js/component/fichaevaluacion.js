@@ -15,7 +15,7 @@ export const Fichaevaluacion = () => {
   });
 
   const llamadaCargaFicha=async()=>{
-    const fetchRoute= `https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/ficha/${store.userInfo.rol? store.fichaSelected.id:store.userInfo.id}`
+    const fetchRoute= `https://3000-lukasoy-backendpokegym-jgq27cn95ig.ws-us85.gitpod.io/ficha/${store.userInfo.rol? store.fichaSelected.id:store.userInfo.id}`
     console.log(fetchRoute)
     var myHeaders = new Headers();
     myHeaders.append(
