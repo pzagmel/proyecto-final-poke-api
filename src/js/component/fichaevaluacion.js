@@ -14,7 +14,9 @@ export const Fichaevaluacion = () => {
     porcentaje_musculo: 0,
   });
 
-  useEffect(() => {
+  const llamadaCargaFicha=async()=>{
+    const fetchRoute= `https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/ficha/${store.userInfo.rol? store.fichaSelected.id:store.userInfo.id}`
+    console.log(fetchRoute)
     var myHeaders = new Headers();
     myHeaders.append(
       "Authorization",
@@ -27,10 +29,8 @@ export const Fichaevaluacion = () => {
       headers: myHeaders,
       redirect: "follow",
     };
-console.log('first')
-    fetch(
-      "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/ficha/" +
-        store.fichaSelected.id,
+    await fetch(
+      fetchRoute,
       requestOptions
     )
       .then((response) => response.json())
@@ -41,6 +41,16 @@ console.log('first')
         } else actions.estadoFetchFicha(false);
       })
       .catch((error) => console.log("error", error));
+    
+  }
+  useEffect(() => {
+if(!store.userInfo.rol)
+    llamadaCargaFicha()
+
+   }, []);
+
+  useEffect(() => {
+   llamadaCargaFicha()
   }, [store.fichaSelected.id]);
 
   return (store.fetchfichaexitoso?(    
@@ -358,7 +368,6 @@ console.log('first')
                     Sentadillas con barra 30kg + / 4 Series / 12 Repeticiones
                   </option>
                 </select>
-
                 <select
                   className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
@@ -380,5 +389,5 @@ console.log('first')
         </div>
       </div>
     </div>
-  ) : <RegistroFicha/>);
+  ) : (store.userInfo.rol && <RegistroFicha/>));
 };

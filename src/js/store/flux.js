@@ -6,6 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       pokemon: [],
       infoRegister: [],
       userInfo: {
+        id:'',
         nombre: "",
         apellido: "",
         email: "",

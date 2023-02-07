@@ -26,10 +26,12 @@ export const Perfilcliente = () => {
     else 
     navigate("/login")
   };
+  
 
   useEffect(() => {
     llamada();
   }, []);
+
 
   return (
     <div className="container">
@@ -40,10 +42,14 @@ export const Perfilcliente = () => {
           </div>
           <div>
             <InfoFicha />
-            <Fichaevaluacion />
+            {store.userInfo.id!=''&&<Fichaevaluacion/>}
           </div>
         </div>
     </div>
   );
 };
+
+
+
+
 /* En este ejemplo, si store.token existe, entonces se renderizará el contenido de la vista, de lo contrario, se mostrará null y no se verá nada en la pantalla. */

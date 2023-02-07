@@ -1,15 +1,9 @@
 import React from "react";
-import { useEffect, useState, useContext } from "react";
-import pokebola from "../../img/POKEBOLA.png";
+import { useState, useContext } from "react";
 import "../../styles/PPClientes.css";
 import { Context } from "../store/appContext";
-import { Modal } from "react-bootstrap";
 import { Fichaevaluacion } from "./fichaevaluacion";
 import pokebolalista from "../../img/pokebolalista.png";
-import { FaAcquisitionsIncorporated } from "react-icons/fa";
-
-
-
 
 export const ListaClientes = ({ data }) => {
   const [selectedUser, setSelectedUser] = useState(null);
@@ -22,7 +16,6 @@ export const ListaClientes = ({ data }) => {
     setSelectedUser(user);
   };
 
- 
   return (
     <div>
       <div className="dropdown-center">
