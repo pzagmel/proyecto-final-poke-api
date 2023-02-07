@@ -4,7 +4,6 @@ import "../../styles/perfilprofe.css";
 import { Link, NavLink, useNavigate, useSearchParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import Bienvenido from "../../img/Bienvenidos.png";
-
 import { InfoGym } from "../component/CardsINFOGYM";
 import { Footer } from "../component/footer";
 import { Footergp } from "../component/footer2";
