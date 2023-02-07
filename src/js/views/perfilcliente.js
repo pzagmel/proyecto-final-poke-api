@@ -11,11 +11,13 @@ import { Context } from "../store/appContext";
 import { Fichaevaluacion } from "../component/fichaevaluacion";
 import { FichaPersonal } from "../component/FijaPersonal";
 
+
 export const Perfilcliente = () => {
   let navigate = useNavigate();
   const { store, actions } = useContext(Context);
   
   const [imageUrl, setImageUrl] = useState("");
+  const [pokemonId, setPokemonId] = useState(66);
 
   const llamada = async () => {
     if (sessionStorage.getItem("token")?? localStorage.getItem("token")) {
@@ -31,7 +33,6 @@ export const Perfilcliente = () => {
   
   useEffect(() => {
     llamada();
-    const pokemonId = 66;
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}/`;
 
     fetch(url)
@@ -40,8 +41,11 @@ export const Perfilcliente = () => {
         setImageUrl(data.sprites.front_default);
       })
       .catch(error => console.error(error));
-  }, []);
+  }, [pokemonId]);
 
+  const handleClick = () => {
+    setPokemonId(pokemonId + 1);
+  };
 
   return (
     <div className="container">
@@ -53,7 +57,7 @@ export const Perfilcliente = () => {
               <h1>Tu Pokemon</h1>
             <img src={imageUrl} style={{ width: "300px", height: "300px" }} />
             </div>
-          
+            <button onClick={handleClick}>Evoluciona 💪🏽</button>
           </div>
           <div>
             <InfoFicha />
@@ -64,5 +68,4 @@ export const Perfilcliente = () => {
   );
 };
 
-
-/* En este ejemplo, si store.token existe, entonces se renderizará el contenido de la vista, de lo contrario, se mostrará null y no se verá nada en la pantalla. */
+export default Perfilcliente;
