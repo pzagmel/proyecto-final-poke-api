@@ -14,9 +14,11 @@ export const Fichaevaluacion = () => {
     porcentaje_musculo: 0,
   });
 
-  const llamadaCargaFicha=async()=>{
-    const fetchRoute= `https://3000-lukasoy-backendpokegym-jgq27cn95ig.ws-us85.gitpod.io/ficha/${store.userInfo.rol? store.fichaSelected.id:store.userInfo.id}`
-    console.log(fetchRoute)
+  const llamadaCargaFicha = async () => {
+    const fetchRoute = `https://3000-lukasoy-backendpokegym-jgq27cn95ig.ws-us85.gitpod.io/ficha/${
+      store.userInfo.rol ? store.fichaSelected.id : store.userInfo.id
+    }`;
+    console.log(fetchRoute);
     var myHeaders = new Headers();
     myHeaders.append(
       "Authorization",
@@ -29,10 +31,7 @@ export const Fichaevaluacion = () => {
       headers: myHeaders,
       redirect: "follow",
     };
-    await fetch(
-      fetchRoute,
-      requestOptions
-    )
+    await fetch(fetchRoute, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         if (result.msg == "tienes acceso a la ficha") {
@@ -41,19 +40,16 @@ export const Fichaevaluacion = () => {
         } else actions.estadoFetchFicha(false);
       })
       .catch((error) => console.log("error", error));
-    
-  }
+  };
   useEffect(() => {
-if(!store.userInfo.rol)
-    llamadaCargaFicha()
-
-   }, []);
+    if (!store.userInfo.rol) llamadaCargaFicha();
+  }, []);
 
   useEffect(() => {
-   llamadaCargaFicha()
+    llamadaCargaFicha();
   }, [store.fichaSelected.id]);
 
-  return (store.fetchfichaexitoso?(    
+  return store.fetchfichaexitoso ? (
     <div className="ejercicioscard mb-3 ">
       <div className="row g-0">
         <div className="col-md-4">
@@ -389,5 +385,7 @@ if(!store.userInfo.rol)
         </div>
       </div>
     </div>
-  ) : (store.userInfo.rol && <RegistroFicha/>));
+  ) : (
+    store.userInfo.rol && <RegistroFicha />
+  );
 };

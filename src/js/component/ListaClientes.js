@@ -5,16 +5,20 @@ import { Context } from "../store/appContext";
 import { Fichaevaluacion } from "./fichaevaluacion";
 import pokebolalista from "../../img/pokebolalista.png";
 
+
 export const ListaClientes = ({ data }) => {
   const [selectedUser, setSelectedUser] = useState(null);
   const { store, actions } = useContext(Context);
-  
+ 
   const handleClick = (user) => {
+
 
     actions.guardarFichaSelected(user)
 
+
     setSelectedUser(user);
   };
+
 
   return (
     <div>
@@ -45,4 +49,9 @@ export const ListaClientes = ({ data }) => {
   );
 };
 
+
 export default ListaClientes;
+
+
+
+

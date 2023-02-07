@@ -11,11 +11,13 @@ import { FichaPersonal } from "../component/FijaPersonal";
 import { ListaClientes } from "../component/ListaClientes";
 import { Fichaevaluacion } from "../component/fichaevaluacion";
 
+
 export const Perfilprofe = () => {
   const { store, actions } = useContext(Context);
   const [list, setList] = useState([]);
   let navigate = useNavigate();
-  
+ 
+
 
   const llamada = async () => {
     if (sessionStorage.getItem("token")?? localStorage.getItem("token")) {
@@ -24,18 +26,21 @@ export const Perfilprofe = () => {
       if (ruta !== "/perfilprofe") {
         navigate(ruta);
       }      
-    }else 
+    }else
     navigate("/login")
   };
+
 
   useEffect(() => {
     llamada();
   }, []);
 
+
   useEffect(() => {
     var myHeaders = new Headers();
     myHeaders.append("Authorization", `Bearer ${sessionStorage.getItem("token")?? localStorage.getItem("token")}`);
     myHeaders.append("Content-Type", "application/json");
+
 
     var requestOptions = {
       method: "POST",
@@ -55,10 +60,11 @@ export const Perfilprofe = () => {
         if(data.user)
         setList(data.user);
       })
-      .catch((error) =>{ 
+      .catch((error) =>{
         setList([]);
         console.log("error", error)});
   }, []);
+
 
   return(
     <div>

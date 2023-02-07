@@ -11,10 +11,11 @@ import { Context } from "../store/appContext";
 import { Fichaevaluacion } from "../component/fichaevaluacion";
 import { FichaPersonal } from "../component/FijaPersonal";
 
+
 export const Perfilcliente = () => {
   let navigate = useNavigate();
   const { store, actions } = useContext(Context);
-  
+ 
   const llamada = async () => {
     if (sessionStorage.getItem("token")?? localStorage.getItem("token")) {
       const ruta = await actions.tokenValidation("/perfilcliente");
@@ -23,14 +24,17 @@ export const Perfilcliente = () => {
         navigate(ruta);
       }      
     }
-    else 
+    else
     navigate("/login")
   };
-  
+ 
+
 
   useEffect(() => {
     llamada();
   }, []);
+
+
 
 
   return (
@@ -48,8 +52,3 @@ export const Perfilcliente = () => {
     </div>
   );
 };
-
-
-
-
-/* En este ejemplo, si store.token existe, entonces se renderizará el contenido de la vista, de lo contrario, se mostrará null y no se verá nada en la pantalla. */

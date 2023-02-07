@@ -1,5 +1,6 @@
 import jwt_decode from "jwt-decode";
 
+
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
@@ -28,6 +29,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       fetchfichaexitoso: false
 
+
     },
     actions: {
       getPokemon: (poke) => {
@@ -46,6 +48,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             });
           });
       },
+
 
       logout: () => {
         sessionStorage.removeItem("token");
@@ -72,6 +75,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("Access-Control-Allow-Credentials", "*");
+
 
         fetch(
           "https://3000-lukasoy-backendpokegym-jgq27cn95ig.ws-us85.gitpod.io/login",
@@ -121,6 +125,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           token = sessionStorage.getItem("token");
         }
 
+
         if (token !== "") {
           var myHeaders = new Headers();
           myHeaders.append("Authorization", `Bearer ${token}`);
@@ -146,6 +151,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                   if (user.rol != null) {
                     if ( user.rol)
                       retorno = "/perfilprofe";
+
 
                     else
                       retorno = "/perfilcliente";
@@ -173,6 +179,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             localStorage.clear();
             sessionStorage.clear();
 
+
             if (ruta != "/login") return "/login";
           }
         } else {
@@ -180,6 +187,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
         return retorno;
       },
+
 
       getinfoRegister: async (user) => {
         fetch(
@@ -207,19 +215,22 @@ const getState = ({ getStore, getActions, setStore }) => {
               alert(data.msg);
             }
 
+
             //recibo tokene y debo guardarlo en store, luego desencriptarlo
           })
           .catch((error) => console.log("error", error));
       },
-      
+     
       guardarFichaSelected:(user)=>{
         console.log('user', user)
       setStore({fichaSelected:user});
+
 
       },
       estadoFetchFicha:(estadof)=>{
       setStore({fetchfichaexitoso: estadof})
       },
+
 
       handleform:(peso,porcentaje_grasa,porcentaje_musculo,nivel)=>{
         var myHeaders = new Headers();
@@ -236,13 +247,13 @@ const getState = ({ getStore, getActions, setStore }) => {
           porcentaje_musculo,
           nivel,
           id_usuario: getStore().fichaSelected.id
-        });   
+        });  
         var requestOptions = {
           method: 'POST',
           headers: myHeaders,
           redirect: 'follow',
           body: raw
-        };       
+        };      
         fetch("https://3000-lukasoy-backendpokegym-jgq27cn95ig.ws-us85.gitpod.io/ficha", requestOptions)
           .then(response => response.json())
           .then(result => console.log(result))
