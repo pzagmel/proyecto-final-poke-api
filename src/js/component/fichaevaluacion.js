@@ -1,8 +1,49 @@
 import React from "react";
+import { useEffect, useState, useContext } from "react";
+import { Context } from "../store/appContext";
 import Machop from "../../img/Machop.png";
+import { RegistroFicha } from "./registroficha";
 
 export const Fichaevaluacion = () => {
-  return (
+  const { store, actions } = useContext(Context);
+
+  const [ficha, setFicha] = useState({
+    nivel: 0,
+    peso: 0,
+    porcentaje_grasa: 0,
+    porcentaje_musculo: 0,
+  });
+
+  useEffect(() => {
+    var myHeaders = new Headers();
+    myHeaders.append(
+      "Authorization",
+      `Bearer ${
+        sessionStorage.getItem("token") ?? localStorage.getItem("token")
+      }`
+    );
+    var requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      redirect: "follow",
+    };
+console.log('first')
+    fetch(
+      "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/ficha/" +
+        store.fichaSelected.id,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.msg == "tienes acceso a la ficha") {
+          actions.estadoFetchFicha(true);
+          setFicha(result.ficha);
+        } else actions.estadoFetchFicha(false);
+      })
+      .catch((error) => console.log("error", error));
+  }, [store.fichaSelected.id]);
+
+  return (store.fetchfichaexitoso?(    
     <div className="ejercicioscard mb-3 ">
       <div className="row g-0">
         <div className="col-md-4">
@@ -10,17 +51,17 @@ export const Fichaevaluacion = () => {
         </div>
         <div className="col-md-8">
           <h5 className="card-titleficha text-center">
-            Ficha de evaluacion profesional
+            Ficha de evaluación profesional
           </h5>
           <h6 className="card-subtitle mb-2 text-center">
-            Informacion general
+            Información general
           </h6>
           <div className="table-responsive">
             <table className="table align-middle">
               <thead id="headtableinfo">
                 <tr>
                   <th id="thficha" scope="col">
-                    Peso (kg)
+                    Peso kg
                   </th>
                   <th id="thficha" scope="col">
                     % de Grasa
@@ -28,15 +69,19 @@ export const Fichaevaluacion = () => {
                   <th id="thficha" scope="col">
                     % de Músculo
                   </th>
+                  <th id="thficha" scope="col">
+                    Nivel
+                  </th>
                 </tr>
               </thead>
               <tbody id="bodytableinfo" className="table-group-divider">
                 <tr>
                   <td id="tdficha" scope="row">
-                    70
+                    {ficha.peso}
                   </td>
-                  <td id="tdficha">40</td>
-                  <td id="tdficha">25</td>
+                  <td id="tdficha">{ficha.porcentaje_grasa}</td>
+                  <td id="tdficha">{ficha.porcentaje_musculo}</td>
+                  <td id="tdficha">{ficha.nivel}</td>
                 </tr>
               </tbody>
             </table>
@@ -198,7 +243,7 @@ export const Fichaevaluacion = () => {
                 >
                   <option value={0}>Espalda</option>
                   <option className="nivel" value="1">
-                  Dominadas 3 Series / 10 Repeticiones 
+                    Dominadas 3 Series / 10 Repeticiones
                   </option>
                 </select>
 
@@ -258,19 +303,19 @@ export const Fichaevaluacion = () => {
                   aria-label=".form-select-sm example"
                 >
                   <option value={0} className="nivel">
-                 
                     Brazos
                   </option>
                   <option className="nivel" value="1">
-                    Biceps: Flexión de codo con barra 20+ Kilos /
-                    3 Series / 10 Repeticiones
+                    Biceps: Flexión de codo con barra 20+ Kilos / 3 Series / 10
+                    Repeticiones
                   </option>
                   <option className="nivel" value="1">
-                    Tríceps: Extención de codo con polea  10+ Kilos / 3
-                    Series / 10 Repeticiones
+                    Tríceps: Extención de codo con polea 10+ Kilos / 3 Series /
+                    10 Repeticiones
                   </option>
                   <option className="nivel" value="3">
-                    Hombros: Elevación de hombros con barra 15+ Kilos  / 3 Series / 10 Repeticiones
+                    Hombros: Elevación de hombros con barra 15+ Kilos / 3 Series
+                    / 10 Repeticiones
                   </option>
                 </select>
 
@@ -281,8 +326,8 @@ export const Fichaevaluacion = () => {
                 >
                   <option value={0}>Pecho</option>
                   <option className="nivel" value={1}>
-                  Elevación de barra con inclinación 30 Kilos + / 3 Series
-                    / 12 Repeticions
+                    Elevación de barra con inclinación 30 Kilos + / 3 Series /
+                    12 Repeticions
                   </option>
                 </select>
 
@@ -292,7 +337,7 @@ export const Fichaevaluacion = () => {
                 >
                   <option value={0}>Espalda</option>
                   <option className="nivel" value="1">
-                  Dominadas 4 Series / 10 Repeticiones / 5 Kilos o +
+                    Dominadas 4 Series / 10 Repeticiones / 5 Kilos o +
                   </option>
                 </select>
                 <select
@@ -301,8 +346,8 @@ export const Fichaevaluacion = () => {
                 >
                   <option value={0}>Abdominales</option>
                   <option className="nivel" value="1">
-                    Barbell Situp 10 kilos 3 Series 15 / Repeticiones 
-                  </option>               
+                    Barbell Situp 10 kilos 3 Series 15 / Repeticiones
+                  </option>
                 </select>
                 <select
                   className="form-select form-select-sm"
@@ -335,5 +380,5 @@ export const Fichaevaluacion = () => {
         </div>
       </div>
     </div>
-  );
+  ) : <RegistroFicha/>);
 };

@@ -16,8 +16,18 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       login: false,
       token: "",
-    },
+      fichaSelected:{
+        id: "",
+        nombre: "",
+        apellido:"",
+        email: "",
+        rol: "",
+        rut: "",
+        telefono: ""        
+      },
+      fetchfichaexitoso: false
 
+    },
     actions: {
       getPokemon: (poke) => {
         console.log("pokemon", poke);
@@ -101,7 +111,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           })
           .catch((error) => console.log("error en login", error));
       },
-
       tokenValidation: async (ruta) => {
         let token = "";
         let retorno = "/";
@@ -201,31 +210,43 @@ const getState = ({ getStore, getActions, setStore }) => {
           })
           .catch((error) => console.log("error", error));
       },
-      postficha: () => {
-        var raw = JSON.stringify({
-          id: "",
-          id_usuario: "",
-          peso: "",
-          porcentaje_grasa: "",
-          porcentaje_musculo: "",
-          nivel: "",
-        });
+      
+      guardarFichaSelected:(user)=>{
+        console.log('user', user)
+      setStore({fichaSelected:user});
 
-        var requestOptions = {
-          method: "POST",
-          headers: myHeaders,
-          body: raw,
-          redirect: "follow",
-        };
-
-        fetch(
-          "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/ficha/id",
-          requestOptions
-        )
-          .then((response) => response.text())
-          .then((result) => console.log(result))
-          .catch((error) => console.log("error", error));
       },
+      estadoFetchFicha:(estadof)=>{
+      setStore({fetchfichaexitoso: estadof})
+      },
+
+      handleform:(peso,porcentaje_grasa,porcentaje_musculo,nivel)=>{
+        var myHeaders = new Headers();
+        myHeaders.append(
+          "Authorization",
+          `Bearer ${
+            sessionStorage.getItem("token") ?? localStorage.getItem("token")
+          }`
+        );
+        myHeaders.append("Content-Type", "application/json");
+          var raw = JSON.stringify({
+          peso,
+          porcentaje_grasa,
+          porcentaje_musculo,
+          nivel,
+          id_usuario: getStore().fichaSelected.id
+        });   
+        var requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          redirect: 'follow',
+          body: raw
+        };       
+        fetch("https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/ficha", requestOptions)
+          .then(response => response.json())
+          .then(result => console.log(result))
+          .catch(error => console.log('error', error));
+      }      
     },
   };
 };

@@ -9,6 +9,7 @@ import { InfoFicha } from "../component/infoFichaCliente";
 import { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import { Fichaevaluacion } from "../component/fichaevaluacion";
+import { FichaPersonal } from "../component/FijaPersonal";
 
 export const Perfilcliente = () => {
   let navigate = useNavigate();
