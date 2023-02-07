@@ -24,8 +24,7 @@ export const RegistroFicha = () => {
     return (
         <div classNAme="container text-center mb-5">
         <div classNAme="row">
-          <div class="col-3">
-          
+          <div class="col-3">         
           </div>
           <div classNAme="col-6">
             <div>Crear ficha </div>
