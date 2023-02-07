@@ -34,7 +34,8 @@ const getState = ({ getStore, getActions, setStore }) => {
     actions: {
       getPokemon: (poke) => {
         console.log("pokemon", poke);
-        fetch("https://pokeapi.co/api/v2/pokemon/" + poke, {
+        var poke=66;
+        fetch("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+poke+".png", {
           headers: {
             "Content-Type": "application/json",
           },
@@ -46,8 +47,8 @@ const getState = ({ getStore, getActions, setStore }) => {
             setStore({
               pokemon: data.sprites.front_default,
             });
-          });
-      },
+          });
+      },
 
 
       logout: () => {

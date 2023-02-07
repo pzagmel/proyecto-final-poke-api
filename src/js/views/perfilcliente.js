@@ -11,11 +11,12 @@ import { Context } from "../store/appContext";
 import { Fichaevaluacion } from "../component/fichaevaluacion";
 import { FichaPersonal } from "../component/FijaPersonal";
 
-
 export const Perfilcliente = () => {
   let navigate = useNavigate();
   const { store, actions } = useContext(Context);
- 
+  
+  const [imageUrl, setImageUrl] = useState("");
+
   const llamada = async () => {
     if (sessionStorage.getItem("token")?? localStorage.getItem("token")) {
       const ruta = await actions.tokenValidation("/perfilcliente");
@@ -24,17 +25,22 @@ export const Perfilcliente = () => {
         navigate(ruta);
       }      
     }
-    else
+    else 
     navigate("/login")
   };
- 
-
-
+  
   useEffect(() => {
     llamada();
+    const pokemonId = 66;
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}/`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        setImageUrl(data.sprites.front_default);
+      })
+      .catch(error => console.error(error));
   }, []);
-
-
 
 
   return (
@@ -43,6 +49,11 @@ export const Perfilcliente = () => {
           <div className="container" id="bienvenido">
             <img src={Bienvenido} style={{ width: 1300 }} />
             <h1 className="usuario"> {store.userInfo?.nombre} </h1>
+            <div>
+              <h1>Tu Pokemon</h1>
+            <img src={imageUrl} style={{ width: "300px", height: "300px" }} />
+            </div>
+          
           </div>
           <div>
             <InfoFicha />
@@ -52,3 +63,6 @@ export const Perfilcliente = () => {
     </div>
   );
 };
+
+
+/* En este ejemplo, si store.token existe, entonces se renderizará el contenido de la vista, de lo contrario, se mostrará null y no se verá nada en la pantalla. */
