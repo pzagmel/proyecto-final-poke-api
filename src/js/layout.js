@@ -19,8 +19,6 @@ import { Navbar2 } from "./component/navbar";
 import { Footerf } from "./component/footerfinal";
 /* import { Footergp } from "./component/footer2"; */
 
-import { Footer } from "./component/footer";
-import { Footerf } from "./component/footer2";
 import { Error404 } from "./views/404";
 
 
