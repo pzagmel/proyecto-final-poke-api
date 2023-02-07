@@ -9,7 +9,7 @@ import Pokebola from "../../img/POKEBOLA.png"
 
 function Cardservice() {
   return (
-    <CardGroup>
+    <CardGroup id="infogymhref">
         <img id="img" src={Pokebola}/>
       <Card className="infogym">
         <Card.Img variant="top" src={M1} />

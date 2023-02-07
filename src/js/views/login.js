@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "../../styles/login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
@@ -6,9 +6,9 @@ import { Context } from "../store/appContext";
 export const Login = () => {
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState(false);
 
-  const login = (evento) => {
-    console.log("evento", evento);
+  const login = async (evento) => {
     evento.preventDefault();
     let MAIL = evento.target[0].value;
     let PASS = evento.target[1].value;
@@ -17,7 +17,10 @@ export const Login = () => {
     if (MAIL == "" || PASS == "") {
       alert("Debes completar los datos");
     } else {
-      actions.login(MAIL, PASS, rememberMe);
+      const success = await actions.login(MAIL, PASS, rememberMe);
+      if (!success) {
+        setErrorMessage(true);
+      }
     }
   };
 
@@ -69,22 +72,23 @@ export const Login = () => {
                 name="password"
                 placeholder="password"
               />
-              <div className="form-check">
+               {/* <div className="form-check">
                 <input
                   className="form-check-input"
                   type="checkbox"
                   value=""
                   id="flexCheckIndeterminate"
-                />
-                <label
+                /> 
+                 {<label
                   className="form-check-label"
                   htmlFor="flexCheckIndeterminate "
                 >
-                  Remember me{" "}
-                </label>{" "}
-              </div>{" "}
-              <input type="submit" className="fadeIn fourth" value="Log In" />
+                  Remember me
+                </label>  
+              </div> */}
+              <input type="submit" className="fadeIn fourth" value="Log In" /> 
             </form>
+            {errorMessage && <div className="error-message">Usuario o contraseña incorrectos</div>}
             <Link to="/recover" className="link link-style">
               {" "}
               ¿Olvidaste tu contraseña ?

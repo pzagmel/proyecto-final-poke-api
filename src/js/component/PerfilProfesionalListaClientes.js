@@ -2,28 +2,28 @@ import React from "react";
 import pokebola from "../../img/POKEBOLA.png";
 import "../../styles/PPClientes.css";
 
-window.onload = function () {
-  const boton = document.querySelector(".dropdown-toggle");
-  const contenedor = document.querySelector(".PrincipalContainerDropdown");
+// window.onload = function () {
+//   const boton = document.querySelector(".dropdown-toggle");
+//   const contenedor = document.querySelector(".PrincipalContainerDropdown");
 
-  boton.addEventListener("click", () => {
-    contenedor.classList.toggle("aumentado");
-  });
-};
+//   boton.addEventListener("click", () => {
+//     contenedor.classList.toggle("aumentado");
+//   });
+// };
 export const ListaClientes = () => (
   <div className="col-12" id="PrimeroPrimerin">
     <div className="row">
       <div className="PrincipalContainerDropdown">
-        <div ClassName="ContainerDropdownClientes">
+        <div className="ContainerDropdownClientes">
           <div className="dropdowndos">
             <button
-              className="btn btn-secondary dropdown-toggle"
+              className=" dropdown-toggle"
               type="button"
               id="dropdownMenu2"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Tus Clientes
+             <h1 className="botontitulo">Tus Clientes</h1> 
             </button>
 
             <ul

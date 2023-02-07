@@ -47,7 +47,7 @@ console.log('first')
     <div className="ejercicioscard mb-3 ">
       <div className="row g-0">
         <div className="col-md-4">
-          <img src={Machop} className="img-fluid rounded-start" />
+          <img src={store.pokemon} className="img-fluid rounded-start" />
         </div>
         <div className="col-md-8">
           <h5 className="card-titleficha text-center">

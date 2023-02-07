@@ -46,7 +46,7 @@ export const Perfilprofe = () => {
       redirect: "follow",
     };
     fetch(
-      "https://3000-lukasoy-backendpokegym-h7ytze1t944.ws-us85.gitpod.io/user",
+      "https://3000-lukasoy-backendpokegym-38mr70hus0e.ws-us85.gitpod.io/user",
       requestOptions
     )
       .then((response) => response.json())
