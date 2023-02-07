@@ -13,7 +13,6 @@ import { ListaClientes } from "../component/ListaClientes";
 import { Fichaevaluacion } from "../component/fichaevaluacion";
 
 
-
 export const Perfilprofe = () => {
   
   const { store, actions } = useContext(Context);
